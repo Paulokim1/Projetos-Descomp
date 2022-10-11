@@ -10,7 +10,7 @@ entity Keys_Buttons is
 	  Rd : in std_logic;
 	  A5 : in std_logic;
 	  Decoder1_IN : in std_logic;
-	  Decoder2_IN : in std_logic_vector(4 downto 0);
+	  Decoder2_IN : in std_logic_vector(7 downto 0);
 	  Saida_Dados : out std_logic_vector(7 downto 0)
     );
 end entity;

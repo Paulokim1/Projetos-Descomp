@@ -54,7 +54,16 @@ end generate;
 
 -- O port map completo da CPU.
 CPU : entity work.CPU generic map (dataWidth => dataWidth, addrWidth => addrWidth, instrWidth => instrWidth)
-          port map (Wr => Wr, Rd => Rd, ROM_Address => ROM_Address, Instruction_IN => Instruction, Data_IN => Data_Rd, Data_OUT => Data_Wr, Data_Address => Data_Address, Decoder_OUT => Decoder_OUT, CLK => CLK);
+          port map (
+			 Wr => Wr, 
+			 Rd => Rd, 
+			 ROM_Address => ROM_Address, 
+			 Instruction_IN => Instruction, 
+			 Data_IN => Data_Rd, 
+			 Data_OUT => Data_Wr, 
+			 Data_Address => Data_Address, 
+			 Decoder_OUT => Decoder_OUT, 
+			 CLK => CLK);
 			 
 -- O port map completo da ROM:
 ROM1 : entity work.memoriaROM   generic map (dataWidth => instrWidth, addrWidth => addrWidth)
@@ -62,27 +71,67 @@ ROM1 : entity work.memoriaROM   generic map (dataWidth => instrWidth, addrWidth 
 
 -- O port map completo da RAM:			 
 RAM1 : entity work.memoriaRAM   generic map (dataWidth => dataWidth, addrWidth => 6)
-          port map (addr => Data_Address(5 downto 0), we => Wr, re => Rd, habilita => Saida_Decoder1(0), dado_in => Data_Wr, dado_out => Data_Rd, clk => CLK);
+          port map (
+			 addr => Data_Address(5 downto 0), 
+			 we => Wr, 
+			 re => Rd, 
+			 habilita => Saida_Decoder1(0), 
+			 dado_in => Data_Wr, 
+			 dado_out => Data_Rd, 
+			 clk => CLK);
 			 
 -- O port map completo do DECODER1:
 DECODER1 : entity work.decoder3x8
-          port map (entrada => Data_Address(8 downto 6), saida => Saida_Decoder1);
+          port map (
+			 entrada => Data_Address(8 downto 6), 
+			 saida => Saida_Decoder1);
 			 
 -- O port map completo do DECODER2:
 DECODER2 : entity work.decoder3x8
-          port map (entrada => Data_Address(2 downto 0), saida => Saida_Decoder2);
+          port map (
+			 entrada => Data_Address(2 downto 0), 
+			 saida => Saida_Decoder2);
 			 
 -- O port map completo dos LEDS:
 LEDS : entity work.Leds
-          port map (Wr => Wr, A5 => Data_Address(5), Data => Data_Wr, Decoder1_IN => Saida_Decoder1(4), Decoder2_IN => Saida_Decoder2(2 downto 0), LEDR => LEDR(7 downto 0), LED8 => LEDR(8), LED9 => LEDR(9), CLK => CLK);
+          port map (
+			 Wr => Wr, 
+			 A5 => Data_Address(5), 
+			 Data => Data_Wr, 
+			 Decoder1_IN => Saida_Decoder1(4), 
+			 Decoder2_IN => Saida_Decoder2(2 downto 0), 
+			 LEDR => LEDR(7 downto 0), 
+			 LED8 => LEDR(8), 
+			 LED9 => LEDR(9), 
+			 CLK => CLK);
 
 -- O port map completo do SEVENSEG:
 SEVENSEG: entity work.SevenSeg
-		    port map (Wr => Wr, Data_IN => Data_Wr(3 downto 0), A5 => Data_Address(5), Decoder1_IN => Saida_Decoder1(4), Decoder2_IN => Saida_Decoder2(5 downto 0), HEX0 => HEX0, HEX1 => HEX1, HEX2 => HEX2, HEX3 => HEX3, HEX4 => HEX4, HEX5 => HEX5, CLK => CLK);
+		    port map (
+			 Wr => Wr, 
+			 Data_IN => Data_Wr(3 downto 0), 
+			 A5 => Data_Address(5), 
+			 Decoder1_IN => Saida_Decoder1(4), 
+			 Decoder2_IN => Saida_Decoder2, 
+			 HEX0 => HEX0, 
+			 HEX1 => HEX1, 
+			 HEX2 => HEX2, 
+			 HEX3 => HEX3, 
+			 HEX4 => HEX4, 
+			 HEX5 => HEX5, 
+			 CLK => CLK);
 			 
 -- O port map completo do KEYS_BUTTONS:
 KEYS_BUTTONS: entity work.Keys_Buttons
-			 port map (KEY => KEY, SW => SW, FPGA_RESET => FPGA_RESET, Rd => Rd, A5 => Data_Address(5), Decoder1_IN => Saida_Decoder1(5), Decoder2_IN => Saida_Decoder2(4 downto 0), Saida_Dados => Leitura_Dados);
+			 port map (
+			 KEY => KEY, 
+			 SW => SW, 
+			 FPGA_RESET => FPGA_RESET, 
+			 Rd => Rd, 
+			 A5 => Data_Address(5), 
+			 Decoder1_IN => Saida_Decoder1(5), 
+			 Decoder2_IN => Saida_Decoder2, 
+			 Saida_Dados => Leitura_Dados);
 			 
 
 PC_OUT <= ROM_Address;			 
