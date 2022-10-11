@@ -1,0 +1,87 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Aula7 is
+  -- Total de bits das entradas e saidas
+  generic ( 
+        dataWidth : natural := 8;
+        addrWidth : natural := 9;
+		  instrWidth : natural := 13;
+        simulacao : boolean := TRUE -- para gravar na placa, altere de TRUE para FALSE
+  );
+  port   (
+    CLOCK_50 : in std_logic;
+    KEY: in std_logic_vector(3 downto 0);
+    PC_OUT: out std_logic_vector(addrWidth-1 downto 0);
+    LEDR  : out std_logic_vector(9 downto 0);
+	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
+	 Decoder_Instru : out std_logic_vector(11 downto 0);
+	 Decoder_1 : out std_logic_vector(dataWidth-1 downto 0);
+	 Decoder_2 : out std_logic_vector(dataWidth-1 downto 0);
+	 Wr_debug : out std_logic;
+	 Data_debug : out std_logic_vector(dataWidth-1 downto 0)
+  );
+end entity;
+
+
+architecture arquitetura of Aula7 is
+
+  signal CLK : std_logic;
+  signal ROM_Address : std_logic_vector (addrWidth-1 downto 0);
+  signal Instruction : std_logic_vector (instrWidth-1 downto 0);
+  signal Data_Address : std_logic_vector (addrWidth-1 downto 0);
+  signal Wr : std_logic;
+  signal Rd : std_logic;
+  signal Saida_Decoder1 : std_logic_vector (dataWidth-1 downto 0);
+  signal Saida_Decoder2 : std_logic_vector (dataWidth-1 downto 0);
+  signal Data_Wr : std_logic_vector (dataWidth-1 downto 0);
+  signal Data_Rd : std_logic_vector (dataWidth-1 downto 0);
+  signal Decoder_OUT : std_logic_vector (11 downto 0);
+begin
+
+-- Instanciando os componentes:
+
+-- Para simular, fica mais simples tirar o edgeDetector
+gravar:  if simulacao generate
+CLK <= KEY(0);
+else generate
+detectorSub0: work.edgeDetector(bordaSubida)
+        port map (clk => CLOCK_50, entrada => (not KEY(0)), saida => CLK);
+end generate;
+
+-- O port map completo da CPU.
+CPU : entity work.CPU generic map (dataWidth => dataWidth, addrWidth => addrWidth, instrWidth => instrWidth)
+          port map (Wr => Wr, Rd => Rd, ROM_Address => ROM_Address, Instruction_IN => Instruction, Data_IN => Data_Rd, Data_OUT => Data_Wr, Data_Address => Data_Address, Decoder_OUT => Decoder_OUT, CLK => CLK);
+			 
+-- O port map completo da ROM:
+ROM1 : entity work.memoriaROM   generic map (dataWidth => instrWidth, addrWidth => addrWidth)
+          port map (Endereco => ROM_Address, Dado => Instruction);
+
+-- O port map completo da RAM:			 
+RAM1 : entity work.memoriaRAM   generic map (dataWidth => dataWidth, addrWidth => 6)
+          port map (addr => Data_Address(5 downto 0), we => Wr, re => Rd, habilita => Saida_Decoder1(0), dado_in => Data_Wr, dado_out => Data_Rd, clk => CLK);
+			 
+-- O port map completo do DECODER1:
+DECODER1 : entity work.decoder3x8
+          port map (entrada => Data_Address(8 downto 6), saida => Saida_Decoder1);
+			 
+-- O port map completo do DECODER2:
+DECODER2 : entity work.decoder3x8
+          port map (entrada => Data_Address(2 downto 0), saida => Saida_Decoder2);
+			 
+-- O port map completo dos LEDS:
+LEDS : entity work.Leds
+          port map (Wr => Wr, A5 => Data_Address(5), Data => Data_Wr, Decoder1_IN => Saida_Decoder1(4), Decoder2_IN => Saida_Decoder2(2 downto 0), LEDR => LEDR(7 downto 0), LED8 => LEDR(8), LED9 => LEDR(9), CLK => CLK);
+
+-- O port map completo do SEVENSEG:
+SEVENSEG: entity work.SevenSeg
+		    port map (Wr => Wr, Data_IN => Data_Wr(3 downto 0), A5 => Data_Address(5), Decoder1_IN => Saida_Decoder1(4), Decoder2_IN => Saida_Decoder2(5 downto 0), HEX0 => HEX0, HEX1 => HEX1, HEX2 => HEX2, HEX3 => HEX3, HEX4 => HEX4, HEX5 => HEX5, CLK => CLK);
+
+PC_OUT <= ROM_Address;			 
+Decoder_Instru <= Decoder_OUT;
+Decoder_1 <= Saida_Decoder1;
+Decoder_2 <= Saida_Decoder2;
+Wr_debug <= Wr;
+Data_debug <= Data_wr;
+
+end architecture;

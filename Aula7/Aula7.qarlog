@@ -1,0 +1,34 @@
+Quartus Prime Archive log --	/Desktop/DesignComp/Aula7/Aula7.qarlog
+
+Archive:	/Desktop/DesignComp/Aula7/Aula7.qar
+Date:		Mon Oct 10 23:57:25 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/Desktop/DesignComp/Aula7/Aula7.qpf
+/Desktop/DesignComp/Aula7/Aula7.qsf
+/Desktop/DesignComp/Aula7/Aula7.vhd
+/Desktop/DesignComp/Aula7/CPU.vhd
+/Desktop/DesignComp/Aula7/FlipFlop.vhd
+/Desktop/DesignComp/Aula7/Keys_Buttons.vhd
+/Desktop/DesignComp/Aula7/Leds.vhd
+/Desktop/DesignComp/Aula7/SevenSeg.vhd
+/Desktop/DesignComp/Aula7/ULASomaSub.vhd
+/Desktop/DesignComp/Aula7/Waveform.vwf
+/Desktop/DesignComp/Aula7/assignment_defaults.qdf
+/Desktop/DesignComp/Aula7/buffer_3_state_1porta.vhd
+/Desktop/DesignComp/Aula7/buffer_3_state_8portas.vhd
+/Desktop/DesignComp/Aula7/conversorHex7Seg.vhd
+/Desktop/DesignComp/Aula7/decoder3x8.vhd
+/Desktop/DesignComp/Aula7/decoderInstru.vhd
+/Desktop/DesignComp/Aula7/edgeDetector.vhd
+/Desktop/DesignComp/Aula7/memoriaRAM.vhd
+/Desktop/DesignComp/Aula7/memoriaROM.vhd
+/Desktop/DesignComp/Aula7/muxGenerico2x1.vhd
+/Desktop/DesignComp/Aula7/muxGenerico4x1.vhd
+/Desktop/DesignComp/Aula7/registradorGenerico.vhd
+/Desktop/DesignComp/Aula7/somaConstante.vhd
+	======= Total: 23 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
