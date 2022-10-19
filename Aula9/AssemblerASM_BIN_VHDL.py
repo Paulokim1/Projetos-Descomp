@@ -4,32 +4,40 @@ destinoBIN = 'BIN.txt' #Arquivo de saída que contém o binário formatado para 
 #definição dos mnemônicos e seus
 #respectivos OPCODEs (em Hexadecimal)
 mne =	{ 
-       "NOP":   "0",
-       "LDA":   "1",
-       "SOMA":  "2",
-       "SUB":   "3",
-       "LDI":   "4",
-       "STA":   "5",
-       "JMP":   "6",
-       "JEQ":   "7",
-       "CEQ":   "8",
-       "JSR":   "9",
-       "RET":   "A",
+       "NOP":   "0000",
+       "LDA":   "0001",
+       "SOMA":  "0010",
+       "SUB":   "0011",
+       "LDI":   "0100",
+       "STA":   "0101",
+       "JMP":   "0110",
+       "JEQ":   "0111",
+       "CEQ":   "1000",
+       "JSR":   "1001",
+       "RET":   "1010",
 }
+
+# Dicionário responsavel em armazenar as posicoes de memoria de cada label
+labels = {}
 
 #Converte o valor após o caractere arroba '@'
 #em um valor hexadecimal de 2 dígitos (8 bits)
 def  converteArroba(line):
     line = line.split('@')
-    line[1] = hex(int(line[1]))[2:].upper().zfill(2)
-    line = ''.join(line)
+
+    if line[1] in labels.keys():
+        line[1] = hex(int(labels[line[1]]))[2:].upper().zfill(3)
+        line = ''.join(line)
+    else:
+        line[1] = hex(int(line[1]))[2:].upper().zfill(3)
+        line = ''.join(line)
     return line
  
 #Converte o valor após o caractere cifrão'$'
 #em um valor hexadecimal de 2 dígitos (8 bits) 
 def  converteCifrao(line):
     line = line.split('$')
-    line[1] = hex(int(line[1]))[2:].upper().zfill(2)
+    line[1] = hex(int(line[1]))[2:].upper().zfill(3)
     line = ''.join(line)
     return line
         
@@ -49,7 +57,15 @@ def defineInstrucao(line):
     line = line.split('#')
     line = line[0]
     return line
-    
+
+#Remove o label a partir do caractere ':'
+def defineLabel(line):
+    if ':' in line:
+        label = line.split(":")[0]
+        return label
+    else:
+        return None
+
 #Consulta o dicionário e "converte" o mnemônico em
 #seu respectivo valor em hexadecimal
 def trataMnemonico(line):
@@ -67,10 +83,9 @@ with open(assembly, "r") as f: #Abre o arquivo ASM
     
 with open(destinoBIN, "w") as f:  #Abre o destino BIN
 
-    cont = 0 #Cria uma variável para contagem
-    
-    for line in lines:        
-        
+    #Vamos identificar primeiro os labels e salva-los no dicionario
+    cont = 0 #Cria uma variavel para contagem
+    for line in lines:
         #Verifica se a linha começa com alguns caracteres invalidos ('\n' ou ' ' ou '#')
         if (line.startswith('\n') or line.startswith(' ') or line.startswith('#')):
             line = line.replace("\n", "")
@@ -78,13 +93,36 @@ with open(destinoBIN, "w") as f:  #Abre o destino BIN
         
         #Se a linha for válida para conversão, executa
         else:
+            label = defineLabel(line)
+            if label != None:
+                labels[label] = cont
+                cont -= 1
+        cont += 1
+    
+    print(f"<<<As labels são: {labels}>>>")
             
+
+    #Agora, vamos identificar as instrucoes e comentarios
+    cont = 0 #Reset do contator
+    for line in lines:        
+        
+        #Verifica se a linha começa com alguns caracteres invalidos ('\n' ou ' ' ou '#')
+        if (line.startswith('\n') or line.startswith(' ') or line.startswith('#')):
+            line = line.replace("\n", "")
+            print("-- Sintaxe invalida" + ' na Linha: ' + ' --> (' + line + ')') #Print apenas para debug
+        
+        #Label não é nem instrução ou comentário, logo, não precisamos extrair nada deste line
+        elif ":" in line:
+            continue
+        
+        #Se a linha for válida para conversão, executa
+        else:
             #Exemplo de linha => 1. JSR @14 #comentario1
             comentarioLine = defineComentario(line).replace("\n","") #Define o comentário da linha. Ex: #comentario1
             instrucaoLine = defineInstrucao(line).replace("\n","") #Define a instrução. Ex: JSR @14
             
             instrucaoLine = trataMnemonico(instrucaoLine) #Trata o mnemonico. Ex(JSR @14): x"9" @14
-                  
+
             if '@' in instrucaoLine: #Se encontrar o caractere arroba '@' 
                 instrucaoLine = converteArroba(instrucaoLine) #converte o número após o caractere Ex(JSR @14): x"9" x"0E"
                     
@@ -93,10 +131,10 @@ with open(destinoBIN, "w") as f:  #Abre o destino BIN
                 
             else: #Senão, se a instrução nao possuir nenhum imediator, ou seja, nao conter '@' ou '$'
                 instrucaoLine = instrucaoLine.replace("\n", "") #Remove a quebra de linha
-                instrucaoLine = instrucaoLine + '00' #Acrescenta o valor x"00". Ex(RET): x"A" x"00"
-                
+                instrucaoLine = instrucaoLine + '000' #Acrescenta o valor x"00". Ex(RET): x"A" x"00"           
             
-            line = 'tmp(' + str(cont) + ') := x"' + instrucaoLine + '";\t-- ' + comentarioLine + '\n'  #Formata para o arquivo BIN
+            lineNoComment = 'tmp(' + str(cont) + ') := "' + instrucaoLine[:4] + '"' + " & '" + instrucaoLine[4] + "' & x" + '"' + instrucaoLine[5:] + '";'  #Formata para o arquivo BIN
+            line = lineNoComment + (35 - len(lineNoComment))*" " + '\t-- ' + comentarioLine + '\n'
                                                                                                        #Entrada => 1. JSR @14 #comentario1
                                                                                                        #Saída =>   1. tmp(0) := x"90E";	-- JSR @14 	#comentario1
                                         
