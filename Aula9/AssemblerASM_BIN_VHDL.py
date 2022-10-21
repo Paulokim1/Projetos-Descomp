@@ -89,8 +89,9 @@ with open(destinoBIN, "w") as f:  #Abre o destino BIN
         #Verifica se a linha começa com alguns caracteres invalidos ('\n' ou ' ' ou '#')
         if (line.startswith('\n') or line.startswith(' ') or line.startswith('#')):
             line = line.replace("\n", "")
-            print("-- Sintaxe invalida" + ' na Linha: ' + ' --> (' + line + ')') #Print apenas para debug
-        
+            cont -= 1
+            #print("-- Sintaxe invalida" + ' na Linha: ' + ' --> (' + line + ')') #Print apenas para debug
+
         #Se a linha for válida para conversão, executa
         else:
             label = defineLabel(line)
