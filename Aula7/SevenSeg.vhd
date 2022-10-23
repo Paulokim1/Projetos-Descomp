@@ -8,13 +8,13 @@ entity SevenSeg is
 	   Data_IN : in std_logic_vector(3 downto 0);
 	   A5 : in std_logic;
 	   Decoder1_IN : in std_logic;
-	   Decoder2_IN : in std_logic_vector(7 downto 0);
+	   Decoder2_IN : in std_logic_vector(5 downto 0);
 	   CLK : in std_logic;  
 		HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0)
     );
 end entity;
 
-architecture comportamento of SevenSeg is			
+architecture comportamento of SevenSeg is
 
 signal REG0_OUT, REG1_OUT, REG2_OUT, REG3_OUT, REG4_OUT, REG5_OUT : std_logic_vector(3 downto 0);  
   

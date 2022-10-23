@@ -17,7 +17,7 @@ entity CPU is
 		  Data_IN : in std_logic_vector(dataWidth-1 downto 0);
 		  Data_OUT : out std_logic_vector(dataWidth-1 downto 0);
 		  Data_Address : out std_logic_vector(addrWidth-1 downto 0);
-		  Decoder_OUT : out std_logic_vector(11 downto 0)
+		  Decoder_OUT : out std_logic_vector(12 downto 0)
   );
 end entity;
 
@@ -27,13 +27,11 @@ architecture arquitetura of CPU is
   signal MUX1_OUT : std_logic_vector (dataWidth-1 downto 0);
   signal REG1_ULA_A : std_logic_vector (dataWidth-1 downto 0);
   signal Saida_ULA : std_logic_vector (dataWidth-1 downto 0);
-  signal Sinais_Controle : std_logic_vector (11 downto 0);
+  signal Sinais_Controle : std_logic_vector (12 downto 0);
   signal proxPC : std_logic_vector (addrWidth-1 downto 0);
   signal Opcode : std_logic_vector(3 downto 0);
   signal SelMUX : std_logic;
-  signal Operacao_ULA : std_logic_vector (1 downto 0); 	
-  signal Habilita_Leitura : std_logic;
-  signal Habilita_Escrita : std_logic;
+  signal Operacao_ULA : std_logic_vector (2 downto 0); 	
   signal seletorMuxPC : std_logic_vector(1 downto 0);
   signal MUX_PC : std_logic_vector (addrWidth-1 downto 0);
   signal Destino : std_logic_vector (addrWidth-1 downto 0);
@@ -45,6 +43,8 @@ architecture arquitetura of CPU is
   signal Valor : std_logic_vector(7 downto 0);
   signal Address : std_logic_vector(addrWidth-1 downto 0);
   signal Habilita_A : std_logic;
+  signal Habilita_Leitura : std_logic;
+  signal Habilita_Escrita : std_logic;
   
 begin
 
@@ -87,7 +87,7 @@ MUX2 :  entity work.muxGenerico4x1  generic map (larguraDados => addrWidth)
 					  
 -- O port map completo do Flip-Flop de Igual.
 FlipFlopIgual : entity work.FlipFlop
-                port map (DIN => saida_ULA_flip_flop_igual, DOUT => Flag_Igual, ENABLE => Habilita_Reg_Igual, CLK => CLK);
+                port map (DIN => saida_ULA_flip_flop_igual, DOUT => Flag_Igual, ENABLE => Habilita_Reg_Igual, CLK => CLK, RST => '0');
 					 
 -- O port map completo do REG_END_RET.
 REG_END_RET : entity work.registradorGenerico   generic map (larguraDados => addrWidth)
@@ -98,10 +98,10 @@ Opcode <= Instruction_IN(12 downto 9);
 Destino <= Instruction_IN(8 downto 0);
 Valor <= Instruction_IN(7 downto 0);
 
-Habilita_Escrita_Retorno <= Sinais_Controle(11);
-selMUX <= Sinais_Controle(6);
-Habilita_A <= Sinais_Controle(5);
-Operacao_ULA <= Sinais_Controle(4 downto 3);
+Habilita_Escrita_Retorno <= Sinais_Controle(12);
+selMUX <= Sinais_Controle(7);
+Habilita_A <= Sinais_Controle(6);
+Operacao_ULA <= Sinais_Controle(5 downto 3);
 Habilita_Reg_Igual <= Sinais_Controle(2);
 Habilita_Leitura <= Sinais_Controle(1);
 Habilita_Escrita <= Sinais_Controle(0);

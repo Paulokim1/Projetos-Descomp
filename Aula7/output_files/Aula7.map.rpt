@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula7
-Tue Oct 11 09:53:28 2022
+Sun Oct 23 20:51:16 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,39 +13,51 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |Aula7
- 12. Parameter Settings for User Entity Instance: CPU:CPU
- 13. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1
- 14. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGA
- 15. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
- 16. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:incrementaPC
- 17. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
- 18. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x1:MUX2
- 19. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG_END_RET
- 20. Parameter Settings for User Entity Instance: memoriaROM:ROM1
- 21. Parameter Settings for User Entity Instance: memoriaRAM:RAM1
- 22. Parameter Settings for User Entity Instance: Leds:LEDS|registradorGenerico:REG1
- 23. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG0
- 24. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG1
- 25. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG2
- 26. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG3
- 27. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG4
- 28. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG5
- 29. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS"
- 30. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER5"
- 31. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER4"
- 32. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER3"
- 33. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER2"
- 34. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER1"
- 35. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0"
- 36. Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX2"
- 37. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
- 38. Post-Synthesis Netlist Statistics for Top Partition
- 39. Elapsed Time Per Partition
- 40. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |Aula7
+ 11. Parameter Settings for User Entity Instance: CPU:CPU
+ 12. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1
+ 13. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REGA
+ 14. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
+ 15. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:incrementaPC
+ 16. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
+ 17. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x1:MUX2
+ 18. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG_END_RET
+ 19. Parameter Settings for User Entity Instance: memoriaROM:ROM1
+ 20. Parameter Settings for User Entity Instance: memoriaRAM:RAM1
+ 21. Parameter Settings for User Entity Instance: Leds:LEDS|registradorGenerico:REG1
+ 22. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG0
+ 23. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG1
+ 24. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG2
+ 25. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG3
+ 26. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG4
+ 27. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG5
+ 28. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_RESET"
+ 29. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K3"
+ 30. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K2"
+ 31. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K1"
+ 32. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K0"
+ 33. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_SW9"
+ 34. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_SW8"
+ 35. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER3"
+ 36. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER2"
+ 37. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER1"
+ 38. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER0"
+ 39. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER5"
+ 40. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER4"
+ 41. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER3"
+ 42. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER2"
+ 43. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER1"
+ 44. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0"
+ 45. Port Connectivity Checks: "Leds:LEDS|FlipFlop:FLIPFLOP2"
+ 46. Port Connectivity Checks: "Leds:LEDS|FlipFlop:FLIPFLOP1"
+ 47. Port Connectivity Checks: "CPU:CPU|FlipFlop:FlipFlopIgual"
+ 48. Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX2"
+ 49. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 50. Post-Synthesis Netlist Statistics for Top Partition
+ 51. Elapsed Time Per Partition
+ 52. Analysis & Synthesis Messages
 
 
 
@@ -72,14 +84,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 11 09:53:28 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sun Oct 23 20:51:16 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Aula7                                       ;
 ; Top-level Entity Name           ; Aula7                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 49                                          ;
-; Total pins                      ; 114                                         ;
+; Total registers                 ; 581                                         ;
+; Total pins                      ; 115                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -185,621 +197,126 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 14          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-14        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                          ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; FlipFlop.vhd                     ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/FlipFlop.vhd               ;         ;
-; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/ULASomaSub.vhd             ;         ;
-; somaConstante.vhd                ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/somaConstante.vhd          ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/registradorGenerico.vhd    ;         ;
-; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/muxGenerico4x1.vhd         ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/muxGenerico2x1.vhd         ;         ;
-; memoriaROM.vhd                   ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/memoriaROM.vhd             ;         ;
-; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd             ;         ;
-; decoderInstru.vhd                ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/decoderInstru.vhd          ;         ;
-; Aula7.vhd                        ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd                  ;         ;
-; CPU.vhd                          ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd                    ;         ;
-; decoder3x8.vhd                   ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/decoder3x8.vhd             ;         ;
-; Leds.vhd                         ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/Leds.vhd                   ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/conversorHex7Seg.vhd       ;         ;
-; SevenSeg.vhd                     ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/SevenSeg.vhd               ;         ;
-; Keys_Buttons.vhd                 ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/Keys_Buttons.vhd           ;         ;
-; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/buffer_3_state_8portas.vhd ;         ;
-; buffer_3_state_1porta.vhd        ; yes             ; User VHDL File  ; //Mac/Home/Desktop/DesignComp/Aula7/buffer_3_state_1porta.vhd  ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; FlipFlop.vhd                     ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/FlipFlop.vhd               ;         ;
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/ULASomaSub.vhd             ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/somaConstante.vhd          ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/registradorGenerico.vhd    ;         ;
+; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico4x1.vhd         ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd         ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/memoriaROM.vhd             ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/memoriaRAM.vhd             ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/edgeDetector.vhd           ;         ;
+; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/decoderInstru.vhd          ;         ;
+; Aula7.vhd                        ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd                  ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd                    ;         ;
+; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/decoder3x8.vhd             ;         ;
+; Leds.vhd                         ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Leds.vhd                   ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/conversorHex7Seg.vhd       ;         ;
+; SevenSeg.vhd                     ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/SevenSeg.vhd               ;         ;
+; Keys_Buttons.vhd                 ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Keys_Buttons.vhd           ;         ;
+; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/buffer_3_state_8portas.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 70           ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 129          ;
-;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 0            ;
-;     -- 5 input functions                    ; 27           ;
-;     -- 4 input functions                    ; 54           ;
-;     -- <=3 input functions                  ; 48           ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 49           ;
-;                                             ;              ;
-; I/O pins                                    ; 114          ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 49           ;
-; Total fan-out                               ; 851          ;
-; Average fan-out                             ; 2.10         ;
-+---------------------------------------------+--------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 515            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 587            ;
+;     -- 7 input functions                    ; 6              ;
+;     -- 6 input functions                    ; 360            ;
+;     -- 5 input functions                    ; 39             ;
+;     -- 4 input functions                    ; 75             ;
+;     -- <=3 input functions                  ; 107            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 581            ;
+;                                             ;                ;
+; I/O pins                                    ; 115            ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 577            ;
+; Total fan-out                               ; 4939           ;
+; Average fan-out                             ; 3.53           ;
++---------------------------------------------+----------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Entity Name         ; Library Name ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------+---------------------+--------------+
-; |Aula7                             ; 129 (1)             ; 49 (0)                    ; 0                 ; 0          ; 114  ; 0            ; |Aula7                                             ; Aula7               ; work         ;
-;    |CPU:CPU|                       ; 41 (0)              ; 17 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU                                     ; CPU                 ; work         ;
-;       |ULASomaSub:ULA1|            ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|ULASomaSub:ULA1                     ; ULASomaSub          ; work         ;
-;       |decoderInstru:DECODER|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|decoderInstru:DECODER               ; decoderInstru       ; work         ;
-;       |registradorGenerico:PC|     ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|registradorGenerico:PC              ; registradorGenerico ; work         ;
-;       |registradorGenerico:REGA|   ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|registradorGenerico:REGA            ; registradorGenerico ; work         ;
-;       |somaConstante:incrementaPC| ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|somaConstante:incrementaPC          ; somaConstante       ; work         ;
-;    |SevenSeg:SEVENSEG|             ; 48 (6)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG                           ; SevenSeg            ; work         ;
-;       |conversorHex7Seg:DECODER0|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0 ; conversorHex7Seg    ; work         ;
-;       |conversorHex7Seg:DECODER1|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER1 ; conversorHex7Seg    ; work         ;
-;       |conversorHex7Seg:DECODER2|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER2 ; conversorHex7Seg    ; work         ;
-;       |conversorHex7Seg:DECODER3|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER3 ; conversorHex7Seg    ; work         ;
-;       |conversorHex7Seg:DECODER4|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER4 ; conversorHex7Seg    ; work         ;
-;       |conversorHex7Seg:DECODER5|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER5 ; conversorHex7Seg    ; work         ;
-;       |registradorGenerico:REG0|   ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG0  ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG1|   ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG1  ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG2|   ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG2  ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG3|   ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG3  ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG4|   ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG4  ; registradorGenerico ; work         ;
-;       |registradorGenerico:REG5|   ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG5  ; registradorGenerico ; work         ;
-;    |decoder3x8:DECODER2|           ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|decoder3x8:DECODER2                         ; decoder3x8          ; work         ;
-;    |memoriaRAM:RAM1|               ; 17 (17)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|memoriaRAM:RAM1                             ; memoriaRAM          ; work         ;
-;    |memoriaROM:ROM1|               ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|memoriaROM:ROM1                             ; memoriaROM          ; work         ;
-+------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                          ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name         ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------------+--------------+
+; |Aula7                                  ; 587 (16)            ; 581 (0)                   ; 0                 ; 0          ; 115  ; 0            ; |Aula7                                               ; Aula7               ; work         ;
+;    |CPU:CPU|                            ; 72 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU                                       ; CPU                 ; work         ;
+;       |FlipFlop:FlipFlopIgual|          ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|FlipFlop:FlipFlopIgual                ; FlipFlop            ; work         ;
+;       |ULASomaSub:ULA1|                 ; 25 (25)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|ULASomaSub:ULA1                       ; ULASomaSub          ; work         ;
+;       |decoderInstru:DECODER|           ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|decoderInstru:DECODER                 ; decoderInstru       ; work         ;
+;       |muxGenerico2x1:MUX1|             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|muxGenerico2x1:MUX1                   ; muxGenerico2x1      ; work         ;
+;       |muxGenerico4x1:MUX2|             ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|muxGenerico4x1:MUX2                   ; muxGenerico4x1      ; work         ;
+;       |registradorGenerico:PC|          ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|registradorGenerico:PC                ; registradorGenerico ; work         ;
+;       |registradorGenerico:REGA|        ; 2 (2)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|registradorGenerico:REGA              ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG_END_RET| ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|registradorGenerico:REG_END_RET       ; registradorGenerico ; work         ;
+;       |somaConstante:incrementaPC|      ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|CPU:CPU|somaConstante:incrementaPC            ; somaConstante       ; work         ;
+;    |Keys_Buttons:KEYS_BUTTONS|          ; 6 (6)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|Keys_Buttons:KEYS_BUTTONS                     ; Keys_Buttons        ; work         ;
+;       |FlipFlop:DEBOUNCER0|             ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER0 ; FlipFlop            ; work         ;
+;       |FlipFlop:DEBOUNCER1|             ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER1 ; FlipFlop            ; work         ;
+;       |FlipFlop:DEBOUNCER2|             ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER2 ; FlipFlop            ; work         ;
+;       |FlipFlop:DEBOUNCER3|             ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER3 ; FlipFlop            ; work         ;
+;    |Leds:LEDS|                          ; 3 (1)               ; 10 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula7|Leds:LEDS                                     ; Leds                ; work         ;
+;       |FlipFlop:FLIPFLOP1|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|Leds:LEDS|FlipFlop:FLIPFLOP1                  ; FlipFlop            ; work         ;
+;       |FlipFlop:FLIPFLOP2|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|Leds:LEDS|FlipFlop:FLIPFLOP2                  ; FlipFlop            ; work         ;
+;       |registradorGenerico:REG1|        ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|Leds:LEDS|registradorGenerico:REG1            ; registradorGenerico ; work         ;
+;    |SevenSeg:SEVENSEG|                  ; 48 (6)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG                             ; SevenSeg            ; work         ;
+;       |conversorHex7Seg:DECODER0|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0   ; conversorHex7Seg    ; work         ;
+;       |conversorHex7Seg:DECODER1|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER1   ; conversorHex7Seg    ; work         ;
+;       |conversorHex7Seg:DECODER2|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER2   ; conversorHex7Seg    ; work         ;
+;       |conversorHex7Seg:DECODER3|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER3   ; conversorHex7Seg    ; work         ;
+;       |conversorHex7Seg:DECODER4|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER4   ; conversorHex7Seg    ; work         ;
+;       |conversorHex7Seg:DECODER5|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER5   ; conversorHex7Seg    ; work         ;
+;       |registradorGenerico:REG0|        ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG0    ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG1|        ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG1    ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG2|        ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG2    ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG3|        ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG3    ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG4|        ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG4    ; registradorGenerico ; work         ;
+;       |registradorGenerico:REG5|        ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|SevenSeg:SEVENSEG|registradorGenerico:REG5    ; registradorGenerico ; work         ;
+;    |decoder3x8:DECODER1|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|decoder3x8:DECODER1                           ; decoder3x8          ; work         ;
+;    |decoder3x8:DECODER2|                ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|decoder3x8:DECODER2                           ; decoder3x8          ; work         ;
+;    |edgeDetector:detectorSub0|          ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|edgeDetector:detectorSub0                     ; edgeDetector        ; work         ;
+;    |edgeDetector:detectorSub1|          ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|edgeDetector:detectorSub1                     ; edgeDetector        ; work         ;
+;    |edgeDetector:detectorSub2|          ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|edgeDetector:detectorSub2                     ; edgeDetector        ; work         ;
+;    |edgeDetector:detectorSub3|          ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|edgeDetector:detectorSub3                     ; edgeDetector        ; work         ;
+;    |memoriaRAM:RAM1|                    ; 297 (297)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Aula7|memoriaRAM:RAM1                               ; memoriaRAM          ; work         ;
+;    |memoriaROM:ROM1|                    ; 121 (121)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Aula7|memoriaROM:ROM1                               ; memoriaROM          ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                               ;
-+----------------------------------------------------+---------------------------------------------+
-; Register name                                      ; Reason for Removal                          ;
-+----------------------------------------------------+---------------------------------------------+
-; CPU:CPU|registradorGenerico:REG_END_RET|DOUT[0]    ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|FlipFlop:FlipFlopIgual|DOUT                ; Stuck at GND due to stuck port clock_enable ;
-; CPU:CPU|registradorGenerico:REG_END_RET|DOUT[1..8] ; Stuck at GND due to stuck port clock_enable ;
-; Leds:LEDS|registradorGenerico:REG1|DOUT[0..7]      ; Stuck at GND due to stuck port clock_enable ;
-; Leds:LEDS|FlipFlop:FLIPFLOP2|DOUT                  ; Stuck at GND due to stuck port clock_enable ;
-; Leds:LEDS|FlipFlop:FLIPFLOP1|DOUT                  ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~79                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~80                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~81                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~82                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~83                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~84                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~85                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~86                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~87                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~88                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~89                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~90                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~91                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~92                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~93                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~94                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~95                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~96                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~97                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~98                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~99                             ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~100                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~101                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~102                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~103                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~104                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~105                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~106                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~107                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~108                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~109                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~110                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~111                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~112                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~113                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~114                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~115                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~116                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~117                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~118                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~119                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~120                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~121                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~122                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~123                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~124                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~125                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~126                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~127                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~128                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~129                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~130                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~131                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~132                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~133                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~134                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~135                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~136                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~137                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~138                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~139                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~140                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~141                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~142                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~143                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~144                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~145                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~146                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~147                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~148                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~149                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~150                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~151                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~152                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~153                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~154                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~155                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~156                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~157                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~158                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~159                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~160                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~161                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~162                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~163                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~164                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~165                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~166                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~167                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~168                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~169                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~170                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~171                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~172                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~173                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~174                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~175                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~176                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~177                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~178                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~179                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~180                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~181                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~182                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~183                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~184                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~185                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~186                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~187                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~188                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~189                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~190                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~191                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~192                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~193                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~194                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~195                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~196                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~197                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~198                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~199                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~200                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~201                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~202                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~203                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~204                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~205                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~206                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~207                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~208                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~209                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~210                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~211                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~212                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~213                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~214                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~215                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~216                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~217                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~218                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~219                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~220                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~221                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~222                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~223                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~224                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~225                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~226                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~227                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~228                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~229                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~230                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~231                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~232                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~233                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~234                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~235                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~236                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~237                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~238                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~239                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~240                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~241                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~242                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~243                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~244                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~245                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~246                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~247                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~248                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~249                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~250                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~251                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~252                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~253                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~254                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~255                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~256                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~257                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~258                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~259                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~260                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~261                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~262                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~263                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~264                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~265                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~266                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~267                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~268                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~269                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~270                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~335                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~336                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~337                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~338                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~339                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~340                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~341                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~342                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~343                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~344                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~345                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~346                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~347                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~348                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~349                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~350                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~351                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~352                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~353                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~354                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~355                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~356                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~357                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~358                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~359                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~360                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~361                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~362                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~363                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~364                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~365                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~366                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~367                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~368                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~369                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~370                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~371                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~372                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~373                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~374                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~375                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~376                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~377                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~378                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~379                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~380                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~381                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~382                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~383                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~384                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~385                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~386                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~387                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~388                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~389                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~390                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~391                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~392                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~393                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~394                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~395                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~396                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~397                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~398                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~399                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~400                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~401                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~402                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~403                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~404                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~405                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~406                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~407                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~408                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~409                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~410                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~411                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~412                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~413                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~414                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~415                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~416                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~417                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~418                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~419                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~420                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~421                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~422                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~423                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~424                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~425                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~426                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~427                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~428                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~429                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~430                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~431                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~432                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~433                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~434                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~435                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~436                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~437                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~438                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~439                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~440                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~441                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~442                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~443                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~444                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~445                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~446                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~447                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~448                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~449                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~450                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~451                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~452                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~453                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~454                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~455                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~456                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~457                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~458                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~459                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~460                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~461                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~462                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~463                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~464                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~465                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~466                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~467                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~468                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~469                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~470                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~471                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~472                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~473                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~474                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~475                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~476                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~477                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~478                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~479                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~480                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~481                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~482                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~483                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~484                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~485                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~486                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~487                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~488                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~489                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~490                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~491                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~492                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~493                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~494                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~495                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~496                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~497                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~498                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~499                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~500                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~501                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~502                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~503                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~504                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~505                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~506                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~507                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~508                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~509                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~510                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~511                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~512                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~513                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~514                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~515                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~516                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~517                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~518                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~519                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~520                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~521                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~522                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~523                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~524                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~525                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~526                            ; Lost fanout                                 ;
-; memoriaRAM:RAM1|ram~271                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~303                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~279                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~311                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~287                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~319                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~295                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~327                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~272                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~280                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~288                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~296                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~304                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~312                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~320                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~328                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~273                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~305                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~281                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~313                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~289                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~321                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~297                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~329                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~274                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~282                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~290                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~298                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~306                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~314                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~322                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~330                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~275                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~307                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~283                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~315                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~291                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~323                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~299                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~331                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~276                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~284                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~292                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~300                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~308                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~316                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~324                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~332                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~277                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~309                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~285                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~317                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~293                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~325                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~301                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~333                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~278                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~286                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~294                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~302                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~310                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~318                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~326                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~334                            ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~47                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~23                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~55                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~31                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~63                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~39                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~71                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~24                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~32                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~40                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~48                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~56                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~64                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~72                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~49                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~25                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~57                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~33                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~65                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~41                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~73                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~26                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~34                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~42                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~50                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~58                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~66                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~74                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~51                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~27                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~59                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~35                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~67                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~43                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~75                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~28                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~36                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~44                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~52                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~60                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~68                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~76                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~53                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~29                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~61                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~37                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~69                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~45                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~77                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~30                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~38                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~46                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~54                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~62                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~70                             ; Stuck at GND due to stuck port clock_enable ;
-; memoriaRAM:RAM1|ram~78                             ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 524            ;                                             ;
-+----------------------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -807,23 +324,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 49    ;
+; Total registers                              ; 581   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 17    ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 40    ;
+; Number of registers using Clock Enable       ; 561   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Aula7|CPU:CPU|registradorGenerico:REGA|DOUT[6] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Aula7|CPU:CPU|registradorGenerico:PC|DOUT[0]          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Aula7|CPU:CPU|registradorGenerico:REGA|DOUT[2]        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Aula7|CPU:CPU|decoderInstru:DECODER|saida_controle[6] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -834,7 +353,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dataWidth      ; 8     ; Signed Integer                               ;
 ; addrWidth      ; 9     ; Signed Integer                               ;
 ; instrWidth     ; 13    ; Signed Integer                               ;
-; simulacao      ; true  ; Enumerated                                   ;
+; simulacao      ; false ; Enumerated                                   ;
 +----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1014,13 +533,107 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS"                                                                 ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; saida_dados ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_RESET" ;
++---------------+-------+----------+-------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                               ;
++---------------+-------+----------+-------------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                          ;
++---------------+-------+----------+-------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K3" ;
++---------------+-------+----------+----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                            ;
++---------------+-------+----------+----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                       ;
++---------------+-------+----------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K2" ;
++---------------+-------+----------+----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                            ;
++---------------+-------+----------+----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                       ;
++---------------+-------+----------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K1" ;
++---------------+-------+----------+----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                            ;
++---------------+-------+----------+----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                       ;
++---------------+-------+----------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K0" ;
++---------------+-------+----------+----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                            ;
++---------------+-------+----------+----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                       ;
++---------------+-------+----------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_SW9" ;
++---------------+-------+----------+-----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                             ;
++---------------+-------+----------+-----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                        ;
++---------------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_SW8" ;
++---------------+-------+----------+-----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                             ;
++---------------+-------+----------+-----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                        ;
++---------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER3" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                  ;
+; enable ; Input ; Info     ; Stuck at VCC                                  ;
++--------+-------+----------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER2" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                  ;
+; enable ; Input ; Info     ; Stuck at VCC                                  ;
++--------+-------+----------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER1" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                  ;
+; enable ; Input ; Info     ; Stuck at VCC                                  ;
++--------+-------+----------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER0" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                  ;
+; enable ; Input ; Info     ; Stuck at VCC                                  ;
++--------+-------+----------+-----------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -1089,6 +702,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-------------------------------------------+
 
 
++----------------------------------------------------------+
+; Port Connectivity Checks: "Leds:LEDS|FlipFlop:FLIPFLOP2" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Leds:LEDS|FlipFlop:FLIPFLOP1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|FlipFlop:FlipFlopIgual" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
 +---------------------------------------------------------+
 ; Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX2" ;
 +--------------+-------+----------+-----------------------+
@@ -1112,27 +752,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 49                          ;
-;     ENA               ; 32                          ;
-;     ENA SLD           ; 8                           ;
-;     SLD               ; 9                           ;
-; arriav_lcell_comb     ; 136                         ;
+; arriav_ff             ; 581                         ;
+;     CLR               ; 4                           ;
+;     ENA               ; 561                         ;
+;     plain             ; 16                          ;
+; arriav_lcell_comb     ; 593                         ;
 ;     arith             ; 26                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         3 data inputs ; 8                           ;
-;         5 data inputs ; 8                           ;
-;     normal            ; 110                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 25                          ;
-;         4 data inputs ; 54                          ;
-;         5 data inputs ; 19                          ;
-; boundary_port         ; 114                         ;
+;         5 data inputs ; 16                          ;
+;     extend            ; 6                           ;
+;         7 data inputs ; 6                           ;
+;     normal            ; 561                         ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 83                          ;
+;         4 data inputs ; 75                          ;
+;         5 data inputs ; 23                          ;
+;         6 data inputs ; 360                         ;
+; boundary_port         ; 115                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.60                        ;
-; Average LUT depth     ; 3.48                        ;
+; Max LUT depth         ; 10.30                       ;
+; Average LUT depth     ; 6.71                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1141,7 +782,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1151,151 +792,112 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 11 09:53:07 2022
+    Info: Processing started: Sun Oct 23 20:51:08 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula7 -c Aula7
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
-    Info (12022): Found design unit 1: FlipFlop-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/FlipFlop.vhd Line: 12
-    Info (12023): Found entity 1: FlipFlop File: //Mac/Home/Desktop/DesignComp/Aula7/FlipFlop.vhd Line: 4
+    Info (12022): Found design unit 1: FlipFlop-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/FlipFlop.vhd Line: 13
+    Info (12023): Found entity 1: FlipFlop File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/FlipFlop.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ulasomasub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/ULASomaSub.vhd Line: 15
-    Info (12023): Found entity 1: ULASomaSub File: //Mac/Home/Desktop/DesignComp/Aula7/ULASomaSub.vhd Line: 5
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/ULASomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/ULASomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: //Mac/Home/Desktop/DesignComp/Aula7/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/somaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: //Mac/Home/Desktop/DesignComp/Aula7/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico4x1.vhd
-    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/muxGenerico4x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x1 File: //Mac/Home/Desktop/DesignComp/Aula7/muxGenerico4x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico4x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x1 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico4x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: //Mac/Home/Desktop/DesignComp/Aula7/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaROM.vhd Line: 16
-    Info (12023): Found entity 1: memoriaROM File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaROM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/memoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: memoriaROM File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/memoriaROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 21
-    Info (12023): Found entity 1: memoriaRAM File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/memoriaRAM.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/memoriaRAM.vhd Line: 5
 Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: //Mac/Home/Desktop/DesignComp/Aula7/edgeDetector.vhd Line: 10
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: //Mac/Home/Desktop/DesignComp/Aula7/edgeDetector.vhd Line: 23
-    Info (12023): Found entity 1: edgeDetector File: //Mac/Home/Desktop/DesignComp/Aula7/edgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/edgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoderinstru.vhd
-    Info (12022): Found design unit 1: decoderInstru-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/decoderInstru.vhd Line: 12
-    Info (12023): Found entity 1: decoderInstru File: //Mac/Home/Desktop/DesignComp/Aula7/decoderInstru.vhd Line: 4
+    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/decoderInstru.vhd Line: 12
+    Info (12023): Found entity 1: decoderInstru File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/decoderInstru.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file aula7.vhd
-    Info (12022): Found design unit 1: Aula7-arquitetura File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 29
-    Info (12023): Found entity 1: Aula7 File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 4
+    Info (12022): Found design unit 1: Aula7-arquitetura File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd Line: 29
+    Info (12023): Found entity 1: Aula7 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
-    Info (12022): Found design unit 1: CPU-arquitetura File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 25
-    Info (12023): Found entity 1: CPU File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 4
+    Info (12022): Found design unit 1: CPU-arquitetura File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 25
+    Info (12023): Found entity 1: CPU File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoder3x8.vhd
-    Info (12022): Found design unit 1: decoder3x8-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/decoder3x8.vhd Line: 10
-    Info (12023): Found entity 1: decoder3x8 File: //Mac/Home/Desktop/DesignComp/Aula7/decoder3x8.vhd Line: 4
+    Info (12022): Found design unit 1: decoder3x8-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/decoder3x8.vhd Line: 10
+    Info (12023): Found entity 1: decoder3x8 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/decoder3x8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file leds.vhd
-    Info (12022): Found design unit 1: Leds-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/Leds.vhd Line: 18
-    Info (12023): Found entity 1: Leds File: //Mac/Home/Desktop/DesignComp/Aula7/Leds.vhd Line: 4
+    Info (12022): Found design unit 1: Leds-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Leds.vhd Line: 18
+    Info (12023): Found entity 1: Leds File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Leds.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: //Mac/Home/Desktop/DesignComp/Aula7/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file sevenseg.vhd
-    Info (12022): Found design unit 1: SevenSeg-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/SevenSeg.vhd Line: 17
-    Info (12023): Found entity 1: SevenSeg File: //Mac/Home/Desktop/DesignComp/Aula7/SevenSeg.vhd Line: 4
+    Info (12022): Found design unit 1: SevenSeg-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/SevenSeg.vhd Line: 17
+    Info (12023): Found entity 1: SevenSeg File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/SevenSeg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keys_buttons.vhd
-    Info (12022): Found design unit 1: Keys_Buttons-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/Keys_Buttons.vhd Line: 18
-    Info (12023): Found entity 1: Keys_Buttons File: //Mac/Home/Desktop/DesignComp/Aula7/Keys_Buttons.vhd Line: 4
+    Info (12022): Found design unit 1: Keys_Buttons-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Keys_Buttons.vhd Line: 21
+    Info (12023): Found entity 1: Keys_Buttons File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Keys_Buttons.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3_state_8portas.vhd
-    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/buffer_3_state_8portas.vhd Line: 11
-    Info (12023): Found entity 1: buffer_3_state_8portas File: //Mac/Home/Desktop/DesignComp/Aula7/buffer_3_state_8portas.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/buffer_3_state_8portas.vhd Line: 11
+    Info (12023): Found entity 1: buffer_3_state_8portas File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/buffer_3_state_8portas.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3_state_1porta.vhd
-    Info (12022): Found design unit 1: buffer_3_state_1porta-comportamento File: //Mac/Home/Desktop/DesignComp/Aula7/buffer_3_state_1porta.vhd Line: 12
-    Info (12023): Found entity 1: buffer_3_state_1porta File: //Mac/Home/Desktop/DesignComp/Aula7/buffer_3_state_1porta.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3_state_1porta-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/buffer_3_state_1porta.vhd Line: 12
+    Info (12023): Found entity 1: buffer_3_state_1porta File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/buffer_3_state_1porta.vhd Line: 4
 Info (12127): Elaborating entity "Aula7" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Aula7.vhd(42): object "Leitura_Dados" assigned a value but never read File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 42
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(35): object "Habilita_Leitura" assigned a value but never read File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 35
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(36): object "Habilita_Escrita" assigned a value but never read File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 36
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 54
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REGA" File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 61
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:PC" File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 65
-Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaPC" File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 68
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 72
-Info (12128): Elaborating entity "decoderInstru" for hierarchy "CPU:CPU|decoderInstru:DECODER" File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 76
-Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "CPU:CPU|muxGenerico4x1:MUX2" File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 80
-Info (12128): Elaborating entity "FlipFlop" for hierarchy "CPU:CPU|FlipFlop:FlipFlopIgual" File: //Mac/Home/Desktop/DesignComp/Aula7/CPU.vhd Line: 89
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 69
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM1" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 73
-Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:DECODER1" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 84
-Info (12128): Elaborating entity "Leds" for hierarchy "Leds:LEDS" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 96
-Info (12128): Elaborating entity "SevenSeg" for hierarchy "SevenSeg:SEVENSEG" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 109
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "SevenSeg:SEVENSEG|registradorGenerico:REG0" File: //Mac/Home/Desktop/DesignComp/Aula7/SevenSeg.vhd Line: 24
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0" File: //Mac/Home/Desktop/DesignComp/Aula7/SevenSeg.vhd Line: 42
-Info (12128): Elaborating entity "Keys_Buttons" for hierarchy "Keys_Buttons:KEYS_BUTTONS" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 125
-Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_8" File: //Mac/Home/Desktop/DesignComp/Aula7/Keys_Buttons.vhd Line: 24
-Info (12128): Elaborating entity "buffer_3_state_1porta" for hierarchy "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_1porta:Tri_1_SW8" File: //Mac/Home/Desktop/DesignComp/Aula7/Keys_Buttons.vhd Line: 31
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd Line: 54
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd Line: 81
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(46): object "Habilita_Leitura" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 46
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(47): object "Habilita_Escrita" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 47
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 54
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:REGA" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 61
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:PC" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 65
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaPC" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 68
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 72
+Info (12128): Elaborating entity "decoderInstru" for hierarchy "CPU:CPU|decoderInstru:DECODER" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 76
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "CPU:CPU|muxGenerico4x1:MUX2" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 80
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "CPU:CPU|FlipFlop:FlipFlopIgual" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/CPU.vhd Line: 89
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd Line: 94
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd Line: 100
+Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:DECODER1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd Line: 111
+Info (12128): Elaborating entity "Leds" for hierarchy "Leds:LEDS" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd Line: 121
+Info (12128): Elaborating entity "SevenSeg" for hierarchy "SevenSeg:SEVENSEG" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd Line: 134
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "SevenSeg:SEVENSEG|registradorGenerico:REG0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/SevenSeg.vhd Line: 24
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/SevenSeg.vhd Line: 42
+Info (12128): Elaborating entity "Keys_Buttons" for hierarchy "Keys_Buttons:KEYS_BUTTONS" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Aula7.vhd Line: 150
+Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_8" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/Keys_Buttons.vhd Line: 103
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "memoriaRAM:RAM1|ram" is uninferred due to asynchronous read logic File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 27
+    Info (276007): RAM logic "memoriaRAM:RAM1|ram" is uninferred due to asynchronous read logic File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/memoriaRAM.vhd Line: 27
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[0]" feeding internal logic into a wire File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[1]" feeding internal logic into a wire File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[2]" feeding internal logic into a wire File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[3]" feeding internal logic into a wire File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[4]" feeding internal logic into a wire File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[5]" feeding internal logic into a wire File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[6]" feeding internal logic into a wire File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 17
-    Warning (13049): Converted tri-state buffer "memoriaRAM:RAM1|dado_out[7]" feeding internal logic into a wire File: //Mac/Home/Desktop/DesignComp/Aula7/memoriaRAM.vhd Line: 17
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 15
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 15
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 15
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 15
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 15
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 15
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 15
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 15
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 15
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 15
-    Warning (13410): Pin "Decoder_Instru[2]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 20
-    Warning (13410): Pin "Decoder_Instru[8]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 20
-    Warning (13410): Pin "Decoder_Instru[9]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 20
-    Warning (13410): Pin "Decoder_Instru[11]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 20
-    Warning (13410): Pin "Decoder_1[1]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 21
-    Warning (13410): Pin "Decoder_1[2]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 21
-    Warning (13410): Pin "Decoder_1[3]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 21
-    Warning (13410): Pin "Decoder_1[5]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 21
-    Warning (13410): Pin "Decoder_1[6]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 21
-    Warning (13410): Pin "Decoder_1[7]" is stuck at GND File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 21
+    Warning (13048): Converted tri-state node "Data_Rd[7]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[6]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[5]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[4]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[3]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[2]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[1]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[0]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Aula7/muxGenerico2x1.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 384 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 15 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 13
-    Warning (15610): No output dependent on input pin "SW[0]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 17
-    Warning (15610): No output dependent on input pin "SW[1]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 17
-    Warning (15610): No output dependent on input pin "SW[2]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 17
-    Warning (15610): No output dependent on input pin "SW[3]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 17
-    Warning (15610): No output dependent on input pin "SW[4]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 17
-    Warning (15610): No output dependent on input pin "SW[5]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 17
-    Warning (15610): No output dependent on input pin "SW[6]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 17
-    Warning (15610): No output dependent on input pin "SW[7]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 17
-    Warning (15610): No output dependent on input pin "SW[8]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 17
-    Warning (15610): No output dependent on input pin "SW[9]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 17
-    Warning (15610): No output dependent on input pin "KEY[1]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 18
-    Warning (15610): No output dependent on input pin "KEY[2]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 18
-    Warning (15610): No output dependent on input pin "KEY[3]" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 18
-    Warning (15610): No output dependent on input pin "FPGA_RESET" File: //Mac/Home/Desktop/DesignComp/Aula7/Aula7.vhd Line: 19
-Info (21057): Implemented 275 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1259 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 98 output pins
-    Info (21061): Implemented 161 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 9146 megabytes
-    Info: Processing ended: Tue Oct 11 09:53:28 2022
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:40
+    Info (21059): Implemented 99 output pins
+    Info (21061): Implemented 1144 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4916 megabytes
+    Info: Processing ended: Sun Oct 23 20:51:16 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
 
 

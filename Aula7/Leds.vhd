@@ -20,11 +20,11 @@ architecture comportamento of Leds is
   
 -- O port map completo do FLIPFLOP1:
 FLIPFLOP1 : entity work.FlipFlop
-          port map (DIN => Data(0), DOUT => LED9, ENABLE => Wr AND Decoder1_IN AND Decoder2_IN(2) AND NOT(A5), CLK => CLK);
+          port map (DIN => Data(0), DOUT => LED9, ENABLE => Wr AND Decoder1_IN AND Decoder2_IN(2) AND NOT(A5), CLK => CLK, RST => '0');
 			 
 -- O port map completo do FLIPFLOP1:
 FLIPFLOP2 : entity work.FlipFlop
-          port map (DIN => Data(0), DOUT => LED8, ENABLE => Wr AND Decoder1_IN AND Decoder2_IN(1) AND NOT(A5), CLK => CLK);
+          port map (DIN => Data(0), DOUT => LED8, ENABLE => Wr AND Decoder1_IN AND Decoder2_IN(1) AND NOT(A5), CLK => CLK, RST => '0');
 			 
 -- O port map completo do REG1:
 REG1 : entity work.registradorGenerico

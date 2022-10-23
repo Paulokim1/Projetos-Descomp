@@ -15,6 +15,7 @@ mne =	{
        "CEQ":   "1000",
        "JSR":   "1001",
        "RET":   "1010",
+       "ANDI": "1011",
 }
 
 # Dicionário responsavel em armazenar as posicoes de memoria de cada label
@@ -72,9 +73,27 @@ def trataMnemonico(line):
     line = line.replace("\n", "") #Remove o caracter de final de linha
     line = line.replace("\t", "") #Remove o caracter de tabulacao
     line = line.split(' ')
-    line[0] = mne[line[0]]
+    # line[0] = mne[line[0]]
     line = "".join(line)
     return line
+
+def split_opcode(inst):
+
+    if ("@" in inst):
+        splitted_inst = inst.split("@")
+        opcode = splitted_inst[0]
+        value = "@" + splitted_inst[1]
+        return opcode, value
+
+    elif ("$" in inst):
+        splitted_inst = inst.split("$")
+        opcode = splitted_inst[0]
+        value = "$" + splitted_inst[1]
+        return opcode, value
+
+    else:
+        return inst, ""
+
 
 
 ########################################              PROGRAMA PRINCIPAL              ########################################
@@ -100,7 +119,7 @@ with open(destinoBIN, "w") as f:  #Abre o destino BIN
                 cont -= 1
         cont += 1
     
-    print(f"<<<As labels são: {labels}>>>")
+    # print(f"<<<As labels são: {labels}>>>")
             
 
     #Agora, vamos identificar as instrucoes e comentarios
@@ -110,7 +129,7 @@ with open(destinoBIN, "w") as f:  #Abre o destino BIN
         #Verifica se a linha começa com alguns caracteres invalidos ('\n' ou ' ' ou '#')
         if (line.startswith('\n') or line.startswith(' ') or line.startswith('#')):
             line = line.replace("\n", "")
-            print("-- Sintaxe invalida" + ' na Linha: ' + ' --> (' + line + ')') #Print apenas para debug
+            # print("-- Sintaxe invalida" + ' na Linha: ' + ' --> (' + line + ')') #Print apenas para debug
         
         #Label não é nem instrução ou comentário, logo, não precisamos extrair nada deste line
         elif ":" in line:
@@ -124,17 +143,18 @@ with open(destinoBIN, "w") as f:  #Abre o destino BIN
             
             instrucaoLine = trataMnemonico(instrucaoLine) #Trata o mnemonico. Ex(JSR @14): x"9" @14
 
-            if '@' in instrucaoLine: #Se encontrar o caractere arroba '@' 
-                instrucaoLine = converteArroba(instrucaoLine) #converte o número após o caractere Ex(JSR @14): x"9" x"0E"
+            opcode, value = split_opcode(instrucaoLine)
+
+            if '@' in value: #Se encontrar o caractere arroba '@' 
+                convertedValue = converteArroba(value) #converte o número após o caractere Ex(JSR @14): x"9" x"0E"
                     
-            elif '$' in instrucaoLine: #Se encontrar o caractere cifrao '$' 
-                instrucaoLine = converteCifrao(instrucaoLine) #converte o número após o caractere Ex(LDI $5): x"4" x"05"
+            elif '$' in value: #Se encontrar o caractere cifrao '$' 
+                convertedValue = converteCifrao(value) #converte o número após o caractere Ex(LDI $5): x"4" x"05"
                 
-            else: #Senão, se a instrução nao possuir nenhum imediator, ou seja, nao conter '@' ou '$'
-                instrucaoLine = instrucaoLine.replace("\n", "") #Remove a quebra de linha
-                instrucaoLine = instrucaoLine + '000' #Acrescenta o valor x"00". Ex(RET): x"A" x"00"           
+            else: #Senão, se a instrução nao possuir nenhum imediato, ou seja, nao conter '@' ou '$'
+                convertedValue = "000"    
             
-            lineNoComment = 'tmp(' + str(cont) + ') := "' + instrucaoLine[:4] + '"' + " & '" + instrucaoLine[4] + "' & x" + '"' + instrucaoLine[5:] + '";'  #Formata para o arquivo BIN
+            lineNoComment = 'tmp(' + str(cont) + ') := ' + opcode + " & '" + convertedValue[0] + "' & x" + '"' + convertedValue[1:] + '";'  #Formata para o arquivo BIN
             line = lineNoComment + (35 - len(lineNoComment))*" " + '\t-- ' + comentarioLine + '\n'
                                                                                                        #Entrada => 1. JSR @14 #comentario1
                                                                                                        #Saída =>   1. tmp(0) := x"90E";	-- JSR @14 	#comentario1

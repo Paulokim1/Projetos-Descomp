@@ -1,5 +1,5 @@
 Restore Archived Project report for Aula7
-Mon Oct 10 22:45:53 2022
+Wed Oct 19 19:00:16 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Mon Oct 10 22:45:53 2022 ;
+; Restore Archived Project Status ; Successful - Wed Oct 19 19:00:16 2022 ;
 ; Revision Name                   ; Aula7                                 ;
 ; Top-level Entity Name           ; Aula7                                 ;
 ; Family                          ; Cyclone V                             ;
@@ -47,49 +47,52 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored '//Mac/Home/Desktop/DesignComp/Aula7.qar' into the '//Mac/Home/Desktop/DesignComp/Aula7/' directory
+Info: Successfully restored 'C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/DesignComp/Projetos-Descomp/Aula7/Aula7.qar' into the 'C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/DesignComp/Projetos-Descomp/Aula7/Aula7_restored/' directory
 Info: Generated report 'Aula7.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
-Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 9099 megabytes
-    Info: Processing ended: Mon Oct 10 22:45:53 2022
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+Info: Quartus Prime Shell was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Wed Oct 19 19:00:16 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
 
 
-+-------------------------+
-; Files Restored          ;
-+-------------------------+
-; File Name               ;
-+-------------------------+
-; qar_info.json           ;
-; Aula7.qpf               ;
-; Aula7.qsf               ;
-; Aula7.vhd               ;
-; CPU.vhd                 ;
-; FlipFlop.vhd            ;
-; Leds.vhd                ;
-; SevenSeg.vhd            ;
-; ULASomaSub.vhd          ;
-; Waveform.vwf            ;
-; conversorHex7Seg.vhd    ;
-; decoder3x8.vhd          ;
-; decoderInstru.vhd       ;
-; edgeDetector.vhd        ;
-; memoriaRAM.vhd          ;
-; memoriaROM.vhd          ;
-; muxGenerico2x1.vhd      ;
-; muxGenerico4x1.vhd      ;
-; registradorGenerico.vhd ;
-; somaConstante.vhd       ;
-; assignment_defaults.qdf ;
-+-------------------------+
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
 
 
-+--------------------+
-; Files Not Restored ;
-+--------------------+
-; File Name          ;
-+--------------------+
++----------------------------+
+; Files Not Restored         ;
++----------------------------+
+; File Name                  ;
++----------------------------+
+; qar_info.json              ;
+; Aula7.qpf                  ;
+; Aula7.qsf                  ;
+; Aula7.vhd                  ;
+; CPU.vhd                    ;
+; FlipFlop.vhd               ;
+; Keys_Buttons.vhd           ;
+; Leds.vhd                   ;
+; SevenSeg.vhd               ;
+; ULASomaSub.vhd             ;
+; Waveform.vwf               ;
+; assignment_defaults.qdf    ;
+; buffer_3_state_1porta.vhd  ;
+; buffer_3_state_8portas.vhd ;
+; conversorHex7Seg.vhd       ;
+; decoder3x8.vhd             ;
+; decoderInstru.vhd          ;
+; edgeDetector.vhd           ;
+; memoriaRAM.vhd             ;
+; memoriaROM.vhd             ;
+; muxGenerico2x1.vhd         ;
+; muxGenerico4x1.vhd         ;
+; registradorGenerico.vhd    ;
+; somaConstante.vhd          ;
++----------------------------+
 
 

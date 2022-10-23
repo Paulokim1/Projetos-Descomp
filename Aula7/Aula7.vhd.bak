@@ -11,10 +11,12 @@ entity Aula7 is
   );
   port   (
     CLOCK_50 : in std_logic;
-    KEY: in std_logic_vector(3 downto 0);
     PC_OUT: out std_logic_vector(addrWidth-1 downto 0);
     LEDR  : out std_logic_vector(9 downto 0);
 	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
+	 SW : in std_logic_vector(9 downto 0);
+	 KEY : in std_logic_vector(3 downto 0);
+	 FPGA_RESET : in std_logic;
 	 Decoder_Instru : out std_logic_vector(11 downto 0);
 	 Decoder_1 : out std_logic_vector(dataWidth-1 downto 0);
 	 Decoder_2 : out std_logic_vector(dataWidth-1 downto 0);
@@ -37,6 +39,7 @@ architecture arquitetura of Aula7 is
   signal Data_Wr : std_logic_vector (dataWidth-1 downto 0);
   signal Data_Rd : std_logic_vector (dataWidth-1 downto 0);
   signal Decoder_OUT : std_logic_vector (11 downto 0);
+  signal Leitura_Dados : std_logic_vector (7 downto 0);
 begin
 
 -- Instanciando os componentes:
@@ -76,6 +79,11 @@ LEDS : entity work.Leds
 -- O port map completo do SEVENSEG:
 SEVENSEG: entity work.SevenSeg
 		    port map (Wr => Wr, Data_IN => Data_Wr(3 downto 0), A5 => Data_Address(5), Decoder1_IN => Saida_Decoder1(4), Decoder2_IN => Saida_Decoder2(5 downto 0), HEX0 => HEX0, HEX1 => HEX1, HEX2 => HEX2, HEX3 => HEX3, HEX4 => HEX4, HEX5 => HEX5, CLK => CLK);
+			 
+-- O port map completo do KEYS_BUTTONS:
+KEYS_BUTTONS: entity work.Keys_Buttons
+			 port map (KEY => KEY, SW => SW, FPGA_RESET => FPGA_RESET, Rd => Rd, A5 => Data_Address(5), Decoder1_IN => Saida_Decoder1(5), Decoder2_IN => Saida_Decoder2(4 downto 0), Saida_Dados => Leitura_Dados);
+			 
 
 PC_OUT <= ROM_Address;			 
 Decoder_Instru <= Decoder_OUT;
@@ -83,5 +91,6 @@ Decoder_1 <= Saida_Decoder1;
 Decoder_2 <= Saida_Decoder2;
 Wr_debug <= Wr;
 Data_debug <= Data_wr;
+
 
 end architecture;

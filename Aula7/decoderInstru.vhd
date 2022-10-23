@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity decoderInstru is
   port ( opcode : in std_logic_vector(3 downto 0);
 			flag_igual : in std_logic;
-         saida_controle : out std_logic_vector(11 downto 0);
+         saida_controle : out std_logic_vector(12 downto 0);
 			seletor_mux_pc : out std_logic_vector(1 downto 0)
   );
 end entity;
@@ -22,20 +22,22 @@ architecture comportamento of decoderInstru is
   constant CEQ : std_logic_vector(3 downto 0) := "1000";
   constant JSR : std_logic_vector(3 downto 0) := "1001";
   constant RET : std_logic_vector(3 downto 0) := "1010";
+  constant ANDI  : std_logic_vector(3 downto 0) := "1011";
 
   begin
-saida_controle <= "000000000000" when opcode = NOP else
-                  "000000110010" when opcode = LDA else
-                  "000000101010" when opcode = SOMA else
-                  "000000100010" when opcode = SUB else
-                  "000001110000" when opcode = LDI else
-			         "000000000001" when opcode = STA else
-			         "010000000000" when opcode = JMP else
-			         "000010000000" when opcode = JEQ else
-			         "000000000110" when opcode = CEQ else
-						"100100000000" when opcode = JSR else
-						"001000000000" when opcode = RET else
-                  "000000000000";  -- NOP para os opcodes Indefinidos
+saida_controle <= "0000000000000" when opcode = NOP else
+                  "0000001010010" when opcode = LDA else
+                  "0000001001010" when opcode = SOMA else
+                  "0000001000010" when opcode = SUB else
+						"0000011100010" when opcode = ANDI else
+                  "0000011010000" when opcode = LDI else
+			         "0000000000001" when opcode = STA else
+			         "0100000000000" when opcode = JMP else
+			         "0000100000000" when opcode = JEQ else
+			         "0000000000110" when opcode = CEQ else
+						"1001000000000" when opcode = JSR else
+						"0010000000000" when opcode = RET else
+                  "0000000000000";  -- NOP para os opcodes Indefinidos
 						
 seletor_mux_pc <= "10" when (opcode = RET) else
 						"01" when (opcode = JMP) or ((opcode = JEQ) and (flag_igual = '1')) or (opcode = JSR) else
