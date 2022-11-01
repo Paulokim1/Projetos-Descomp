@@ -1,0 +1,589 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PC_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[16]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[17]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[18]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[19]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[20]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[21]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[22]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[23]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[24]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[25]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[26]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[27]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[28]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[16]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[17]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[19]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[21]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[23]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OUT_Sim[31]",
+					"strict" : false
+				},
+				{
+					"name" : "endRegS_Sim[0]",
+					"strict" : false
+				},
+				{
+					"name" : "endRegS_Sim[2]",
+					"strict" : false
+				},
+				{
+					"name" : "endRegS_Sim[3]",
+					"strict" : false
+				},
+				{
+					"name" : "endRegT_Sim[0]",
+					"strict" : false
+				},
+				{
+					"name" : "endRegT_Sim[1]",
+					"strict" : false
+				},
+				{
+					"name" : "endRegT_Sim[3]",
+					"strict" : false
+				},
+				{
+					"name" : "endRegD_Sim[3]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[1]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[2]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[3]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[4]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[5]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[6]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[7]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[8]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[9]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[10]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[11]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[12]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[13]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[14]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[15]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[16]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[17]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[18]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[19]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[20]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[21]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[22]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[23]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[24]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[25]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[26]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[27]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[28]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[29]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[30]",
+					"strict" : false
+				},
+				{
+					"name" : "regS_OUT_Sim[31]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[1]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[2]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[3]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[4]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[5]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[6]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[7]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[8]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[9]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[10]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[11]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[12]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[13]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[14]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[15]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[16]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[17]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[18]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[19]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[20]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[21]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[22]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[23]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[24]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[25]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[26]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[27]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[28]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[29]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[30]",
+					"strict" : false
+				},
+				{
+					"name" : "regT_OUT_Sim[31]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "ULA_OP",
+					"strict" : false
+				},
+				{
+					"name" : "Habilita_WR",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
