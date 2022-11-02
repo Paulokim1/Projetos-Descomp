@@ -1,0 +1,2 @@
+STA R1 @510 #RESET no KEY1
+NOP

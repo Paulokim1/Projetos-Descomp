@@ -1,0 +1,2 @@
+tmp(0) := STA & R1 & '1' & x"FE";  	-- STA R1 @510 	#RESET no KEY1
+tmp(1) := NOP & R0 & '0' & x"00";  	-- NOP
