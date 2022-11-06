@@ -1,0 +1,514 @@
+########## SETUP INICIAL #########
+BEGIN:
+NOP #BEGIN
+LDI $0 #Carrega o acumulador com o valor 0
+STA @511 #RESET no KEY0
+STA @510 #RESET no KEY1
+STA @256 #Armazena o valor do bit0 do acumulador no LDR0 ~ LEDR7
+STA @257 #Armazena o valor do bit0 do acumulador no LDR8
+STA @258 #Armazena o valor do bit0 do acumulador no LDR9
+STA @288 #Armazena o valor do acumulador em HEX0
+STA @289 #Armazena o valor do acumulador em HEX1
+STA @290 #Armazena o valor do acumulador em HEX2
+STA @291 #Armazena o valor do acumulador em HEX3
+STA @292 #Armazena o valor do acumulador em HEX4
+STA @293 #Armazena o valor do acumulador em HEX5
+STA @0 #Armazena o valor do acumulador em MEM[0] UNIDADES
+STA @1 #Armazena o valor do acumulador em MEM[1] DEZENAS
+STA @2 #Armazena o valor do acumulador em MEM[2] CENTENAS
+STA @3 #Armazena o valor do acumulador em MEM[3] MILHAR
+STA @4 #Armazena o valor do acumulador em MEM[4] DEZENA DE MILHAR
+STA @5 #Armazena o valor do acumulador em MEM[5] CENTENA DE MILHAR
+LDI $9 #Carrega no acumulador o valor 9
+STA @10 #Armazena o valor do acumulador em MEM[10] (LIMITE UNIDADE)
+STA @11 #Armazena o valor do acumulador em MEM[11] (LIMITE DEZENA)
+STA @12 #Armazena o valor do acumulador em MEM[12] (LIMITE CENTENA)
+STA @13 #Armazena o valor do acumulador em MEM[13] (LIMITE MILHAR)
+STA @14 #Armazena o valor do acumulador em MEM[14] (LIMITE DEZENA DE MILHAR)
+STA @15 #Armazena o valor do acumulador em MEM[15] (LIMITE CENTENA DE MILHAR)
+LDI $0 #Carrega no acumulador o valor 0
+STA @16 #Armazena o valor do acumulador em MEM[16] (VALOR ATUAL DO LIMITE UNIDADE)
+STA @17 #Armazena o valor do acumulador em MEM[17] (VALOR ATUAL DO LIMITE DEZENA)
+STA @18 #Armazena o valor do acumulador em MEM[18] (VALOR ATUAL DO LIMITE CENTENA)
+STA @19 #Armazena o valor do acumulador em MEM[19] (VALOR ATUAL DO LIMITE MILHAR)
+STA @20 #Armazena o valor do acumulador em MEM[20] (VALOR ATUAL DO LIMITE DEZENA DE MILHAR)
+STA @21 #Armazena o valor do acumulador em MEM[21] (VALOR ATUAL DO LIMITE CENTENA DE MILHAR)
+LDI $0 #Carrega o valor 0 para fazer comparações
+STA @6 #Armazena o valor do acumulador em MEM[6]
+LDI $1 #Carrega o valor 1 para fazer incrementos
+STA @7 #Armazena o valor do acumulador em MEM[7]
+LDI $10 #Carrega o valor 10 para fazer comparações de limite
+STA @8 #Armazena o valor do acumulador em MEM[8]
+LDI $128 #Carrega o valor 10 para fazer comparações de limite máximo
+STA @9 #Armazena o valor do acumulador em MEM[9]
+LDI $0 #Carrega o valor 0 para FLAG INIBIR
+STA @50 #Flag de inibir a contagem
+
+
+
+# <<<<<<<<<<<<<<<< LOOP-PRINCIPAL >>>>>>>>>>>>>>>> #
+
+MAIN_LOOP:
+NOP #LOOP PRINCIPAL
+
+LDI $0 #Carrega o acumulador com o valor 0
+STA @256 #Limpa os LEDS0~7
+
+JSR @ATUALIZA_TELA #Responsável em atualizar a tela
+
+# Checa evento do KEY0
+LDA @352 #Carrega o acumulador com a leitura do botão KEY0
+CEQ @7 #Compara o valor de KEY0 com o valor 1
+JEQ @GOTO_DEF_LIMITE #Jump para a linha onde realizara o JSR da definição de limite
+
+#Checa evento do KEY1
+LDA @353 #Carrega o acumulador com a leitura do botão KEY1
+CEQ @7 #Compara o valor de KEY1 com o valor 1
+JEQ @GOTO_INCREMENTA #Jump para a linha onde realizara o JSR de incremento
+
+#Checa evento do FPGA_RESET
+LDA @356 #Carrega o acumulador com a leitura do botão FPGA_RESET
+CEQ @7 #Compara o valor de KEY1 com o valor 1
+JEQ @GOTO_RESET_CONTAGEM #Jump para a linha onde realizara o JSR de reset
+
+#Checa limite
+LDA @50 #Carrega o valor da flag de inibir a contagem no acumulador
+CEQ @6 #Checa se a flag de inibir contagem nao esta setada
+JEQ @GOTO_CHECA_LIMITE #Vai para a subrotina de checagem de limite
+
+JMP @MAIN_LOOP #Volta para o MAIN_LOOP e espera o usuário realizar um evento
+
+GOTO_DEF_LIMITE:
+NOP #GOTO_DEF_LIMITE
+JSR @DEF_LIMITE 
+JMP @MAIN_LOOP 
+
+GOTO_INCREMENTA:    
+NOP #GOTO_INCREMENTA
+JSR @INCREMENTA
+JMP @MAIN_LOOP
+
+GOTO_RESET_CONTAGEM:    
+NOP #GOTO_RESET_CONTAGEM
+JMP @BEGIN
+
+GOTO_CHECA_LIMITE:
+NOP #GOTO_CHECA_LIMITE
+JSR @CHECA_LIMITE #Jump na subrotina de checagem de limite
+JMP @MAIN_LOOP
+
+
+# <<<<<<<<<<<<<<<< SUB-ROTINAS >>>>>>>>>>>>>>>> #
+
+# <<< SUB-ROTINA DE DEFINIÇÃO DO LIMITE >>> #
+DEF_LIMITE:
+NOP # DEF_LIMITE
+
+STA @511 #RESET no KEY0
+LDI $1 #Carrega o valor 1
+
+LDA @50 #Carrega FLAG DE INIBIR CONTAGEM
+CEQ @7 @Comparar se a flag está setada
+JEQ @RETORNO_MAIN_LOOP
+
+LDI $0 #Carrega acumulador com 0
+STA @288 #Escreve no HEX0
+STA @289 #Escreve no HEX1
+STA @290 #Escreve no HEX2 
+STA @291 #Escreve no HEX3
+STA @292 #Escreve no HEX4
+STA @293 #Escreve no HEX5
+
+### UNIDADE ###
+LDI $0 #Carrega o acumulador com o valor 0
+STA @511 #RESET no KEY0
+LDI $1 #Carrega o valor 1
+STA @256 #Armazena o valor 1 no LEDR0
+JMP @BUSY_WAITING_1
+
+COLOCA_9_UNIDADE:
+NOP #COLOCA_9_UNIDADE
+LDI $9 #Carrega 9 no acumulador
+STA @288 #Escreve no HEX0
+STA @16 #Escreve no VALOR ATUAL DO LIMITE UNIDADE
+JMP @SALVA_UNIDADE
+
+BUSY_WAITING_1:
+NOP #BUSY_WAITING_1
+LDA @320 #Leitura do SW0 ~ SW7 
+STA @16 #Escreve no VALOR ATUAL DO LIMITE UNIDADE
+STA @288 #Escreve no HEX0
+LDA @352 #Ler o valor do KEY0
+CEQ @6 #Compara o acumulador com o valor 0
+JEQ @BUSY_WAITING_1 #Volta na leitura do KEY0
+
+LDI $9 #Carrega acumulador com o limite máximo
+SUB @16 #Subtrai o VALOR ATUAL DO LIMITE UNIDADE do limite máximo da unidade
+ANDI $128 #AND com 10000000 para ver se valor é negativo
+CEQ @9 #Verifica se o valor do AND deu 128
+JEQ @COLOCA_9_UNIDADE #Vai para a escrita de 9
+
+SALVA_UNIDADE:
+LDA @16 #Leitura do VALOR ATUAL DO LIMITE UNIDADE
+STA @10 #Armazena o valor do acumulador em MEM[10] (LIMITE UNIDADE)
+
+### DEZENA ###
+LDI $0 #Carrega o acumulador com o valor 0
+STA @511 #RESET no KEY0
+LDI $2 #Carrega o valor 2
+STA @256 #Armazena o valor 1 no LEDR1
+JMP @BUSY_WAITING_2
+
+COLOCA_9_DEZENA:
+NOP #COLOCA_9_DEZENA
+LDI $9 #Carrega 9 no acumulador
+STA @289 #Escreve no HEX1
+STA @17 #Escreve no VALOR ATUAL DO LIMITE DEZENA
+JMP @SALVA_DEZENA
+
+BUSY_WAITING_2:
+NOP #BUSY_WAITING_2
+LDA @320 #Leitura do SW0 ~ SW7 
+STA @17 #Escreve no VALOR ATUAL DO LIMITE DEZENA
+STA @289 #Escreve no HEX1
+LDA @352 #Ler o valor do KEY0
+CEQ @6 #Compara o acumulador com o valor 0
+JEQ @BUSY_WAITING_2 #Volta na leitura do KEY0
+
+LDI $9 #Carrega acumulador com o limite máximo
+SUB @17 #Subtrai o VALOR ATUAL DO LIMITE DEZENA do limite máximo da dezena
+ANDI $128 #AND com 10000000 para ver se valor é negativo
+CEQ @9 #Verifica se o valor do AND deu 128
+JEQ @COLOCA_9_DEZENA #Vai para a escrita de 9
+
+SALVA_DEZENA:
+LDA @17 #Leitura do VALOR ATUAL DO LIMITE DEZENA
+STA @11 #Armazena o valor do acumulador em MEM[11] (LIMITE DEZENA)
+
+### CENTENA ###
+LDI $0 #Carrega o acumulador com o valor 0
+STA @511 #RESET no KEY0
+LDI $4 #Carrega o valor 4
+STA @256 #Armazena o valor 1 no LEDR2
+JMP @BUSY_WAITING_3
+
+COLOCA_9_CENTENA:
+NOP #COLOCA_9_CENTENA
+LDI $9 #Carrega 9 no acumulador
+STA @290 #Escreve no HEX2
+STA @18 #Escreve no VALOR ATUAL DO LIMITE CENTENA
+JMP @SALVA_CENTENA
+
+BUSY_WAITING_3:
+NOP #BUSY_WAITING_3
+LDA @320 #Leitura do SW0 ~ SW7 
+STA @18 #Escreve no VALOR ATUAL DO LIMITE CENTENA
+STA @290 #Escreve no HEX2
+LDA @352 #Ler o valor do KEY0
+CEQ @6 #Compara o acumulador com o valor 0
+JEQ @BUSY_WAITING_3 #Volta na leitura do KEY0
+
+LDI $9 #Carrega acumulador com o limite máximo
+SUB @18 #Subtrai o VALOR ATUAL DO LIMITE CENTENA do limite máximo da centena
+ANDI $128 #AND com 10000000 para ver se valor é negativo
+CEQ @9 #Verifica se o valor do AND deu 128
+JEQ @COLOCA_9_CENTENA #Vai para a escrita de 9
+
+SALVA_CENTENA:
+LDA @18 #Leitura do VALOR ATUAL DO LIMITE CENTENA
+STA @12 #Armazena o valor do acumulador em MEM[12] (LIMITE CENTENA)
+
+### MILHAR ###
+LDI $0 #Carrega o acumulador com o valor 0
+STA @511 #RESET no KEY0
+LDI $8 #Carrega o valor 8
+STA @256 #Armazena o valor 1 no LEDR3
+JMP @BUSY_WAITING_4
+
+COLOCA_9_MILHAR:
+NOP #COLOCA_9_MILHAR
+LDI $9 #Carrega 9 no acumulador
+STA @291 #Escreve no HEX3
+STA @19 #Escreve no VALOR ATUAL DO LIMITE MILHAR
+JMP @SALVA_MILHAR
+
+BUSY_WAITING_4:
+NOP #BUSY_WAITING_4
+LDA @320 #Leitura do SW0 ~ SW7 
+STA @19 #Escreve no VALOR ATUAL DO LIMITE MILHAR
+STA @291 #Escreve no HEX3
+LDA @352 #Ler o valor do KEY0
+CEQ @6 #Compara o acumulador com o valor 0
+JEQ @BUSY_WAITING_4 #Volta na leitura do KEY0
+
+LDI $9 #Carrega acumulador com o limite máximo
+SUB @19 #Subtrai o VALOR ATUAL DO LIMITE MILHAR do limite máximo do milhar
+ANDI $128 #AND com 10000000 para ver se valor é negativo
+CEQ @9 #Verifica se o valor do AND deu 128
+JEQ @COLOCA_9_MILHAR #Vai para a escrita de 9
+
+SALVA_MILHAR:
+LDA @19 #Leitura do VALOR ATUAL DO LIMITE MILHAR
+STA @13 #Armazena o valor do acumulador em MEM[13] (LIMITE MILHAR)
+
+### DEZENA DE MILHAR ###
+LDI $0 #Carrega o acumulador com o valor 0
+STA @511 #RESET no KEY0
+LDI $16 #Carrega o valor 16
+STA @256 #Armazena o valor 1 no LEDR4
+JMP @BUSY_WAITING_5
+
+COLOCA_9_DEZENA_MILHAR:
+NOP #COLOCA_9_DEZENA_MILHAR
+LDI $9 #Carrega 9 no acumulador
+STA @292 #Escreve no HEX4
+STA @20 #Escreve no VALOR ATUAL DO LIMITE DEZENA MILHAR
+JMP @SALVA_DEZENA_MILHAR
+
+BUSY_WAITING_5:
+NOP #BUSY_WAITING_5
+LDA @320 #Leitura do SW0 ~ SW7 
+STA @20 #Escreve no VALOR ATUAL DO LIMITE DEZENA DE MILHAR
+STA @292 #Escreve no HEX4
+LDA @352 #Ler o valor do KEY0
+CEQ @6 #Compara o acumulador com o valor 0
+JEQ @BUSY_WAITING_5 #Volta na leitura do KEY0
+
+LDI $9 #Carrega acumulador com o limite máximo
+SUB @20 #Subtrai o VALOR ATUAL DO LIMITE DEZENA DE MILHAR do limite máximo da dezena de milhar
+ANDI $128 #AND com 10000000 para ver se valor é negativo
+CEQ @9 #Verifica se o valor do AND deu 128
+JEQ @COLOCA_9_DEZENA_MILHAR #Vai para a escrita de 9
+
+SALVA_DEZENA_MILHAR:
+LDA @20 #Leitura do VALOR ATUAL DO LIMITE DEZENA DE MILHAR
+STA @14 #Armazena o valor do acumulador em MEM[14] (LIMITE DEZENA DE MILHAR)
+
+### CENTENA DE MILHAR ###
+LDI $0 #Carrega o acumulador com o valor 0
+STA @511 #RESET no KEY0
+LDI $32 #Carrega o valor 32
+STA @256 #Armazena o valor 1 no LEDR5
+JMP @BUSY_WAITING_6
+
+COLOCA_9_CENTENA_MILHAR:
+NOP #COLOCA_9_CENTENA_MILHAR
+LDI $9 #Carrega 9 no acumulador
+STA @293 #Escreve no HEX5
+STA @21 #Escreve no VALOR ATUAL DO LIMITE CENTENA MILHAR
+JMP @SALVA_CENTENA_MILHAR
+
+BUSY_WAITING_6:
+NOP #BUSY_WAITING_6
+LDA @320 #Leitura do SW0 ~ SW7 
+STA @21 #Escreve no VALOR ATUAL DO LIMITE CENTENA DE MILHAR
+STA @293 #Escreve no HEX5
+LDA @352 #Ler o valor do KEY0
+CEQ @6 #Compara o acumulador com o valor 0
+JEQ @BUSY_WAITING_6 #Volta na leitura do KEY0
+
+LDI $9 #Carrega acumulador com o limite máximo
+SUB @21 #Subtrai o VALOR ATUAL DO LIMITE CENTENA DE MILHAR do limite máximo da centena de milhar
+ANDI $128 #AND com 10000000 para ver se valor é negativo
+CEQ @9 #Verifica se o valor do AND deu 128
+JEQ @COLOCA_9_CENTENA_MILHAR #Vai para a escrita de 9
+
+SALVA_CENTENA_MILHAR:
+LDA @21 #Leitura do VALOR ATUAL DO LIMITE CENTENA DE MILHAR
+STA @15 #Armazena o valor do acumulador em MEM[15] (LIMITE CENTENA DE MILHAR)
+
+### ACENDE TODOS OS LEDS SIMBOLIZANDO QUE O LIMITE FOI DEFINIDO ###
+LDI $0 #Carrega o acumulador com o valor 0
+STA @511 #RESET no KEY0
+LDI $255 #Carrega o valor 255
+STA @256 #Armazena o valor 255 nos LEDR0~LEDR7
+
+### AGUARDA NOVO CLIQUE DO KEY0 PARA SAIR DA SUB-ROTINA ###
+BUSY_WAITING_7:
+NOP #BUSY_WAITING_7
+LDA @352 #Ler o valor do KEY0
+CEQ @6 #Compara o acumulador com o valor 0
+JEQ @BUSY_WAITING_7 #Volta na leitura do KEY0
+
+LDI $0 #Carrega o acumulador com o valor 0
+STA @511 #RESET no KEY0
+
+RETORNO_MAIN_LOOP:
+NOP #RETORNO_MAIN_LOOP
+RET
+
+
+# <<< SUB-ROTINA DE INCREMENTAR >>> #
+INCREMENTA:
+NOP # INCREMENTA
+LDI $0 #Carrega o acumulador com o valor 0
+STA @510 #RESET no KEY1
+LDA @50 #Carrega FLAG DE INIBIR CONTAGEM
+CEQ @7 @Comparar se a flag está setada
+JEQ @RETORNO
+
+LDI $0 # Carrega zero
+STA @258 #Apaga o LED 9 
+
+LDA @0 # Carrega conteudo das UNIDADES
+SOMA @7 # Soma 1 ao valor das UNIDADES
+CEQ @8 # Comparar com o valor 10
+JEQ @INCREMENTA_DEZENA # Pula para incrementar dezena quando há overflow na unidade
+STA @0 # Guarda o valor novo das UNIDADES
+LDI $0 #Carrega o acumulador com o valor 0
+STA @510 #RESET no KEY1
+RET # Retorna para a MAIN LOOP
+
+INCREMENTA_DEZENA:
+NOP #INCREMENTA_DEZENA
+LDA @6 # Carrega zero
+STA @0 # Define o valor das unidades com zero
+
+LDA @1 # Carrega valor das dezenas
+SOMA @7 # Soma 1 ao valor das DEZENAS
+CEQ @8 # Comparar com o valor 10
+JEQ @INCREMENTA_CENTENA # Pula para incrementar centena quando há overflow na dezena
+STA @1 # Salva o novo valor das DEZENAS
+LDI $0 #Carrega o acumulador com o valor 0
+STA @510 #RESET no KEY1
+RET # Retorna para MAIN LOOP
+
+INCREMENTA_CENTENA:
+NOP #INCREMENTA_CENTENA
+LDA @6 # Carrega zero
+STA @1 # Define o valor das dezenas com zero
+
+LDA @2 # Carrega valor das centenas
+SOMA @7 # Soma 1 ao valor das CENTENAS
+CEQ @8 # Comparar com o valor 10
+JEQ @INCREMENTA_MILHAR # Pula para incrementar milhar quando há overflow na centena
+STA @2 # Salva o novo valor das CENTENAS
+LDI $0 #Carrega o acumulador com o valor 0
+STA @510 #RESET no KEY1
+RET # Retorna para MAIN LOOP
+
+INCREMENTA_MILHAR:
+NOP #INCREMENTA_MILHAR
+LDA @6 # Carrega zero
+STA @2 # Define o valor das cetenas com zero
+
+LDA @3 # Carrega valor dos milhares
+SOMA @7 # Soma 1 ao valor dos MILHARES
+CEQ @8 # Comparar com o valor 10
+JEQ @INCREMENTA_DEZENA_MILHAR # Pula para incrementar dezena de milhar quando há overflow no milhar
+STA @3 # Salva o novo valor dos MILHARES
+LDI $0 #Carrega o acumulador com o valor 0
+STA @510 #RESET no KEY1
+RET # Retorna para MAIN LOOP
+
+INCREMENTA_DEZENA_MILHAR:
+NOP #INCREMENTA_DEZENA_MILHAR
+
+LDA @6 # Carrega zero
+STA @3 # Define o valor dos milhares com zero
+
+LDA @4 # Carrega valor das dezenas de milhar
+SOMA @7 # Soma 1 ao valor das DEZENAS DE MILHAR
+CEQ @8 # Comparar com o valor 10
+JEQ @INCREMENTA_CENTENA_MILHAR # Pula para incrementar centena de milhar quando há overflow na dezena de milhar
+STA @4 # Salva o novo valor das DEZENAS DE MILHAR
+LDI $0 #Carrega o acumulador com o valor 0
+STA @510 #RESET no KEY1
+RET # Retorna para MAIN LOOP
+
+INCREMENTA_CENTENA_MILHAR:
+NOP #INCREMENTA_CENTENA_MILHAR
+
+LDA @6 # Carrega zero
+STA @4 # Define o valor das dezenas de milhar com zero
+
+LDA @5 # Carrega valor das centenas de milhar
+SOMA @7 # Soma 1 ao valor das CENTENAS DE MILHAR
+CEQ @8 # Comparar com o valor 10
+JEQ @VOLTAR_MAIN # Volta para main loop quando atingir o máximo das centenas de milhar
+STA @2 # Salva o novo valor das CENTENAS
+LDI $0 #Carrega o acumulador com o valor 0
+STA @510 #RESET no KEY1
+RET # Retorna para MAIN LOOP
+
+VOLTAR_MAIN:
+LDI $0 #Carrega o acumulador com o valor 0
+STA @510 #RESET no KEY1
+RET # Retorna para MAIN LOOP
+
+
+
+
+# <<< SUB-ROTINA DE ATUALIZAR TELA >>> #
+ATUALIZA_TELA:
+NOP #Atualiza tela
+LDA @0 # Carrega UNIDADES
+STA @288 # Mostra unidade no HEX0
+
+LDA @1 # Carrega DEZENA
+STA @289 # Mostra unidade no HEX1
+
+LDA @2 # Carrega CENTENA
+STA @290 # Mostra unidade no HEX2
+
+LDA @3 # Carrega MILHAR
+STA @291 # Mostra unidade no HEX3
+
+LDA @4 # Carrega DEZENA DE MILHAR
+STA @292 # Mostra unidade no HEX4
+
+LDA @5 # Carrega CENTENA DE MILHAR
+STA @293 # Mostra unidade no HEX5
+
+RETORNO:
+NOP #RETORNO MAIN LOOP
+RET
+
+# <<< SUB-ROTINA DE CHECAGEM DE LIMITE >>> #
+CHECA_LIMITE:
+LDA @0 #Carrega o valor atual da UNIDADE no acumulador
+CEQ @10 #Compara o valor do acumulador com o valor de limite da UNIDADE
+JEQ @CHECA_DEZENA #Jump para a checagem da DEZENA
+RET
+
+CHECA_DEZENA:
+NOP #CHECA_DEZENA
+LDA @1 #Carrega o valor atual da DEZENA no acumulador
+CEQ @11 #Compara o valor do acumulador com o valor de limite da DEZENA
+JEQ @CHECA_CENTENA #Jump para a checagem da CENTENA
+RET
+
+CHECA_CENTENA:
+NOP #CHECA_CENTENA
+LDA @2 #Carrega o valor atual da CENTENA no acumulador
+CEQ @12 #Compara o valor do acumulador com o valor de limite da CENTENA
+JEQ @CHECA_MILHAR #Jump para a checagem da MILHAR
+RET
+
+CHECA_MILHAR:
+NOP #CHECA_MILHAR
+LDA @3 #Carrega o valor atual da MILHAR no acumulador
+CEQ @13 #Compara o valor do acumulador com o valor de limite da MILHAR
+JEQ @CHECA_DEZENA_MILHAR #Jump para a checagem da DEZENA DE MILHAR
+RET
+
+CHECA_DEZENA_MILHAR:
+NOP #CHECA_DEZENA_MILHAR
+LDA @4 #Carrega o valor atual da DEZENA_MILHAR no acumulador
+CEQ @14 #Compara o valor do acumulador com o valor de limite da DEZENA_MILHAR
+JEQ @CHECA_CENTENA_MILHAR #Jump para a checagem da CENTENA_MILHAR
+RET
+
+CHECA_CENTENA_MILHAR:
+NOP #CENTENA_MILHAR
+LDA @5 #Carrega o valor atual da CENTENA_MILHAR no acumulador
+CEQ @15 #Compara o valor do acumulador com o valor de limite da CENTENA_MILHAR
+JEQ @INIBIR_FLAG #Jump para a parte responsável em setar a flag de inibir contagem e ligar LED de Overflow
+RET
+
+INIBIR_FLAG:
+NOP #INIBIR_FLAG
+LDI $1 #Carregar acumulador com valor 1
+STA @50 #Ativa flag de inibir a contagem
+STA @258 #Liga LED9 de Limite Atingido
+RET
