@@ -79,6 +79,9 @@ def defineLabel(line):
 def defineRegistrador(line):
     instructions = line.split(" ")
 
+    if instructions[0] in ['JEQ', 'JSR', 'JMP']:
+        return None
+
     if len(instructions) >= 3:
         reg = instructions[1]
         return reg
