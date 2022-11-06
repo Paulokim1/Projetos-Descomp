@@ -1,0 +1,965 @@
+Analysis & Synthesis report for Relogio
+Sun Nov 06 15:03:40 2022
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |Relogio
+ 11. Parameter Settings for User Entity Instance: CPU:CPU
+ 12. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1
+ 13. Parameter Settings for User Entity Instance: CPU:CPU|bancoRegistradoresArqRegMem:REGBANK
+ 14. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC
+ 15. Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:incrementaPC
+ 16. Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1
+ 17. Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x1:MUX2
+ 18. Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG_END_RET
+ 19. Parameter Settings for User Entity Instance: memoriaROM:ROM1
+ 20. Parameter Settings for User Entity Instance: memoriaRAM:RAM1
+ 21. Parameter Settings for User Entity Instance: Leds:LEDS|registradorGenerico:REG1
+ 22. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG0
+ 23. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG1
+ 24. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG2
+ 25. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG3
+ 26. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG4
+ 27. Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG5
+ 28. Parameter Settings for User Entity Instance: divisorGenerico:DIVGEN_N
+ 29. Parameter Settings for User Entity Instance: divisorGenerico:DIVGEN_R
+ 30. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_CLOCK
+ 31. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_RESET"
+ 32. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K3"
+ 33. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K2"
+ 34. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K1"
+ 35. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K0"
+ 36. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_SW9"
+ 37. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_SW8"
+ 38. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER3"
+ 39. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER2"
+ 40. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER1"
+ 41. Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER0"
+ 42. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER5"
+ 43. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER4"
+ 44. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER3"
+ 45. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER2"
+ 46. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER1"
+ 47. Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0"
+ 48. Port Connectivity Checks: "Leds:LEDS|FlipFlop:FLIPFLOP2"
+ 49. Port Connectivity Checks: "Leds:LEDS|FlipFlop:FLIPFLOP1"
+ 50. Port Connectivity Checks: "CPU:CPU|FlipFlop:FlipFlopIgual"
+ 51. Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX2"
+ 52. Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC"
+ 53. Port Connectivity Checks: "edgeDetector:detectorSub0"
+ 54. Post-Synthesis Netlist Statistics for Top Partition
+ 55. Elapsed Time Per Partition
+ 56. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Nov 06 15:03:40 2022       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Relogio                                     ;
+; Top-level Entity Name           ; Relogio                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 646                                         ;
+; Total pins                      ; 115                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; Relogio            ; Relogio            ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
+; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 14          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processors 8-14        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                               ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Relogio.vhd                      ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd                     ;         ;
+; FlipFlop.vhd                     ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/FlipFlop.vhd                    ;         ;
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/ULASomaSub.vhd                  ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/somaConstante.vhd               ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/registradorGenerico.vhd         ;         ;
+; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico4x1.vhd              ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd              ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaROM.vhd                  ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaRAM.vhd                  ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/edgeDetector.vhd                ;         ;
+; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoderInstru.vhd               ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd                         ;         ;
+; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoder3x8.vhd                  ;         ;
+; Leds.vhd                         ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Leds.vhd                        ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/conversorHex7Seg.vhd            ;         ;
+; SevenSeg.vhd                     ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/SevenSeg.vhd                    ;         ;
+; Keys_Buttons.vhd                 ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Keys_Buttons.vhd                ;         ;
+; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/buffer_3_state_8portas.vhd      ;         ;
+; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/bancoRegistradoresArqRegMem.vhd ;         ;
+; divisorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/divisorGenerico.vhd             ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 551            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 645            ;
+;     -- 7 input functions                    ; 4              ;
+;     -- 6 input functions                    ; 364            ;
+;     -- 5 input functions                    ; 55             ;
+;     -- 4 input functions                    ; 81             ;
+;     -- <=3 input functions                  ; 141            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 646            ;
+;                                             ;                ;
+; I/O pins                                    ; 115            ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 642            ;
+; Total fan-out                               ; 5305           ;
+; Average fan-out                             ; 3.49           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                        ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Entity Name                 ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-----------------------------+--------------+
+; |Relogio                                    ; 645 (15)            ; 646 (0)                   ; 0                 ; 0          ; 115  ; 0            ; |Relogio                                               ; Relogio                     ; work         ;
+;    |CPU:CPU|                                ; 86 (0)              ; 51 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Relogio|CPU:CPU                                       ; CPU                         ; work         ;
+;       |FlipFlop:FlipFlopIgual|              ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|CPU:CPU|FlipFlop:FlipFlopIgual                ; FlipFlop                    ; work         ;
+;       |ULASomaSub:ULA1|                     ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|CPU:CPU|ULASomaSub:ULA1                       ; ULASomaSub                  ; work         ;
+;       |bancoRegistradoresArqRegMem:REGBANK| ; 12 (12)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Relogio|CPU:CPU|bancoRegistradoresArqRegMem:REGBANK   ; bancoRegistradoresArqRegMem ; work         ;
+;       |decoderInstru:DECODER|               ; 19 (19)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|CPU:CPU|decoderInstru:DECODER                 ; decoderInstru               ; work         ;
+;       |muxGenerico2x1:MUX1|                 ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|CPU:CPU|muxGenerico2x1:MUX1                   ; muxGenerico2x1              ; work         ;
+;       |muxGenerico4x1:MUX2|                 ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|CPU:CPU|muxGenerico4x1:MUX2                   ; muxGenerico4x1              ; work         ;
+;       |registradorGenerico:PC|              ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|CPU:CPU|registradorGenerico:PC                ; registradorGenerico         ; work         ;
+;       |registradorGenerico:REG_END_RET|     ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|CPU:CPU|registradorGenerico:REG_END_RET       ; registradorGenerico         ; work         ;
+;       |somaConstante:incrementaPC|          ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|CPU:CPU|somaConstante:incrementaPC            ; somaConstante               ; work         ;
+;    |Keys_Buttons:KEYS_BUTTONS|              ; 7 (7)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|Keys_Buttons:KEYS_BUTTONS                     ; Keys_Buttons                ; work         ;
+;       |FlipFlop:DEBOUNCER0|                 ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER0 ; FlipFlop                    ; work         ;
+;       |FlipFlop:DEBOUNCER1|                 ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER1 ; FlipFlop                    ; work         ;
+;       |FlipFlop:DEBOUNCER2|                 ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER2 ; FlipFlop                    ; work         ;
+;       |FlipFlop:DEBOUNCER3|                 ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER3 ; FlipFlop                    ; work         ;
+;    |Leds:LEDS|                              ; 4 (2)               ; 10 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Relogio|Leds:LEDS                                     ; Leds                        ; work         ;
+;       |FlipFlop:FLIPFLOP1|                  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|Leds:LEDS|FlipFlop:FLIPFLOP1                  ; FlipFlop                    ; work         ;
+;       |FlipFlop:FLIPFLOP2|                  ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|Leds:LEDS|FlipFlop:FLIPFLOP2                  ; FlipFlop                    ; work         ;
+;       |registradorGenerico:REG1|            ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|Leds:LEDS|registradorGenerico:REG1            ; registradorGenerico         ; work         ;
+;    |SevenSeg:SEVENSEG|                      ; 48 (6)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG                             ; SevenSeg                    ; work         ;
+;       |conversorHex7Seg:DECODER0|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0   ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DECODER1|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER1   ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DECODER2|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER2   ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DECODER3|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER3   ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DECODER4|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER4   ; conversorHex7Seg            ; work         ;
+;       |conversorHex7Seg:DECODER5|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|conversorHex7Seg:DECODER5   ; conversorHex7Seg            ; work         ;
+;       |registradorGenerico:REG0|            ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|registradorGenerico:REG0    ; registradorGenerico         ; work         ;
+;       |registradorGenerico:REG1|            ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|registradorGenerico:REG1    ; registradorGenerico         ; work         ;
+;       |registradorGenerico:REG2|            ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|registradorGenerico:REG2    ; registradorGenerico         ; work         ;
+;       |registradorGenerico:REG3|            ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|registradorGenerico:REG3    ; registradorGenerico         ; work         ;
+;       |registradorGenerico:REG4|            ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|registradorGenerico:REG4    ; registradorGenerico         ; work         ;
+;       |registradorGenerico:REG5|            ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|SevenSeg:SEVENSEG|registradorGenerico:REG5    ; registradorGenerico         ; work         ;
+;    |decoder3x8:DECODER1|                    ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|decoder3x8:DECODER1                           ; decoder3x8                  ; work         ;
+;    |decoder3x8:DECODER2|                    ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|decoder3x8:DECODER2                           ; decoder3x8                  ; work         ;
+;    |divisorGenerico:DIVGEN_N|               ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Relogio|divisorGenerico:DIVGEN_N                      ; divisorGenerico             ; work         ;
+;    |divisorGenerico:DIVGEN_R|               ; 20 (20)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Relogio|divisorGenerico:DIVGEN_R                      ; divisorGenerico             ; work         ;
+;    |edgeDetector:detectorSub1|              ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|edgeDetector:detectorSub1                     ; edgeDetector                ; work         ;
+;    |edgeDetector:detectorSub2|              ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|edgeDetector:detectorSub2                     ; edgeDetector                ; work         ;
+;    |edgeDetector:detectorSub3|              ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|edgeDetector:detectorSub3                     ; edgeDetector                ; work         ;
+;    |memoriaRAM:RAM1|                        ; 297 (297)           ; 512 (512)                 ; 0                 ; 0          ; 0    ; 0            ; |Relogio|memoriaRAM:RAM1                               ; memoriaRAM                  ; work         ;
+;    |memoriaROM:ROM1|                        ; 113 (113)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|memoriaROM:ROM1                               ; memoriaROM                  ; work         ;
+;    |muxGenerico2x1:MUX_CLOCK|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Relogio|muxGenerico2x1:MUX_CLOCK                      ; muxGenerico2x1              ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------+-----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 646   ;
+; Number of registers using Synchronous Clear  ; 40    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 585   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |Relogio|CPU:CPU|registradorGenerico:PC|DOUT[0]          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Relogio|CPU:CPU|ULASomaSub:ULA1|saida[1]                ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Relogio|CPU:CPU|decoderInstru:DECODER|saida_controle[6] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Relogio ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; dataWidth      ; 8     ; Signed Integer                                 ;
+; addrWidth      ; 9     ; Signed Integer                                 ;
+; instrWidth     ; 15    ; Signed Integer                                 ;
+; simulacao      ; false ; Enumerated                                     ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; datawidth      ; 8     ; Signed Integer              ;
+; addrwidth      ; 9     ; Signed Integer              ;
+; instrwidth     ; 15    ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico2x1:MUX1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|bancoRegistradoresArqRegMem:REGBANK ;
++---------------------+-------+------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                       ;
++---------------------+-------+------------------------------------------------------------+
+; larguradados        ; 8     ; Signed Integer                                             ;
+; larguraendbancoregs ; 2     ; Signed Integer                                             ;
++---------------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:PC ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|somaConstante:incrementaPC ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                         ;
+; constante      ; 1     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|ULASomaSub:ULA1 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|muxGenerico4x1:MUX2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:CPU|registradorGenerico:REG_END_RET ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; larguradados   ; 9     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaROM:ROM1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; datawidth      ; 15    ; Signed Integer                      ;
+; addrwidth      ; 9     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaRAM:RAM1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; datawidth      ; 8     ; Signed Integer                      ;
+; addrwidth      ; 6     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Leds:LEDS|registradorGenerico:REG1 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG0 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG1 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG2 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG3 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG4 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SevenSeg:SEVENSEG|registradorGenerico:REG5 ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:DIVGEN_N ;
++----------------+----------+-------------------------------------------+
+; Parameter Name ; Value    ; Type                                      ;
++----------------+----------+-------------------------------------------+
+; divisor        ; 25000000 ; Signed Integer                            ;
++----------------+----------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisorGenerico:DIVGEN_R ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; divisor        ; 25000 ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_CLOCK ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; larguradados   ; 1     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_RESET" ;
++---------------+-------+----------+-------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                               ;
++---------------+-------+----------+-------------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                          ;
++---------------+-------+----------+-------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K3" ;
++---------------+-------+----------+----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                            ;
++---------------+-------+----------+----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                       ;
++---------------+-------+----------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K2" ;
++---------------+-------+----------+----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                            ;
++---------------+-------+----------+----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                       ;
++---------------+-------+----------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K1" ;
++---------------+-------+----------+----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                            ;
++---------------+-------+----------+----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                       ;
++---------------+-------+----------+----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_K0" ;
++---------------+-------+----------+----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                            ;
++---------------+-------+----------+----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                       ;
++---------------+-------+----------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_SW9" ;
++---------------+-------+----------+-----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                             ;
++---------------+-------+----------+-----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                        ;
++---------------+-------+----------+-----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_1_SW8" ;
++---------------+-------+----------+-----------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                             ;
++---------------+-------+----------+-----------------------------------------------------+
+; entrada[7..1] ; Input ; Info     ; Stuck at GND                                        ;
++---------------+-------+----------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER3" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                  ;
+; enable ; Input ; Info     ; Stuck at VCC                                  ;
++--------+-------+----------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER2" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                  ;
+; enable ; Input ; Info     ; Stuck at VCC                                  ;
++--------+-------+----------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER1" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                  ;
+; enable ; Input ; Info     ; Stuck at VCC                                  ;
++--------+-------+----------+-----------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "Keys_Buttons:KEYS_BUTTONS|FlipFlop:DEBOUNCER0" ;
++--------+-------+----------+-----------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                       ;
++--------+-------+----------+-----------------------------------------------+
+; din    ; Input ; Info     ; Stuck at VCC                                  ;
+; enable ; Input ; Info     ; Stuck at VCC                                  ;
++--------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER5" ;
++----------+-------+----------+-------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                   ;
++----------+-------+----------+-------------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                              ;
+; negativo ; Input ; Info     ; Stuck at GND                              ;
+; overflow ; Input ; Info     ; Stuck at GND                              ;
++----------+-------+----------+-------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER4" ;
++----------+-------+----------+-------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                   ;
++----------+-------+----------+-------------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                              ;
+; negativo ; Input ; Info     ; Stuck at GND                              ;
+; overflow ; Input ; Info     ; Stuck at GND                              ;
++----------+-------+----------+-------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER3" ;
++----------+-------+----------+-------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                   ;
++----------+-------+----------+-------------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                              ;
+; negativo ; Input ; Info     ; Stuck at GND                              ;
+; overflow ; Input ; Info     ; Stuck at GND                              ;
++----------+-------+----------+-------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER2" ;
++----------+-------+----------+-------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                   ;
++----------+-------+----------+-------------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                              ;
+; negativo ; Input ; Info     ; Stuck at GND                              ;
+; overflow ; Input ; Info     ; Stuck at GND                              ;
++----------+-------+----------+-------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER1" ;
++----------+-------+----------+-------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                   ;
++----------+-------+----------+-------------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                              ;
+; negativo ; Input ; Info     ; Stuck at GND                              ;
+; overflow ; Input ; Info     ; Stuck at GND                              ;
++----------+-------+----------+-------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0" ;
++----------+-------+----------+-------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                   ;
++----------+-------+----------+-------------------------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND                              ;
+; negativo ; Input ; Info     ; Stuck at GND                              ;
+; overflow ; Input ; Info     ; Stuck at GND                              ;
++----------+-------+----------+-------------------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Leds:LEDS|FlipFlop:FLIPFLOP2" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "Leds:LEDS|FlipFlop:FLIPFLOP1" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|FlipFlop:FlipFlopIgual" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                     ;
++------+-------+----------+----------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|muxGenerico4x1:MUX2" ;
++--------------+-------+----------+-----------------------+
+; Port         ; Type  ; Severity ; Details               ;
++--------------+-------+----------+-----------------------+
+; entradad_mux ; Input ; Info     ; Stuck at GND          ;
++--------------+-------+----------+-----------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:CPU|registradorGenerico:PC" ;
++--------+-------+----------+--------------------------------+
+; Port   ; Type  ; Severity ; Details                        ;
++--------+-------+----------+--------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                   ;
++--------+-------+----------+--------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "edgeDetector:detectorSub0"                                                           ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; saida ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 646                         ;
+;     CLR               ; 4                           ;
+;     ENA               ; 585                         ;
+;     SCLR              ; 40                          ;
+;     plain             ; 17                          ;
+; arriav_lcell_comb     ; 651                         ;
+;     arith             ; 66                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 49                          ;
+;         5 data inputs ; 16                          ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 581                         ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 74                          ;
+;         4 data inputs ; 81                          ;
+;         5 data inputs ; 39                          ;
+;         6 data inputs ; 364                         ;
+; boundary_port         ; 115                         ;
+;                       ;                             ;
+; Max LUT depth         ; 10.30                       ;
+; Average LUT depth     ; 6.22                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sun Nov 06 15:03:33 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Relogio -c Relogio
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
+    Info (12022): Found design unit 1: Relogio-arquitetura File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 29
+    Info (12023): Found entity 1: Relogio File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
+    Info (12022): Found design unit 1: FlipFlop-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/FlipFlop.vhd Line: 13
+    Info (12023): Found entity 1: FlipFlop File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/FlipFlop.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ulasomasub.vhd
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/ULASomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/ULASomaSub.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/somaConstante.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/registradorGenerico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico4x1.vhd
+    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico4x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x1 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico4x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: memoriaROM File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaROM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaRAM.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaRAM.vhd Line: 5
+Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/edgeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decoderinstru.vhd
+    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoderInstru.vhd Line: 12
+    Info (12023): Found entity 1: decoderInstru File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoderInstru.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
+    Info (12022): Found design unit 1: CPU-arquitetura File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 25
+    Info (12023): Found entity 1: CPU File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decoder3x8.vhd
+    Info (12022): Found design unit 1: decoder3x8-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoder3x8.vhd Line: 10
+    Info (12023): Found entity 1: decoder3x8 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoder3x8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file leds.vhd
+    Info (12022): Found design unit 1: Leds-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Leds.vhd Line: 18
+    Info (12023): Found entity 1: Leds File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Leds.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file sevenseg.vhd
+    Info (12022): Found design unit 1: SevenSeg-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/SevenSeg.vhd Line: 17
+    Info (12023): Found entity 1: SevenSeg File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/SevenSeg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file keys_buttons.vhd
+    Info (12022): Found design unit 1: Keys_Buttons-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Keys_Buttons.vhd Line: 21
+    Info (12023): Found entity 1: Keys_Buttons File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Keys_Buttons.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file buffer_3_state_8portas.vhd
+    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/buffer_3_state_8portas.vhd Line: 11
+    Info (12023): Found entity 1: buffer_3_state_8portas File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/buffer_3_state_8portas.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file buffer_3_state_1porta.vhd
+    Info (12022): Found design unit 1: buffer_3_state_1porta-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/buffer_3_state_1porta.vhd Line: 12
+    Info (12023): Found entity 1: buffer_3_state_1porta File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/buffer_3_state_1porta.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregmem.vhd
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/bancoRegistradoresArqRegMem.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/divisorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: divisorGenerico File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/divisorGenerico.vhd Line: 5
+Info (12127): Elaborating entity "Relogio" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Relogio.vhd(43): object "Key_0" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 43
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 55
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 82
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(46): object "Habilita_Leitura" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 46
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(47): object "Habilita_Escrita" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 47
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 55
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "CPU:CPU|bancoRegistradoresArqRegMem:REGBANK" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 62
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:PC" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 66
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaPC" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 69
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 73
+Info (12128): Elaborating entity "decoderInstru" for hierarchy "CPU:CPU|decoderInstru:DECODER" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 77
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "CPU:CPU|muxGenerico4x1:MUX2" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 81
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "CPU:CPU|FlipFlop:FlipFlopIgual" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 90
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 95
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 101
+Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:DECODER1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 112
+Info (12128): Elaborating entity "Leds" for hierarchy "Leds:LEDS" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 122
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Leds:LEDS|registradorGenerico:REG1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Leds.vhd Line: 30
+Info (12128): Elaborating entity "SevenSeg" for hierarchy "SevenSeg:SEVENSEG" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 135
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "SevenSeg:SEVENSEG|registradorGenerico:REG0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/SevenSeg.vhd Line: 24
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/SevenSeg.vhd Line: 42
+Info (12128): Elaborating entity "Keys_Buttons" for hierarchy "Keys_Buttons:KEYS_BUTTONS" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 151
+Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_8" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Keys_Buttons.vhd Line: 103
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:DIVGEN_N" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 169
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:DIVGEN_R" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 173
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_CLOCK" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 177
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer muxGenerico2x1:MUX_CLOCK|saida_MUX[0] File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "memoriaRAM:RAM1|ram" is uninferred due to asynchronous read logic File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaRAM.vhd Line: 27
+    Info (276004): RAM logic "CPU:CPU|bancoRegistradoresArqRegMem:REGBANK|registrador" is uninferred due to inappropriate RAM size File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/bancoRegistradoresArqRegMem.vhd Line: 29
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "Data_Rd[7]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[6]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[5]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[4]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[3]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[2]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[1]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[0]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1349 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 99 output pins
+    Info (21061): Implemented 1234 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 4916 megabytes
+    Info: Processing ended: Sun Nov 06 15:03:40 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
+
+
