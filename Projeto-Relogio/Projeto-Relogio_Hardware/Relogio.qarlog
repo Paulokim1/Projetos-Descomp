@@ -1,0 +1,35 @@
+Quartus Prime Archive log --	C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.qarlog
+
+Archive:	C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.qar
+Date:		Sun Nov 06 21:30:04 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/FlipFlop.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Keys_Buttons.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Leds.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.qpf
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.qsf
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/SevenSeg.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/ULASomaSub.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/bancoRegistradoresArqRegMem.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/buffer_3_state_1porta.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/buffer_3_state_8portas.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/conversorHex7Seg.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/decoder3x8.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/decoderInstru.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/divisorGenerico.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/edgeDetector.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/memoriaRAM.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/memoriaROM.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico4x1.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/registradorGenerico.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/somaConstante.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
