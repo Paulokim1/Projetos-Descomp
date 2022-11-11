@@ -299,7 +299,7 @@ CEQ R0 @353 #Compara o KEY1 com o valor 0
 JEQ @BUSY_WAITING_6 #Volta na leitura do KEY1
 
 LDI R2 $3 #Carrega R2 com 3 
-SUB R2 @21 #Subtrai o valor da UNIDADE DE HORA de 3
+SUB R2 @4 #Subtrai o valor da UNIDADE DE HORA de 3
 ANDI R2 $128 #AND com 10000000 para ver se valor é negativo
 CEQ R2 @9 #Verifica se o valor do AND deu 128
 JEQ @VERIFICA_DEZENA_HORA #Vai para a escrita de 1

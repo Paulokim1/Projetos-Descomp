@@ -1,0 +1,27 @@
+Quartus Prime Archive log --	C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/MIPS.qarlog
+
+Archive:	C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/MIPS.qar
+Date:		Mon Nov 07 20:48:35 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/MIPS.qpf
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/MIPS.qsf
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/MIPS.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/RAMMIPS.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/ROMMIPS.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/ULASomaSub.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/Waveform.vwf
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/bancoReg.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/decoderGenerico.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/deslocadorGenerico.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/estendeSinalGenerico.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/muxGenerico2x1.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/registradorGenerico.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/somaConstante.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-I/somadorGenerico.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

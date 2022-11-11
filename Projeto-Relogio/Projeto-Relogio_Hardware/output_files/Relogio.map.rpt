@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Relogio
-Sun Nov 06 15:03:40 2022
+Tue Nov 08 13:54:51 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -88,7 +88,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 06 15:03:40 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 08 13:54:51 2022       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Relogio                                     ;
 ; Top-level Entity Name           ; Relogio                                     ;
@@ -215,36 +215,37 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
-;     Processors 8-14        ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-14        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                               ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; Relogio.vhd                      ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd                     ;         ;
-; FlipFlop.vhd                     ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/FlipFlop.vhd                    ;         ;
-; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/ULASomaSub.vhd                  ;         ;
-; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/somaConstante.vhd               ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/registradorGenerico.vhd         ;         ;
-; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico4x1.vhd              ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd              ;         ;
-; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaROM.vhd                  ;         ;
-; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaRAM.vhd                  ;         ;
-; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/edgeDetector.vhd                ;         ;
-; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoderInstru.vhd               ;         ;
-; CPU.vhd                          ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd                         ;         ;
-; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoder3x8.vhd                  ;         ;
-; Leds.vhd                         ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Leds.vhd                        ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/conversorHex7Seg.vhd            ;         ;
-; SevenSeg.vhd                     ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/SevenSeg.vhd                    ;         ;
-; Keys_Buttons.vhd                 ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Keys_Buttons.vhd                ;         ;
-; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/buffer_3_state_8portas.vhd      ;         ;
-; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/bancoRegistradoresArqRegMem.vhd ;         ;
-; divisorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/divisorGenerico.vhd             ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                               ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                                                                        ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Relogio.vhd                      ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd                     ;         ;
+; FlipFlop.vhd                     ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/FlipFlop.vhd                    ;         ;
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/ULASomaSub.vhd                  ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/somaConstante.vhd               ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/registradorGenerico.vhd         ;         ;
+; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico4x1.vhd              ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd              ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/memoriaROM.vhd                  ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/memoriaRAM.vhd                  ;         ;
+; edgeDetector.vhd                 ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/edgeDetector.vhd                ;         ;
+; decoderInstru.vhd                ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/decoderInstru.vhd               ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd                         ;         ;
+; decoder3x8.vhd                   ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/decoder3x8.vhd                  ;         ;
+; Leds.vhd                         ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Leds.vhd                        ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/conversorHex7Seg.vhd            ;         ;
+; SevenSeg.vhd                     ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/SevenSeg.vhd                    ;         ;
+; Keys_Buttons.vhd                 ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Keys_Buttons.vhd                ;         ;
+; buffer_3_state_8portas.vhd       ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/buffer_3_state_8portas.vhd      ;         ;
+; bancoRegistradoresArqRegMem.vhd  ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/bancoRegistradoresArqRegMem.vhd ;         ;
+; divisorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/divisorGenerico.vhd             ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -256,9 +257,9 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Combinational ALUT usage for logic          ; 645            ;
 ;     -- 7 input functions                    ; 4              ;
-;     -- 6 input functions                    ; 364            ;
+;     -- 6 input functions                    ; 365            ;
 ;     -- 5 input functions                    ; 55             ;
-;     -- 4 input functions                    ; 81             ;
+;     -- 4 input functions                    ; 80             ;
 ;     -- <=3 input functions                  ; 141            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 646            ;
@@ -269,7 +270,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 642            ;
-; Total fan-out                               ; 5305           ;
+; Total fan-out                               ; 5307           ;
 ; Average fan-out                             ; 3.49           ;
 +---------------------------------------------+----------------+
 
@@ -815,13 +816,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         1 data inputs ; 9                           ;
 ;         2 data inputs ; 14                          ;
 ;         3 data inputs ; 74                          ;
-;         4 data inputs ; 81                          ;
+;         4 data inputs ; 80                          ;
 ;         5 data inputs ; 39                          ;
-;         6 data inputs ; 364                         ;
+;         6 data inputs ; 365                         ;
 ; boundary_port         ; 115                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.30                       ;
-; Average LUT depth     ; 6.22                        ;
+; Average LUT depth     ; 6.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -840,115 +841,115 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Nov 06 15:03:33 2022
+    Info: Processing started: Tue Nov 08 13:54:42 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Relogio -c Relogio
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file relogio.vhd
-    Info (12022): Found design unit 1: Relogio-arquitetura File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 29
-    Info (12023): Found entity 1: Relogio File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 4
+    Info (12022): Found design unit 1: Relogio-arquitetura File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 29
+    Info (12023): Found entity 1: Relogio File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
-    Info (12022): Found design unit 1: FlipFlop-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/FlipFlop.vhd Line: 13
-    Info (12023): Found entity 1: FlipFlop File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/FlipFlop.vhd Line: 4
+    Info (12022): Found design unit 1: FlipFlop-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/FlipFlop.vhd Line: 13
+    Info (12023): Found entity 1: FlipFlop File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/FlipFlop.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ulasomasub.vhd
-    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/ULASomaSub.vhd Line: 15
-    Info (12023): Found entity 1: ULASomaSub File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/ULASomaSub.vhd Line: 5
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/ULASomaSub.vhd Line: 15
+    Info (12023): Found entity 1: ULASomaSub File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/ULASomaSub.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/somaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico4x1.vhd
-    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico4x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico4x1 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico4x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico4x1-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico4x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico4x1 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico4x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaROM.vhd Line: 16
-    Info (12023): Found entity 1: memoriaROM File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaROM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/memoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: memoriaROM File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/memoriaROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaRAM.vhd Line: 21
-    Info (12023): Found entity 1: memoriaRAM File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaRAM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/memoriaRAM.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/memoriaRAM.vhd Line: 5
 Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/edgeDetector.vhd Line: 10
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/edgeDetector.vhd Line: 23
-    Info (12023): Found entity 1: edgeDetector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/edgeDetector.vhd Line: 4
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/edgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoderinstru.vhd
-    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoderInstru.vhd Line: 12
-    Info (12023): Found entity 1: decoderInstru File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoderInstru.vhd Line: 4
+    Info (12022): Found design unit 1: decoderInstru-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/decoderInstru.vhd Line: 12
+    Info (12023): Found entity 1: decoderInstru File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/decoderInstru.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
-    Info (12022): Found design unit 1: CPU-arquitetura File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 25
-    Info (12023): Found entity 1: CPU File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 4
+    Info (12022): Found design unit 1: CPU-arquitetura File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 25
+    Info (12023): Found entity 1: CPU File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file decoder3x8.vhd
-    Info (12022): Found design unit 1: decoder3x8-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoder3x8.vhd Line: 10
-    Info (12023): Found entity 1: decoder3x8 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/decoder3x8.vhd Line: 4
+    Info (12022): Found design unit 1: decoder3x8-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/decoder3x8.vhd Line: 10
+    Info (12023): Found entity 1: decoder3x8 File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/decoder3x8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file leds.vhd
-    Info (12022): Found design unit 1: Leds-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Leds.vhd Line: 18
-    Info (12023): Found entity 1: Leds File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Leds.vhd Line: 4
+    Info (12022): Found design unit 1: Leds-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Leds.vhd Line: 18
+    Info (12023): Found entity 1: Leds File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Leds.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/conversorHex7Seg.vhd Line: 4
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/conversorHex7Seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file sevenseg.vhd
-    Info (12022): Found design unit 1: SevenSeg-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/SevenSeg.vhd Line: 17
-    Info (12023): Found entity 1: SevenSeg File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/SevenSeg.vhd Line: 4
+    Info (12022): Found design unit 1: SevenSeg-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/SevenSeg.vhd Line: 17
+    Info (12023): Found entity 1: SevenSeg File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/SevenSeg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keys_buttons.vhd
-    Info (12022): Found design unit 1: Keys_Buttons-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Keys_Buttons.vhd Line: 21
-    Info (12023): Found entity 1: Keys_Buttons File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Keys_Buttons.vhd Line: 4
+    Info (12022): Found design unit 1: Keys_Buttons-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Keys_Buttons.vhd Line: 21
+    Info (12023): Found entity 1: Keys_Buttons File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Keys_Buttons.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3_state_8portas.vhd
-    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/buffer_3_state_8portas.vhd Line: 11
-    Info (12023): Found entity 1: buffer_3_state_8portas File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/buffer_3_state_8portas.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3_state_8portas-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/buffer_3_state_8portas.vhd Line: 11
+    Info (12023): Found entity 1: buffer_3_state_8portas File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/buffer_3_state_8portas.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buffer_3_state_1porta.vhd
-    Info (12022): Found design unit 1: buffer_3_state_1porta-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/buffer_3_state_1porta.vhd Line: 12
-    Info (12023): Found entity 1: buffer_3_state_1porta File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/buffer_3_state_1porta.vhd Line: 4
+    Info (12022): Found design unit 1: buffer_3_state_1porta-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/buffer_3_state_1porta.vhd Line: 12
+    Info (12023): Found entity 1: buffer_3_state_1porta File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/buffer_3_state_1porta.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregmem.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/bancoRegistradoresArqRegMem.vhd Line: 23
-    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/bancoRegistradoresArqRegMem.vhd Line: 5
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico.vhd
-    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/divisorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: divisorGenerico File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/divisorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/divisorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: divisorGenerico File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/divisorGenerico.vhd Line: 5
 Info (12127): Elaborating entity "Relogio" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Relogio.vhd(43): object "Key_0" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 43
-Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 55
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 82
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(46): object "Habilita_Leitura" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 46
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(47): object "Habilita_Escrita" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 47
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 55
-Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "CPU:CPU|bancoRegistradoresArqRegMem:REGBANK" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 62
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:PC" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 66
-Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaPC" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 69
-Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 73
-Info (12128): Elaborating entity "decoderInstru" for hierarchy "CPU:CPU|decoderInstru:DECODER" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 77
-Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "CPU:CPU|muxGenerico4x1:MUX2" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 81
-Info (12128): Elaborating entity "FlipFlop" for hierarchy "CPU:CPU|FlipFlop:FlipFlopIgual" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/CPU.vhd Line: 90
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 95
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 101
-Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:DECODER1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 112
-Info (12128): Elaborating entity "Leds" for hierarchy "Leds:LEDS" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 122
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Leds:LEDS|registradorGenerico:REG1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Leds.vhd Line: 30
-Info (12128): Elaborating entity "SevenSeg" for hierarchy "SevenSeg:SEVENSEG" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 135
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "SevenSeg:SEVENSEG|registradorGenerico:REG0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/SevenSeg.vhd Line: 24
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/SevenSeg.vhd Line: 42
-Info (12128): Elaborating entity "Keys_Buttons" for hierarchy "Keys_Buttons:KEYS_BUTTONS" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 151
-Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_8" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Keys_Buttons.vhd Line: 103
-Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:DIVGEN_N" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 169
-Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:DIVGEN_R" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 173
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_CLOCK" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Relogio.vhd Line: 177
+Warning (10036): Verilog HDL or VHDL warning at Relogio.vhd(43): object "Key_0" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 43
+Info (12129): Elaborating entity "edgeDetector" using architecture "A:bordasubida" for hierarchy "edgeDetector:detectorSub0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 55
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:CPU" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 82
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(46): object "Habilita_Leitura" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 46
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(47): object "Habilita_Escrita" assigned a value but never read File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 47
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:CPU|muxGenerico2x1:MUX1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 55
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "CPU:CPU|bancoRegistradoresArqRegMem:REGBANK" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 62
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:CPU|registradorGenerico:PC" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 66
+Info (12128): Elaborating entity "somaConstante" for hierarchy "CPU:CPU|somaConstante:incrementaPC" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 69
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "CPU:CPU|ULASomaSub:ULA1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 73
+Info (12128): Elaborating entity "decoderInstru" for hierarchy "CPU:CPU|decoderInstru:DECODER" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 77
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "CPU:CPU|muxGenerico4x1:MUX2" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 81
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "CPU:CPU|FlipFlop:FlipFlopIgual" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/CPU.vhd Line: 90
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "memoriaROM:ROM1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 95
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 101
+Info (12128): Elaborating entity "decoder3x8" for hierarchy "decoder3x8:DECODER1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 112
+Info (12128): Elaborating entity "Leds" for hierarchy "Leds:LEDS" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 122
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "Leds:LEDS|registradorGenerico:REG1" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Leds.vhd Line: 30
+Info (12128): Elaborating entity "SevenSeg" for hierarchy "SevenSeg:SEVENSEG" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 135
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "SevenSeg:SEVENSEG|registradorGenerico:REG0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/SevenSeg.vhd Line: 24
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "SevenSeg:SEVENSEG|conversorHex7Seg:DECODER0" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/SevenSeg.vhd Line: 42
+Info (12128): Elaborating entity "Keys_Buttons" for hierarchy "Keys_Buttons:KEYS_BUTTONS" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 151
+Info (12128): Elaborating entity "buffer_3_state_8portas" for hierarchy "Keys_Buttons:KEYS_BUTTONS|buffer_3_state_8portas:Tri_8" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Keys_Buttons.vhd Line: 103
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:DIVGEN_N" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 169
+Info (12128): Elaborating entity "divisorGenerico" for hierarchy "divisorGenerico:DIVGEN_R" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 173
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_CLOCK" File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/Relogio.vhd Line: 177
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer muxGenerico2x1:MUX_CLOCK|saida_MUX[0] File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+    Warning (19017): Found clock multiplexer muxGenerico2x1:MUX_CLOCK|saida_MUX[0] File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 10
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "memoriaRAM:RAM1|ram" is uninferred due to asynchronous read logic File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/memoriaRAM.vhd Line: 27
-    Info (276004): RAM logic "CPU:CPU|bancoRegistradoresArqRegMem:REGBANK|registrador" is uninferred due to inappropriate RAM size File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/bancoRegistradoresArqRegMem.vhd Line: 29
+    Info (276007): RAM logic "memoriaRAM:RAM1|ram" is uninferred due to asynchronous read logic File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/memoriaRAM.vhd Line: 27
+    Info (276004): RAM logic "CPU:CPU|bancoRegistradoresArqRegMem:REGBANK|registrador" is uninferred due to inappropriate RAM size File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/bancoRegistradoresArqRegMem.vhd Line: 29
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13048): Converted tri-state node "Data_Rd[7]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_Rd[6]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_Rd[5]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_Rd[4]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_Rd[3]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_Rd[2]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_Rd[1]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
-    Warning (13048): Converted tri-state node "Data_Rd[0]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[7]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[6]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[5]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[4]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[3]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[2]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[1]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 10
+    Warning (13048): Converted tri-state node "Data_Rd[0]" into a selector File: C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-Relogio/Projeto-Relogio_Hardware/muxGenerico2x1.vhd Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -957,9 +958,9 @@ Info (21057): Implemented 1349 device resources after synthesis - the final reso
     Info (21059): Implemented 99 output pins
     Info (21061): Implemented 1234 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4916 megabytes
-    Info: Processing ended: Sun Nov 06 15:03:40 2022
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 4941 megabytes
+    Info: Processing ended: Tue Nov 08 13:54:51 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:08
 
 
