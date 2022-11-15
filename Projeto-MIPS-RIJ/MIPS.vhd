@@ -9,7 +9,7 @@ entity MIPS is
   );
   port   (
     CLOCK_50 : in std_logic;
-	 ULA_op_Sim : out std_logic_vector(2 downto 0);
+	 ULA_OP_Sim : out std_logic_vector(2 downto 0);
     PC_Out_Sim : out std_logic_vector(larguraEnderecos-1 downto 0);
     Instrucao_sim : out std_logic_vector(larguraEnderecos-1 downto 0);
 	 ULA_OUT_Sim : out std_logic_vector(larguraDados-1 downto 0);
@@ -17,7 +17,9 @@ entity MIPS is
 	 endReg2_Sim : out std_logic_vector(4 downto 0);
 	 endReg3_Sim : out std_logic_vector(4 downto 0);
 	 dado_lido_reg_1_Sim : out std_logic_vector(larguraDados-1 downto 0);
-	 dado_lido_reg_2_Sim : out std_logic_vector(larguraDados-1 downto 0)
+	 dado_lido_reg_2_Sim : out std_logic_vector(larguraDados-1 downto 0);
+	 dado_lido_ram_Sim : out std_logic_vector(larguraDados-1 downto 0);
+	 Pontos_Controle_Sim : out std_logic_vector(10 downto 0)
 
   );
 end entity;
@@ -51,7 +53,7 @@ architecture arquitetura of MIPS is
   signal MUX_Rt_Rd : 					std_logic;
   signal hab_Escrita_Reg : 			std_logic;
   signal MUX_Rt_imediato : 			std_logic;
-  signal ULA_op : 						std_logic_vector(2 downto 0);
+  signal ULA_OP : 						std_logic_vector(2 downto 0);
   signal MUX_ULA_mem : 					std_logic;
   signal BEQ : 							std_logic;
   signal hab_leitura_MEM : 			std_logic;
@@ -156,7 +158,7 @@ MUX_2_MUX_PC: entity work.muxGenerico2x1 generic map(larguraDados => larguraDado
 		port map (
 						entradaA_MUX => somaConstante_OUT, 
 						entradaB_MUX => somador_OUT, 
-						seletor_MUX  => ULA_Z_OUT and BEQ, 
+						seletor_MUX  => ULA_Z_OUT AND BEQ, 
 						saida_MUX    => MUX_2_MUX_PC_OUT  
 		);
 
@@ -224,7 +226,7 @@ mux_PC_BEQ_Jump <= Pontos_Controle(10);
 MUX_Rt_Rd 		 <= Pontos_Controle(9);
 hab_Escrita_Reg <= Pontos_Controle(8);
 MUX_Rt_imediato <= Pontos_Controle(7);
-ULA_op 			 <= Pontos_Controle(6 downto 4);
+ULA_OP 			 <= Pontos_Controle(6 downto 4);
 MUX_ULA_mem 	 <= Pontos_Controle(3);
 BEQ 				 <= Pontos_Controle(2);
 hab_leitura_MEM <= Pontos_Controle(1); 
@@ -233,14 +235,16 @@ hab_escrita_MEM <= Pontos_Controle(0);
 
 
 -- Simulacao
+Pontos_Controle_Sim  <= Pontos_Controle;
 PC_Out_Sim           <= Endereco;
 Instrucao_sim        <= Instrucao;
-ULA_op_Sim           <= ULA_op;
+ULA_OP_Sim           <= ULA_OP;	
 ULA_OUT_Sim          <= ULA_OUT;
 endReg1_Sim          <= endReg1;
 endReg2_Sim          <= endReg2;
 endReg3_Sim          <= endReg3;
 dado_lido_reg_1_Sim  <= dado_lido_reg_1;
 dado_lido_reg_2_Sim  <= dado_lido_reg_2;
+dado_lido_ram_Sim    <= RAM_dado_lido;
 
 end architecture;

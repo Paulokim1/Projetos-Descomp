@@ -33,7 +33,7 @@ architecture comportamento of ULASomaSub is
 		andop <= STD_LOGIC_VECTOR(unsigned(entradaA) AND unsigned(entradaB));
 		orop <= STD_LOGIC_VECTOR(unsigned(entradaA) OR unsigned(entradaB));
 		slt <= "00000000000000000000000000000001" when (A_menos_B(31) = '1') else
-	          "00000000000000000000000000000000";
+	          32x"00";
 				 
 		
       saida <= soma when (seletor = "001") else
@@ -43,5 +43,5 @@ architecture comportamento of ULASomaSub is
 					slt when (seletor = "100") else
 					passa;
 		
-		flagZero <= '1' when (subtracao = "00000000000000000000000000000000") else '0';
+		flagZero <= '1' when (subtracao = 32x"00") else '0';
 end architecture;

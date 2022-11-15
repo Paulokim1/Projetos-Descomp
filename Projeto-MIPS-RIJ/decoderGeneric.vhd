@@ -34,9 +34,9 @@ saida <= "01100100000" when entradaA = ANDOP  AND entradaB = ANDOP_FUNCT  else
          "01100010000" when entradaA = ADD AND entradaB = ADD_FUNCT else
          "01100000000" when entradaA = SUB AND entradaB = SUB_FUNCT else
          "01101000000" when entradaA = SLT AND entradaB = SLT_FUNCT else
-			"00110001010" when entradaA = LW else 
-         "0001000X001" when entradaA = SW else
-			"1001111X1XX" when entradaA = BEQ else
+			"0011XXX1010" when entradaA = LW else 
+         "0001XXXX001" when entradaA = SW else
+			"0000111X1XX" when entradaA = BEQ else
          "1XXXXXXXXXX" when entradaA = JMP else
          "00000000000";  -- NOP para os entradas Indefinidas
 end architecture;

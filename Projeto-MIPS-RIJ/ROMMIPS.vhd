@@ -37,10 +37,21 @@ architecture assincrona OF ROMMIPS IS
   function initMemory
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
-        -- Inicializa os endereços:
-        tmp(0) := SW & "01000" & "01001" & "0000000000000000";
-		  tmp(1) := LW & "01000" & "10000" & "0000000000000000";
-        
+        -- Instrucoes R: (opcode(6) Rs(5) Rt(5) Rd(5) shamt(5) funct(6))
+--		  tmp(0) := ANDOP & "01000" & "01001" & "01010" & "00000" & ANDOP_FUNCT; -- AND
+--		  tmp(0) := OROP & "01000" & "01001" & "01010" & "00000" & OROP_FUNCT;   -- OR
+--		  tmp(0) := ADD & "01001" & "01010" & "01011" & "00000" & ADD_FUNCT;     -- ADD
+--		  tmp(0) := SUB & "01001" & "01010" & "01011" & "00000" & SUB_FUNCT;     -- SUB
+--		  tmp(0) := SLT & "01001" & "01010" & "01011" & "00000" & SLT_FUNCT;     -- SLT
+		  
+		  -- Instrucoes I: (opcode(6) Rs(5) Rt(5) Imediato(16))
+--      tmp(0) := SW & "01000" & "01001" & "0000000000000000";  -- SW
+--		  tmp(1) := LW & "01000" & "01011" & "0000000000000000";  -- LW
+--      tmp(2) := BEQ & "01100" & "01011" & "0000000000010010"; -- BEQ 
+		  
+		  -- Instrucoes J: (opcode(6) Imediato(26))
+--		  tmp(0) := JMP & "00000000000000000000001000";  -- JMP
+		  
         return tmp;
     end initMemory;
 
