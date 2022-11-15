@@ -11,13 +11,13 @@ entity deslocadorGenerico is
 	 );
     port (
         sinalIN : in  STD_LOGIC_VECTOR(larguraDadoEntrada-1 downto 0);
-        sinalOUT : out STD_LOGIC_VECTOR(larguraDados-1 downto 0)
+        sinalOUT : out STD_LOGIC_VECTOR(larguraDadoSaida-1 downto 0)
     );
 end entity;
 
 architecture comportamento of deslocadorGenerico is
     begin
 	 
-        sinalOUT <= sinalIn(larguraDadoSaida downto 0) & "00";
+        sinalOUT <= sinalIn(larguraDados-1 downto 0) & "00";
 		  
 end architecture;

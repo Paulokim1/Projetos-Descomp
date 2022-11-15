@@ -9,16 +9,15 @@ entity MIPS is
   );
   port   (
     CLOCK_50 : in std_logic;
-	 --Habilita_WR : in std_logic;
-	 --ULA_OP : in std_logic;
-    PC_OUT : out std_logic_vector(larguraEnderecos-1 downto 0);
-    --Instrucao : out std_logic_vector(larguraEnderecos-1 downto 0);
---	 ULA_OUT_Sim : out std_logic_vector(larguraDados-1 downto 0);
---	 endRegS_Sim : out std_logic_vector(4 downto 0);
---	 endRegT_Sim : out std_logic_vector(4 downto 0);
---	 endRegD_Sim : out std_logic_vector(4 downto 0);
---	 regS_OUT_Sim : out std_logic_vector(larguraDados-1 downto 0);
---	 regT_OUT_Sim : out std_logic_vector(larguraDados-1 downto 0)
+	 ULA_op_Sim : out std_logic_vector(2 downto 0);
+    PC_Out_Sim : out std_logic_vector(larguraEnderecos-1 downto 0);
+    Instrucao_sim : out std_logic_vector(larguraEnderecos-1 downto 0);
+	 ULA_OUT_Sim : out std_logic_vector(larguraDados-1 downto 0);
+	 endReg1_Sim : out std_logic_vector(4 downto 0);
+	 endReg2_Sim : out std_logic_vector(4 downto 0);
+	 endReg3_Sim : out std_logic_vector(4 downto 0);
+	 dado_lido_reg_1_Sim : out std_logic_vector(larguraDados-1 downto 0);
+	 dado_lido_reg_2_Sim : out std_logic_vector(larguraDados-1 downto 0)
 
   );
 end entity;
@@ -26,42 +25,42 @@ end entity;
 
 architecture arquitetura of MIPS is
 
-  signal CLK : std_logic;
-  signal Instrucao : std_logic_vector(larguraEnderecos-1 downto 0);
-  signal somaConstante_OUT : std_logic_vector(larguraEnderecos-1 downto 0);
-  signal Endereco : std_logic_vector(larguraEnderecos-1 downto 0);
-  signal endReg1 : std_logic_vector(4 downto 0);
-  signal endReg2 : std_logic_vector(4 downto 0);
-  signal endReg3 : std_logic_vector(4 downto 0);
-  signal dado_lido_reg_1 : std_logic_vector(larguraDados-1 downto 0);
-  signal dado_lido_reg_2 : std_logic_vector(larguraDados-1 downto 0);
-  signal RAM_dado_lido : std_logic_vector(larguraDados-1 downto 0);
-  signal ULA_OUT : std_logic_vector(larguraDados-1 downto 0);
-  signal ULA_Z_OUT : std_logic;
-  signal PROX_PC : std_logic_vector(larguraDados-1 downto 0);
-  signal MUX_REG_BANK_OUT : std_logic_vector(larguraDados-1 downto 0);
-  signal MUX_ULA_OUT : std_logic_vector(larguraDados-1 downto 0);
-  signal MUX_RAM_OUT : std_logic_vector(larguraDados-1 downto 0);
-  signal SigExt_Imediato : std_logic_vector(larguraDados-1 downto 0);
-  signal deslocador_2_MUX_PC_OUT : std_logic_vector(larguraDados-1 downto 0);
+  signal CLK : 							std_logic;
+  signal Instrucao : 					std_logic_vector(larguraEnderecos-1 downto 0);
+  signal somaConstante_OUT : 			std_logic_vector(larguraEnderecos-1 downto 0);
+  signal Endereco : 						std_logic_vector(larguraEnderecos-1 downto 0);
+  signal endReg1 : 						std_logic_vector(4 downto 0);
+  signal endReg2 : 						std_logic_vector(4 downto 0);
+  signal endReg3 : 						std_logic_vector(4 downto 0);
+  signal dado_lido_reg_1 : 			std_logic_vector(larguraDados-1 downto 0);
+  signal dado_lido_reg_2 : 			std_logic_vector(larguraDados-1 downto 0);
+  signal RAM_dado_lido : 				std_logic_vector(larguraDados-1 downto 0);
+  signal ULA_OUT : 						std_logic_vector(larguraDados-1 downto 0);
+  signal ULA_Z_OUT : 					std_logic;
+  signal PROX_PC : 						std_logic_vector(larguraDados-1 downto 0);
+  signal MUX_REG_BANK_OUT : 			std_logic_vector(4 downto 0);
+  signal MUX_ULA_OUT : 					std_logic_vector(larguraDados-1 downto 0);
+  signal MUX_RAM_OUT : 					std_logic_vector(larguraDados-1 downto 0);
+  signal SigExt_Imediato : 			std_logic_vector(larguraDados-1 downto 0);
+  signal deslocador_2_MUX_PC_OUT :  std_logic_vector(27 downto 0);
   signal deslocador_2_somador_OUT : std_logic_vector(larguraDados-1 downto 0);
-  signal somador_OUT: std_logic_vector(larguraDados-1 downto 0);
-  signal MUX_2_MUX_PC_OUT: std_logic_vector(larguraDados-1 downto 0);
-  signal Pontos_Controle: std_logic_vector(larguraDados-1 downto 0);
-  
-  signal mux_PC_BEQ_Jump : std_logic;
-  signal MUX_Rt_Rd : std_logic;
-  signal hab_Escrita_Reg : std_logic;
-  signal MUX_Rt_imediato : std_logic;
-  signal ULA_op : std_logic_vector(1 downto 0);
-  signal MUX_ULA_mem : std_logic;
-  signal BEQ : std_logic;
-  signal hab_leitura_MEM : std_logic;
-  signal hab_escrita_MEM : std_logic;
-
+  signal somador_OUT: 					std_logic_vector(larguraDados-1 downto 0);
+  signal MUX_2_MUX_PC_OUT: 			std_logic_vector(larguraDados-1 downto 0);
+  signal Pontos_Controle: 				std_logic_vector(10 downto 0);
+  signal mux_PC_BEQ_Jump : 			std_logic;
+  signal MUX_Rt_Rd : 					std_logic;
+  signal hab_Escrita_Reg : 			std_logic;
+  signal MUX_Rt_imediato : 			std_logic;
+  signal ULA_op : 						std_logic_vector(2 downto 0);
+  signal MUX_ULA_mem : 					std_logic;
+  signal BEQ : 							std_logic;
+  signal hab_leitura_MEM : 			std_logic;
+  signal hab_escrita_MEM : 			std_logic;
+  signal op_code : 			         std_logic_vector(5 downto 0);
+  signal funct : 			            std_logic_vector(5 downto 0);
   
     
-begin
+begin	
 
 CLK <= CLOCK_50;
 
@@ -70,7 +69,7 @@ CLK <= CLOCK_50;
 MUX_PC: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 		port map(
 						entradaA_MUX => MUX_2_MUX_PC_OUT, 
-						entradaB_MUX => somaConstante_OUT(31 downto 28) & deslocador_2_MUX_PC_OUT , 
+						entradaB_MUX => somaConstante_OUT(31 downto 28) & deslocador_2_MUX_PC_OUT, 
 						seletor_MUX  => mux_PC_BEQ_Jump, 
 						saida_MUX    => PROX_PC
 		);
@@ -94,7 +93,7 @@ somaConstante: entity work.somaConstante
 		);
 		
 					 
-deslocador_2_MUX_PC: entity work.deslocadorGenerico
+deslocador_2_MUX_PC: entity work.deslocadorGenerico generic map (larguraDadoEntrada => 26, larguraDadoSaida => 28, larguraDados => 26)
 		port map (
 						sinalIN  => Instrucao(25 downto 0), 
 						sinalOUT => deslocador_2_MUX_PC_OUT
@@ -109,7 +108,7 @@ ROM: entity work.ROMMIPS
 		);
 		 
 		 
-MUX_REG_BANK: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
+MUX_REG_BANK: entity work.muxGenerico2x1 generic map(larguraDados => 5)
 		port map (
 						entradaA_MUX => endReg2, 
 						entradaB_MUX => endReg3, 
@@ -138,7 +137,7 @@ BANCOREG: entity work.bancoReg
 		);
 		
 		
-deslocador_2_somador: entity work.DeslocadorGenerico
+deslocador_2_somador: entity work.DeslocadorGenerico generic map (larguraDadoSaida => 32, larguraDados => 30)
 		port map (
 						sinalIN  => SigExt_Imediato, 
 						sinalOUT => deslocador_2_somador_OUT
@@ -203,39 +202,45 @@ MUX_RAM: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 		);
 		
 		
-Decorder: entity work.decoderGeneric
+Decorder_Controle_Fluxo: entity work.decoderGeneric
 		port map(
-						entrada => Instrucao,
+						entradaA => op_code,
+						entradaB => funct,
 						saida => Pontos_Controle
 		);
-				
 
+-- Fios ligando a saída da ROM p/ o Banco de Registradores
 endReg1 <= Instrucao(25 downto 21);
 endReg2 <= Instrucao(20 downto 16);
 endReg3 <= Instrucao(15 downto 11);
 
+--Entradas do decoder responsavel na unidade de controle de fluxo de dados
+op_code <= Instrucao(31 downto 26);
+funct   <= Instrucao(5 downto 0);
+
 
 -- Pontos de controle
-mux_PC_BEQ_Jump <= Pontos_Controle(0);
-MUX_Rt_Rd 		 <= Pontos_Controle(0);
-hab_Escrita_Reg <= Pontos_Controle(0);
-MUX_Rt_imediato <= Pontos_Controle(0);
-ULA_op 			 <= Pontos_Controle(1 downto 0);
-MUX_ULA_mem 	 <= Pontos_Controle(0);
-BEQ 				 <= Pontos_Controle(0);
-hab_leitura_MEM <= Pontos_Controle(0); 
+mux_PC_BEQ_Jump <= Pontos_Controle(10);
+MUX_Rt_Rd 		 <= Pontos_Controle(9);
+hab_Escrita_Reg <= Pontos_Controle(8);
+MUX_Rt_imediato <= Pontos_Controle(7);
+ULA_op 			 <= Pontos_Controle(6 downto 4);
+MUX_ULA_mem 	 <= Pontos_Controle(3);
+BEQ 				 <= Pontos_Controle(2);
+hab_leitura_MEM <= Pontos_Controle(1); 
 hab_escrita_MEM <= Pontos_Controle(0);
 				
 
 
 -- Simulacao
---ULA_OUT_Sim <= ULA_OUT;
---endRegS_Sim <= endRegS;
---endRegT_Sim <= endRegT;
---endRegD_Sim <= endRegD;
---regS_OUT_Sim <= regS_OUT;
---regT_OUT_Sim <= regT_OUT;
-
-PC_OUT <= Endereco;
+PC_Out_Sim           <= Endereco;
+Instrucao_sim        <= Instrucao;
+ULA_op_Sim           <= ULA_op;
+ULA_OUT_Sim          <= ULA_OUT;
+endReg1_Sim          <= endReg1;
+endReg2_Sim          <= endReg2;
+endReg3_Sim          <= endReg3;
+dado_lido_reg_1_Sim  <= dado_lido_reg_1;
+dado_lido_reg_2_Sim  <= dado_lido_reg_2;
 
 end architecture;

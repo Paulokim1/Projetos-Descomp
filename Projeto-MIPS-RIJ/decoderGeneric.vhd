@@ -2,24 +2,41 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity decoderGeneric is
-  port ( entrada : in std_logic_vector(3 downto 0);
-         saida : out std_logic_vector(3 downto 0)
+  
+  port ( entradaA : in std_logic_vector(5 downto 0);
+			entradaB : in std_logic_vector(5 downto 0);
+         saida : out std_logic_vector(10 downto 0)
   );
 end entity;
 
 architecture comportamento of decoderGeneric is
 
-  constant NOP  : std_logic_vector(3 downto 0) := "0000";
-  constant LDA  : std_logic_vector(3 downto 0) := "0001";
-  constant SOMA : std_logic_vector(3 downto 0) := "0010";
-  constant SUB  : std_logic_vector(3 downto 0) := "0011";
-  constant CLRA : std_logic_vector(3 downto 0) := "1111";
+  constant ANDOP  : std_logic_vector(5 downto 0) := "000000";
+  constant OROP  : std_logic_vector(5 downto 0)  := "000000";
+  constant ADD  : std_logic_vector(5 downto 0)   := "000000";
+  constant SUB  : std_logic_vector(5 downto 0)   := "000000";
+  constant SLT  : std_logic_vector(5 downto 0)   := "000000";
+  constant LW  : std_logic_vector(5 downto 0)    := "100011";
+  constant SW  : std_logic_vector(5 downto 0)    := "101011";
+  constant BEQ  : std_logic_vector(5 downto 0)   := "000100";
+  constant JMP  : std_logic_vector(5 downto 0)   := "000010";
+  
+  constant ANDOP_FUNCT : std_logic_vector(5 downto 0) := "100100";
+  constant OROP_FUNCT : std_logic_vector(5 downto 0)  := "100101";
+  constant ADD_FUNCT : std_logic_vector(5 downto 0)   := "100000";
+  constant SUB_FUNCT : std_logic_vector(5 downto 0)   := "100010";
+  constant SLT_FUNCT : std_logic_vector(5 downto 0)   := "101010";
+
 
   begin
-saida <= "0000" when entrada = NOP else
-         "XXXX" when entrada = LDA else
-         "XXXX" when entrada = SOMA else
-         "XXXX" when entrada = SUB else
-         "XXXX" when entrada = CLRA else
-         "0000";  -- NOP para os entradas Indefinidas
+saida <= "01100100000" when entradaA = ANDOP  AND entradaB = ANDOP_FUNCT  else
+         "01100110000" when entradaA = OROP AND entradaB = OROP_FUNCT else
+         "01100010000" when entradaA = ADD AND entradaB = ADD_FUNCT else
+         "01100000000" when entradaA = SUB AND entradaB = SUB_FUNCT else
+         "01101000000" when entradaA = SLT AND entradaB = SLT_FUNCT else
+			"00110001010" when entradaA = LW else 
+         "0001000X001" when entradaA = SW else
+			"1001111X1XX" when entradaA = BEQ else
+         "1XXXXXXXXXX" when entradaA = JMP else
+         "00000000000";  -- NOP para os entradas Indefinidas
 end architecture;

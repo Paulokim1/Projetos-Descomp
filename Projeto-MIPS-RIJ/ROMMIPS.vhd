@@ -16,9 +16,23 @@ end entity;
 architecture assincrona OF ROMMIPS IS
   type blocoMemoria IS ARRAY(0 TO 2**memoryAddrWidth - 1) OF std_logic_vector(dataWidth-1 downto 0);
   
-   constant LW  : std_logic_vector(5 downto 0) := "100011";
-   constant SW  : std_logic_vector(5 downto 0) := "101011";
-   constant BEQ : std_logic_vector(5 downto 0) := "000100";
+  -- Opcodes
+  constant ANDOP  : std_logic_vector(5 downto 0) := "000000";
+  constant OROP  : std_logic_vector(5 downto 0)  := "000000";
+  constant ADD  : std_logic_vector(5 downto 0)   := "000000";
+  constant SUB  : std_logic_vector(5 downto 0)   := "000000";
+  constant SLT  : std_logic_vector(5 downto 0)   := "000000";
+  constant LW  : std_logic_vector(5 downto 0)    := "100011";
+  constant SW  : std_logic_vector(5 downto 0)    := "101011";
+  constant BEQ  : std_logic_vector(5 downto 0)   := "000100";
+  constant JMP  : std_logic_vector(5 downto 0)   := "000010";
+  
+  -- Functs
+  constant ANDOP_FUNCT : std_logic_vector(5 downto 0) := "100100";
+  constant OROP_FUNCT : std_logic_vector(5 downto 0)  := "100101";
+  constant ADD_FUNCT : std_logic_vector(5 downto 0)   := "100000";
+  constant SUB_FUNCT : std_logic_vector(5 downto 0)   := "100010";
+  constant SLT_FUNCT : std_logic_vector(5 downto 0)   := "101010";
 
   function initMemory
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
