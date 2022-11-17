@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
+
+entity ULA1a31bit is
+    port
+    (	slt       :  in std_logic;
+		entradaA  :  in std_logic;
+		entradaB  :  in std_logic;
+      inverteB  :  in std_logic;
+      selecao   :  in std_logic_vector(1 downto 0);
+		c_in      :  in std_logic;
+		c_out     :  out std_logic;
+		resultado :  out std_logic
+    );
+end entity;

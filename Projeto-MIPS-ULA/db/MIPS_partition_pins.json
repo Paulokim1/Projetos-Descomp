@@ -1,0 +1,133 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PC_Out_Sim[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[16]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[17]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[18]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[19]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[20]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[21]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[22]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[23]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[24]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[25]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[26]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[27]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[28]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[29]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[30]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_Out_Sim[31]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

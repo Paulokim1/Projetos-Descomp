@@ -1,0 +1,54 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
+
+entity ULA_31_1bit is
+    port
+    (	slt       :  in std_logic;
+		entrada_A :  in std_logic;
+		entrada_B :  in std_logic;
+      inverte_B :  in std_logic;
+      seletor   :  in std_logic_vector(1 downto 0);
+		c_in      :  in std_logic;
+		c_out     :  out std_logic;
+		resultado :  out std_logic
+    );
+end entity;
+
+
+architecture comportamento of ULA_31_1bit is
+	
+	signal MUX_INVERTE_B_OUT std_logic;
+	signal somador_OUT std_logic;
+
+
+begin
+
+MUX_INVERTE_B : entity work.muxGenerico2x1 generic map(larguraDados => 1)
+		port map(
+						entradaA_MUX => Entrada_B
+						entradaB_MUX => not(Entrada_B)
+						seletor_MUX  => Inverte_B
+						saida_MUX    => MUX_INVERTE_B_OUT
+		);
+
+		
+somador_1bit: entity work.somadorGenerico_1bit generic map (larguraDados => 1)
+		 port map (
+						entradaA => entrada_A, 
+						entradaB => MUX_INVERTE_B_OUT,
+						c_in     => c_in,
+						c_out    => c_out
+						saida    => somador_OUT
+		);
+		
+MUX_FINAL entity work.muxGenerico4x1 generic map(larguraDados => 1)
+		port map(
+						entradaA_MUX => MUX_INVERTE_B_OUT and entradaA
+						entradaB_MUX => MUX_INVERTE_B_OUT or entradaA
+						entradaC_MUX => somador_OUT
+						entradaD_MUX => slt
+						seletor_MUX  => seletor
+						saida_MUX    => resultado
+		);
+

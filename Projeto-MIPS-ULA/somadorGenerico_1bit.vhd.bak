@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;          -- Biblioteca IEEE para funções aritméticas
+
+entity somadorGenerico_1bit is
+    port
+    (
+      entradaA : in std_logic;
+		entradaB : in std_logic;
+		c_in     : in std_logic;
+		c_out    : out std_logic
+		resultado    : out std_logic
+		  
+    );
+end entity;
+
+architecture comportamento of somadorGenerico1bit is
+  begin
+  
+  resultado => c_in xor (entradaA xor entradaB);
+  c_out     => (A and B) or (c_in and (A xor B));
+  
+    
+end architecture;
