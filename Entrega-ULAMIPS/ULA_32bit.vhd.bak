@@ -55,7 +55,7 @@ MUX_FINAL : entity work.muxGenerico4x1 generic map(larguraDados => 1)
 		);
 		
 saida <= MUX_FINAL_OUT;		
-overflow <= (carryOut xor carryIn) xor somador_OUT;
+overflow <= carryOut xor carryIn;
 
 end architecture;
 
