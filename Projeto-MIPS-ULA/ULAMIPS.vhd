@@ -409,7 +409,4 @@ port map(
 
 flagZero <= '1' when unsigned(saida) = 32x"00" else '0';
 
---Simulação
-overflow <= overflow_OUT;
-
 end architecture;

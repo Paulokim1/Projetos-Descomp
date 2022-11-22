@@ -20,5 +20,5 @@ architecture comportamento of decoder_op_code is
   begin
 saida <= ADD    when entrada = LW or SW else
          SUB    when entrada = BEQ else
-         "XXX";  -- NOP para os entradas Indefinidas
+         "000";  -- NOP para os entradas Indefinidas
 end architecture;

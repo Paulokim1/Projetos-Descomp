@@ -6,9 +6,8 @@ entity UnidadeControleULA is
   port ( opcode    : in std_logic_vector(5 downto 0);
          funct     : in std_logic_vector(5 downto 0);
 			tipo_R    : in std_logic;
-			ULA_CTRL  : out std_logic_vector(2 downto 0);
-			inverte_B : out std_logic
-  );
+			ULA_CTRL  : out std_logic_vector(2 downto 0)
+  );
 end entity;
 
 architecture comportamento of UnidadeControleULA is

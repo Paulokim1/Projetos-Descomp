@@ -19,7 +19,7 @@ entity MIPS is
 	 dado_lido_reg_1_Sim : out std_logic_vector(larguraDados-1 downto 0);
 	 dado_lido_reg_2_Sim : out std_logic_vector(larguraDados-1 downto 0);
 	 dado_lido_ram_Sim : out std_logic_vector(larguraDados-1 downto 0);
-	 Pontos_Controle_Sim : out std_logic_vector(10 downto 0)
+	 Pontos_Controle_Sim : out std_logic_vector(8 downto 0)
 
   );
 end entity;
@@ -48,7 +48,7 @@ architecture arquitetura of MIPS is
   signal deslocador_2_somador_OUT : std_logic_vector(larguraDados-1 downto 0);
   signal somador_OUT: 					std_logic_vector(larguraDados-1 downto 0);
   signal MUX_2_MUX_PC_OUT: 			std_logic_vector(larguraDados-1 downto 0);
-  signal Pontos_Controle: 				std_logic_vector(10 downto 0);
+  signal Pontos_Controle: 				std_logic_vector(8 downto 0);
   signal mux_PC_BEQ_Jump : 			std_logic;
   signal MUX_Rt_Rd : 					std_logic;
   signal hab_Escrita_Reg : 			std_logic;
@@ -61,6 +61,7 @@ architecture arquitetura of MIPS is
   signal op_code : 			         std_logic_vector(5 downto 0);
   signal funct : 			            std_logic_vector(5 downto 0);
   signal ULA_CTRL_OUT :             std_logic_vector(2 downto 0);
+  signal ULA_Overflow_OUT :         std_logic;
   
     
 begin	
@@ -179,11 +180,11 @@ ULA: entity work.ULAMIPS   generic map(larguraDados => larguraDados)
 		 port map (
 						entradaA => dado_lido_reg_1, 
 						entradaB => MUX_ULA_OUT, 
-						sel      => ULA_CTRL_OUT,
-						inverteB => 
+						sel      => ULA_CTRL_OUT(1 downto 0),
+						inverteB => ULA_CTRL_OUT(2),
 						saida    => ULA_OUT, 
 						flagZero => ULA_Z_OUT,
-						overflow =>
+						overflow => ULA_Overflow_OUT
 		);
 		
 Decoder_Unidade_Controle_ULA: entity work.UnidadeControleULA
@@ -192,9 +193,6 @@ Decoder_Unidade_Controle_ULA: entity work.UnidadeControleULA
 						funct => funct, 
 						tipo_R => Tipo_R, 
 						ULA_CTRL => ULA_CTRL_OUT		
-		
-		
-		
 		);
 					
 RAM: entity work.RAMMIPS 

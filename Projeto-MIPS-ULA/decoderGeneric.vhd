@@ -5,7 +5,7 @@ entity decoderGeneric is
   
   port ( entradaA : in std_logic_vector(5 downto 0);
 			entradaB : in std_logic_vector(5 downto 0);
-         saida : out std_logic_vector(10 downto 0)
+         saida : out std_logic_vector(8 downto 0)
   );
 end entity;
 
@@ -35,8 +35,8 @@ saida <= "011010000" when entradaA = ANDOP  AND entradaB = ANDOP_FUNCT  else
          "011010000" when entradaA = SUB AND entradaB = SUB_FUNCT else
          "011010000" when entradaA = SLT AND entradaB = SLT_FUNCT else
 			"001101010" when entradaA = LW else 
-         "00010X001" when entradaA = SW else
-			"00000X1XX" when entradaA = BEQ else
-         "1XXX0XXXX" when entradaA = JMP else
+         "000100001" when entradaA = SW else
+			"000000100" when entradaA = BEQ else
+         "100000000" when entradaA = JMP else
          "000000000";  -- NOP para os entradas Indefinidas
 end architecture;
