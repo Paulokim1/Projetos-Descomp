@@ -3,24 +3,44 @@ use ieee.std_logic_1164.all;
 
 entity UnidadeControleULA is
   
-  port ( entrada : in std_logic_vector(5 downto 0);
-         saida : out std_logic_vector(8 downto 0)
+  port ( opcode    : in std_logic_vector(5 downto 0);
+         funct     : in std_logic_vector(5 downto 0);
+			tipo_R    : in std_logic;
+			ULA_CTRL  : out std_logic_vector(2 downto 0);
+			inverte_B : out std_logic
   );
 end entity;
 
 architecture comportamento of UnidadeControleULA is
 
-  constant NOP  : std_logic_vector(3 downto 0) := "0000";
-  constant LDA  : std_logic_vector(3 downto 0) := "0001";
-  constant SOMA : std_logic_vector(3 downto 0) := "0010";
-  constant SUB  : std_logic_vector(3 downto 0) := "0011";
-  constant CLRA : std_logic_vector(3 downto 0) := "1111";
+  signal opcode_out : std_logic_vector(2 downto 0);
+  signal funct_out : std_logic_vector(2 downto 0);
+  signal mux_out : std_logic_vector(2 downto 0);
+  
 
   begin
-saida <= "0000" when entrada = NOP else
-         "XXXX" when entrada = LDA else
-         "XXXX" when entrada = SOMA else
-         "XXXX" when entrada = SUB else
-         "XXXX" when entrada = CLRA else
-         "0000";  -- NOP para os entradas Indefinidas
+  
+decoder_Op_code :  entity work.decoder_op_code
+        port map( 
+						entrada => opcode,
+                  saida => opcode_out
+						
+					 );
+					  
+decoder_funct :  entity work.decoder_funct
+        port map( 
+						entrada => funct,
+                  saida => funct_out
+					  );
+
+MUX :  entity work.muxGenerico2x1
+        port map (
+						 entradaA_MUX => opcode_out,
+						 entradaB_MUX => funct_out,
+						 seletor_MUX => tipo_R,
+						 saida_MUX => mux_out
+					  );
+ 
+ULA_CTRL <= mux_out;
+ 
 end architecture;

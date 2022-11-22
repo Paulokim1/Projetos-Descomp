@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
 
-entity ULA_32bit is
+entity ULA_31_1bit is
     port
     (	slt       :  in std_logic;
 		entradaA :  in std_logic;
@@ -11,13 +11,12 @@ entity ULA_32bit is
       sel   :  in std_logic_vector(1 downto 0);
 		carryIn      :  in std_logic;
 		carryOut     :  out std_logic;
-		saida :  out std_logic;
-		overflow  :  out std_logic
+		saida :  out std_logic
     );
 end entity;
 
 
-architecture comportamento of ULA_32bit is
+architecture comportamento of ULA_31_1bit is
 	
 	signal MUX_INVERTE_B_OUT : std_logic;
 	signal somador_OUT       : std_logic;
@@ -54,8 +53,6 @@ MUX_FINAL : entity work.muxGenerico4x1 generic map(larguraDados => 1)
 						saida_MUX    => MUX_FINAL_OUT
 		);
 		
-saida <= MUX_FINAL_OUT;		
-overflow <= (carryOut xor carryIn) xor somador_OUT;
+saida <= MUX_FINAL_OUT;
 
 end architecture;
-

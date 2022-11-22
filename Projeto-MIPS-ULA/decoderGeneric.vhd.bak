@@ -29,14 +29,14 @@ architecture comportamento of decoderGeneric is
 
 
   begin
-saida <= "011010000" when entradaA = ANDOP  AND entradaB = ANDOP_FUNCT  else
-         "011010000" when entradaA = OROP AND entradaB = OROP_FUNCT else
-         "011010000" when entradaA = ADD AND entradaB = ADD_FUNCT else
-         "011010000" when entradaA = SUB AND entradaB = SUB_FUNCT else
-         "011010000" when entradaA = SLT AND entradaB = SLT_FUNCT else
-			"001101010" when entradaA = LW else 
-         "00010X001" when entradaA = SW else
-			"00000X1XX" when entradaA = BEQ else
-         "1XXX0XXXX" when entradaA = JMP else
-         "000000000";  -- NOP para os entradas Indefinidas
+saida <= "01100100000" when entradaA = ANDOP  AND entradaB = ANDOP_FUNCT  else
+         "01100110000" when entradaA = OROP AND entradaB = OROP_FUNCT else
+         "01100010000" when entradaA = ADD AND entradaB = ADD_FUNCT else
+         "01100000000" when entradaA = SUB AND entradaB = SUB_FUNCT else
+         "01101000000" when entradaA = SLT AND entradaB = SLT_FUNCT else
+			"0011XXX1010" when entradaA = LW else 
+         "0001XXXX001" when entradaA = SW else
+			"0000111X1XX" when entradaA = BEQ else
+         "1XXXXXXXXXX" when entradaA = JMP else
+         "00000000000";  -- NOP para os entradas Indefinidas
 end architecture;

@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decoder_funct is
+  port ( entrada : in std_logic_vector(5 downto 0);
+         saida : out std_logic_vector(2 downto 0)
+  );
+end entity;
+
+architecture comportamento of decoder_funct is
+
+  constant LW  : std_logic_vector(5 downto 0)    := "100011";
+  constant SW  : std_logic_vector(5 downto 0)    := "101011";
+  constant BEQ  : std_logic_vector(5 downto 0)   := "000100";
+  constant JMP  : std_logic_vector(5 downto 0)   := "000010";
+  
+
+  constant AND_OP : std_logic_vector(2 downto 0) := "000";
+  constant OR_OP  : std_logic_vector(2 downto 0) := "001";
+  constant ADD    : std_logic_vector(2 downto 0) := "010";
+  constant SUB    : std_logic_vector(2 downto 0) := "110";
+  constant SLT    : std_logic_vector(2 downto 0) := "111";
+
+  begin
+saida <= AND_OP when entrada =  else
+         OR_OP  when entrada =  else
+         ADD    when entrada =  else
+         SUB    when entrada = LW or SW else
+         SLT    when entrada = BEQ else
+         "0000";  -- NOP para os entradas Indefinidas
+end architecture;

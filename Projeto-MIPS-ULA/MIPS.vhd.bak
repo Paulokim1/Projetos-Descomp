@@ -60,7 +60,6 @@ architecture arquitetura of MIPS is
   signal hab_escrita_MEM : 			std_logic;
   signal op_code : 			         std_logic_vector(5 downto 0);
   signal funct : 			            std_logic_vector(5 downto 0);
-  signal ULA_CTRL_OUT :             std_logic_vector(2 downto 0);
   
     
 begin	
@@ -175,27 +174,15 @@ MUX_ULA: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
 
 
 -- O port map completo da ULA:
-ULA: entity work.ULAMIPS   generic map(larguraDados => larguraDados)
+ULA: entity work.ULASomaSub   generic map(larguraDados => larguraDados)
 		 port map (
 						entradaA => dado_lido_reg_1, 
 						entradaB => MUX_ULA_OUT, 
-						sel      => ULA_CTRL_OUT,
-						inverteB => 
-						saida    => ULA_OUT, 
-						flagZero => ULA_Z_OUT,
-						overflow =>
+						seletor  => ULA_OP, 
+						saida    => ULA_OUT,
+						flagZero => ULA_Z_OUT
 		);
 		
-Decoder_Unidade_Controle_ULA: entity work.UnidadeControleULA
-		port map (
-						opcode => op_code, 
-						funct => funct, 
-						tipo_R => Tipo_R, 
-						ULA_CTRL => ULA_CTRL_OUT		
-		
-		
-		
-		);
 					
 RAM: entity work.RAMMIPS 
 		port map(
@@ -235,11 +222,11 @@ funct   <= Instrucao(5 downto 0);
 
 
 -- Pontos de controle
-mux_PC_BEQ_Jump <= Pontos_Controle(8);
-MUX_Rt_Rd 		 <= Pontos_Controle(7);
-hab_Escrita_Reg <= Pontos_Controle(6);
-MUX_Rt_imediato <= Pontos_Controle(5);
-Tipo_R          <= POntos_Controle(4)
+mux_PC_BEQ_Jump <= Pontos_Controle(10);
+MUX_Rt_Rd 		 <= Pontos_Controle(9);
+hab_Escrita_Reg <= Pontos_Controle(8);
+MUX_Rt_imediato <= Pontos_Controle(7);
+ULA_OP 			 <= Pontos_Controle(6 downto 4);
 MUX_ULA_mem 	 <= Pontos_Controle(3);
 BEQ 				 <= Pontos_Controle(2);
 hab_leitura_MEM <= Pontos_Controle(1); 
