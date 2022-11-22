@@ -193,6 +193,7 @@ saida[29] <= ula_31_1bit:ULA30.saida
 saida[30] <= ula_31_1bit:ULA31.saida
 saida[31] <= ula_32bit:ULA32.saida
 flagZero <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= ula_32bit:ULA32.overflow
 
 
 |ULAMIPS|ULA_31_1bit:ULA1

@@ -1,0 +1,21 @@
+Quartus Prime Archive log --	C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/ULAMIPS.qarlog
+
+Archive:	C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/ULAMIPS.qar
+Date:		Fri Nov 18 18:59:59 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/ULAMIPS.qpf
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/ULAMIPS.qsf
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/ULAMIPS.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/ULA_31_1bit.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/ULA_32bit.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/Waveform.vwf
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/muxGenerico2x1_1bit.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/muxGenerico4x1.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Entrega-ULAMIPS/somadorGenerico_1bit.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

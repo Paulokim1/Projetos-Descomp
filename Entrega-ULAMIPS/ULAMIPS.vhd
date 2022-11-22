@@ -9,15 +9,14 @@ entity ULAMIPS is
       sel : in std_logic_vector(1 downto 0);
       inverteB : in std_logic;
       saida : out std_logic_vector(larguraDados-1 downto 0);
-      flagZero : out std_logic
-		overflow : out std_logic;
+      flagZero : out std_logic;
+		overflow : out std_logic
    );
 end entity;
 
 architecture comportamento of ULAMIPS is
 
    signal overflow_OUT : std_logic;
-	signal hab_slt
 
    signal c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25, c26, c27, c28, c29, c30 : std_logic;
 
