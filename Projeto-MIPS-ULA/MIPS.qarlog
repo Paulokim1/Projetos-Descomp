@@ -1,0 +1,37 @@
+Quartus Prime Archive log --	C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/MIPS.qarlog
+
+Archive:	C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/MIPS.qar
+Date:		Thu Nov 24 21:56:36 2022
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/MIPS.qpf
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/MIPS.qsf
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/MIPS.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/RAMMIPS.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/ROMMIPS.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/ULAMIPS.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/ULASomaSub.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/ULA_31_1bit.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/ULA_32bit.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/UnidadeControleULA.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/bancoReg.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/conversorHex7Seg.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/decoderGeneric.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/decoder_funct.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/decoder_op_code.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/deslocadorGenerico.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/edgeDetector.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/estendeSinalGenerico.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/muxGenerico2x1.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/muxGenerico2x1_1bit.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/muxGenerico4x1.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/registradorGenerico.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/somaConstante.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/somadorGenerico.vhd
+C:/Users/rapha/OneDrive - Insper - Institudo de Ensino e Pesquisa/Insper/6 SEM/DesignComp/Projetos-Descomp/Projeto-MIPS-ULA/somadorGenerico_1bit.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 26 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

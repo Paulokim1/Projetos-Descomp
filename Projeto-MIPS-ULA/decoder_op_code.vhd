@@ -18,7 +18,7 @@ architecture comportamento of decoder_op_code is
   constant SUB    : std_logic_vector(2 downto 0) := "110";
 
   begin
-saida <= ADD    when entrada = LW or SW else
+saida <= ADD    when entrada = LW OR entrada = SW else
          SUB    when entrada = BEQ else
          "000";  -- NOP para os entradas Indefinidas
 end architecture;

@@ -7,7 +7,7 @@ entity UnidadeControleULA is
          funct     : in std_logic_vector(5 downto 0);
 			tipo_R    : in std_logic;
 			ULA_CTRL  : out std_logic_vector(2 downto 0)
-  );
+  );
 end entity;
 
 architecture comportamento of UnidadeControleULA is
@@ -32,7 +32,7 @@ decoder_funct :  entity work.decoder_funct
                   saida => funct_out
 					  );
 
-MUX :  entity work.muxGenerico2x1
+MUX :  entity work.muxGenerico2x1 generic map(larguraDados => 3)
         port map (
 						 entradaA_MUX => opcode_out,
 						 entradaB_MUX => funct_out,

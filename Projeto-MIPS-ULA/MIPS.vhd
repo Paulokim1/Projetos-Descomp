@@ -9,17 +9,21 @@ entity MIPS is
   );
   port   (
     CLOCK_50 : in std_logic;
-	 ULA_OP_Sim : out std_logic_vector(2 downto 0);
-    PC_Out_Sim : out std_logic_vector(larguraEnderecos-1 downto 0);
-    Instrucao_sim : out std_logic_vector(larguraEnderecos-1 downto 0);
-	 ULA_OUT_Sim : out std_logic_vector(larguraDados-1 downto 0);
-	 endReg1_Sim : out std_logic_vector(4 downto 0);
-	 endReg2_Sim : out std_logic_vector(4 downto 0);
-	 endReg3_Sim : out std_logic_vector(4 downto 0);
-	 dado_lido_reg_1_Sim : out std_logic_vector(larguraDados-1 downto 0);
-	 dado_lido_reg_2_Sim : out std_logic_vector(larguraDados-1 downto 0);
-	 dado_lido_ram_Sim : out std_logic_vector(larguraDados-1 downto 0);
-	 Pontos_Controle_Sim : out std_logic_vector(8 downto 0)
+	LEDR  : out std_logic_vector(9 downto 0);
+	HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
+	SW : in std_logic_vector(9 downto 0);
+	KEY: in std_logic_vector(3 downto 0)	 
+--	ULA_OP_Sim : out std_logic_vector(2 downto 0);
+--    PC_Out_Sim : out std_logic_vector(larguraEnderecos-1 downto 0);
+--    Instrucao_sim : out std_logic_vector(larguraEnderecos-1 downto 0);
+--	ULA_OUT_Sim : out std_logic_vector(larguraDados-1 downto 0);
+--	endReg1_Sim : out std_logic_vector(4 downto 0);
+--	endReg2_Sim : out std_logic_vector(4 downto 0);
+--	endReg3_Sim : out std_logic_vector(4 downto 0);
+--	dado_lido_reg_1_Sim : out std_logic_vector(larguraDados-1 downto 0);
+--	dado_lido_reg_2_Sim : out std_logic_vector(larguraDados-1 downto 0);
+--	dado_lido_ram_Sim : out std_logic_vector(larguraDados-1 downto 0);
+--	Pontos_Controle_Sim : out std_logic_vector(8 downto 0)
 
   );
 end entity;
@@ -61,13 +65,30 @@ architecture arquitetura of MIPS is
   signal op_code : 			         std_logic_vector(5 downto 0);
   signal funct : 			            std_logic_vector(5 downto 0);
   signal ULA_CTRL_OUT :             std_logic_vector(2 downto 0);
+  signal Tipo_R :                   std_logic;
   signal ULA_Overflow_OUT :         std_logic;
+  signal SW_0 :       		        std_logic;
+  signal MUX_ULA_PC_OUT :           std_logic_vector(larguraDados-1 downto 0);
+  signal DECODER_HEX0_OUT :         std_logic_vector(6 downto 0);
+  signal DECODER_HEX1_OUT :         std_logic_vector(6 downto 0);
+  signal DECODER_HEX2_OUT :         std_logic_vector(6 downto 0);
+  signal DECODER_HEX3_OUT :         std_logic_vector(6 downto 0);
+  signal DECODER_HEX4_OUT :         std_logic_vector(6 downto 0);
+  signal DECODER_HEX5_OUT :         std_logic_vector(6 downto 0);
+
   
-    
 begin	
 
-CLK <= CLOCK_50;
+--CLK <= CLOCK_50;
 
+
+detectorSub0: work.edgeDetector(bordaSubida)
+		  port map (
+					clk => CLOCK_50,
+					entrada => (not KEY(0)),
+					saida => CLK
+			);
+			
 -- Instanciando os componentes:
 
 MUX_PC: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
@@ -222,6 +243,52 @@ Decorder_Controle_Fluxo: entity work.decoderGeneric
 						saida => Pontos_Controle
 		);
 
+
+MUX_ULA_PC: entity work.muxGenerico2x1 generic map(larguraDados => larguraDados)
+		port map (
+						entradaA_MUX => Endereco,
+						entradaB_MUX => ULA_OUT,
+						seletor_MUX  => SW_0,
+						saida_MUX    => MUX_ULA_PC_OUT  
+		);
+
+
+DECODER_HEX0: entity work.conversorHex7Seg
+		port map(
+						dadoHex => MUX_ULA_PC_OUT(3 downto 0),
+						saida7seg => DECODER_HEX0_OUT
+		);
+
+DECODER_HEX1: entity work.conversorHex7Seg
+		port map(
+						dadoHex => MUX_ULA_PC_OUT(7 downto 4),
+						saida7seg => DECODER_HEX1_OUT
+		);
+
+DECODER_HEX2: entity work.conversorHex7Seg
+		port map(
+						dadoHex => MUX_ULA_PC_OUT(11 downto 8),
+						saida7seg => DECODER_HEX2_OUT
+		);
+
+DECODER_HEX3: entity work.conversorHex7Seg
+		port map(
+						dadoHex => MUX_ULA_PC_OUT(15 downto 12),
+						saida7seg => DECODER_HEX3_OUT
+		);
+
+DECODER_HEX4: entity work.conversorHex7Seg
+		port map(
+						dadoHex => MUX_ULA_PC_OUT(19 downto 16),
+						saida7seg => DECODER_HEX4_OUT
+		);
+
+DECODER_HEX5: entity work.conversorHex7Seg
+		port map(
+						dadoHex => MUX_ULA_PC_OUT(23 downto 20),
+						saida7seg => DECODER_HEX5_OUT
+		);
+
 -- Fios ligando a saída da ROM p/ o Banco de Registradores
 endReg1 <= Instrucao(25 downto 21);
 endReg2 <= Instrucao(20 downto 16);
@@ -237,7 +304,7 @@ mux_PC_BEQ_Jump <= Pontos_Controle(8);
 MUX_Rt_Rd 		 <= Pontos_Controle(7);
 hab_Escrita_Reg <= Pontos_Controle(6);
 MUX_Rt_imediato <= Pontos_Controle(5);
-Tipo_R          <= POntos_Controle(4)
+Tipo_R          <= POntos_Controle(4);
 MUX_ULA_mem 	 <= Pontos_Controle(3);
 BEQ 				 <= Pontos_Controle(2);
 hab_leitura_MEM <= Pontos_Controle(1); 
@@ -246,16 +313,29 @@ hab_escrita_MEM <= Pontos_Controle(0);
 
 
 -- Simulacao
-Pontos_Controle_Sim  <= Pontos_Controle;
-PC_Out_Sim           <= Endereco;
-Instrucao_sim        <= Instrucao;
-ULA_OP_Sim           <= ULA_OP;	
-ULA_OUT_Sim          <= ULA_OUT;
-endReg1_Sim          <= endReg1;
-endReg2_Sim          <= endReg2;
-endReg3_Sim          <= endReg3;
-dado_lido_reg_1_Sim  <= dado_lido_reg_1;
-dado_lido_reg_2_Sim  <= dado_lido_reg_2;
-dado_lido_ram_Sim    <= RAM_dado_lido;
+--Pontos_Controle_Sim  <= Pontos_Controle;
+--PC_Out_Sim           <= Endereco;
+--Instrucao_sim        <= Instrucao;
+--ULA_OP_Sim           <= ULA_OP;	
+--ULA_OUT_Sim          <= ULA_OUT;
+--endReg1_Sim          <= endReg1;
+--endReg2_Sim          <= endReg2;
+--endReg3_Sim          <= endReg3;
+--dado_lido_reg_1_Sim  <= dado_lido_reg_1;
+--dado_lido_reg_2_Sim  <= dado_lido_reg_2;
+--dado_lido_ram_Sim    <= RAM_dado_lido;
+
+
+
+-- Ligando na placa
+HEX0 <= DECODER_HEX0_OUT;
+HEX1 <= DECODER_HEX1_OUT;
+HEX2 <= DECODER_HEX2_OUT;
+HEX3 <= DECODER_HEX3_OUT;
+HEX4 <= DECODER_HEX4_OUT;
+HEX5 <= DECODER_HEX5_OUT;
+LEDR(3 downto 0) <= MUX_ULA_PC_OUT(27 downto 24);
+LEDR(7 downto 4) <= MUX_ULA_PC_OUT(31 downto 28);
+SW_0 <= SW(0);
 
 end architecture;
