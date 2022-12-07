@@ -1,57 +1,57 @@
 |MIPS
 CLOCK_50 => edgedetector:detectorSub0.clk
-LEDR[0] << muxgenerico2x1:MUX_ULA_PC.saida_MUX[24]
-LEDR[1] << muxgenerico2x1:MUX_ULA_PC.saida_MUX[25]
-LEDR[2] << muxgenerico2x1:MUX_ULA_PC.saida_MUX[26]
-LEDR[3] << muxgenerico2x1:MUX_ULA_PC.saida_MUX[27]
-LEDR[4] << muxgenerico2x1:MUX_ULA_PC.saida_MUX[28]
-LEDR[5] << muxgenerico2x1:MUX_ULA_PC.saida_MUX[29]
-LEDR[6] << muxgenerico2x1:MUX_ULA_PC.saida_MUX[30]
-LEDR[7] << muxgenerico2x1:MUX_ULA_PC.saida_MUX[31]
-LEDR[8] << <GND>
-LEDR[9] << <GND>
-HEX0[0] << conversorhex7seg:DECODER_HEX0.saida7seg[0]
-HEX0[1] << conversorhex7seg:DECODER_HEX0.saida7seg[1]
-HEX0[2] << conversorhex7seg:DECODER_HEX0.saida7seg[2]
-HEX0[3] << conversorhex7seg:DECODER_HEX0.saida7seg[3]
-HEX0[4] << conversorhex7seg:DECODER_HEX0.saida7seg[4]
-HEX0[5] << conversorhex7seg:DECODER_HEX0.saida7seg[5]
-HEX0[6] << conversorhex7seg:DECODER_HEX0.saida7seg[6]
-HEX1[0] << conversorhex7seg:DECODER_HEX1.saida7seg[0]
-HEX1[1] << conversorhex7seg:DECODER_HEX1.saida7seg[1]
-HEX1[2] << conversorhex7seg:DECODER_HEX1.saida7seg[2]
-HEX1[3] << conversorhex7seg:DECODER_HEX1.saida7seg[3]
-HEX1[4] << conversorhex7seg:DECODER_HEX1.saida7seg[4]
-HEX1[5] << conversorhex7seg:DECODER_HEX1.saida7seg[5]
-HEX1[6] << conversorhex7seg:DECODER_HEX1.saida7seg[6]
-HEX2[0] << conversorhex7seg:DECODER_HEX2.saida7seg[0]
-HEX2[1] << conversorhex7seg:DECODER_HEX2.saida7seg[1]
-HEX2[2] << conversorhex7seg:DECODER_HEX2.saida7seg[2]
-HEX2[3] << conversorhex7seg:DECODER_HEX2.saida7seg[3]
-HEX2[4] << conversorhex7seg:DECODER_HEX2.saida7seg[4]
-HEX2[5] << conversorhex7seg:DECODER_HEX2.saida7seg[5]
-HEX2[6] << conversorhex7seg:DECODER_HEX2.saida7seg[6]
-HEX3[0] << conversorhex7seg:DECODER_HEX3.saida7seg[0]
-HEX3[1] << conversorhex7seg:DECODER_HEX3.saida7seg[1]
-HEX3[2] << conversorhex7seg:DECODER_HEX3.saida7seg[2]
-HEX3[3] << conversorhex7seg:DECODER_HEX3.saida7seg[3]
-HEX3[4] << conversorhex7seg:DECODER_HEX3.saida7seg[4]
-HEX3[5] << conversorhex7seg:DECODER_HEX3.saida7seg[5]
-HEX3[6] << conversorhex7seg:DECODER_HEX3.saida7seg[6]
-HEX4[0] << conversorhex7seg:DECODER_HEX4.saida7seg[0]
-HEX4[1] << conversorhex7seg:DECODER_HEX4.saida7seg[1]
-HEX4[2] << conversorhex7seg:DECODER_HEX4.saida7seg[2]
-HEX4[3] << conversorhex7seg:DECODER_HEX4.saida7seg[3]
-HEX4[4] << conversorhex7seg:DECODER_HEX4.saida7seg[4]
-HEX4[5] << conversorhex7seg:DECODER_HEX4.saida7seg[5]
-HEX4[6] << conversorhex7seg:DECODER_HEX4.saida7seg[6]
-HEX5[0] << conversorhex7seg:DECODER_HEX5.saida7seg[0]
-HEX5[1] << conversorhex7seg:DECODER_HEX5.saida7seg[1]
-HEX5[2] << conversorhex7seg:DECODER_HEX5.saida7seg[2]
-HEX5[3] << conversorhex7seg:DECODER_HEX5.saida7seg[3]
-HEX5[4] << conversorhex7seg:DECODER_HEX5.saida7seg[4]
-HEX5[5] << conversorhex7seg:DECODER_HEX5.saida7seg[5]
-HEX5[6] << conversorhex7seg:DECODER_HEX5.saida7seg[6]
+LEDR[0] <= muxgenerico2x1:MUX_ULA_PC.saida_MUX[24]
+LEDR[1] <= muxgenerico2x1:MUX_ULA_PC.saida_MUX[25]
+LEDR[2] <= muxgenerico2x1:MUX_ULA_PC.saida_MUX[26]
+LEDR[3] <= muxgenerico2x1:MUX_ULA_PC.saida_MUX[27]
+LEDR[4] <= muxgenerico2x1:MUX_ULA_PC.saida_MUX[28]
+LEDR[5] <= muxgenerico2x1:MUX_ULA_PC.saida_MUX[29]
+LEDR[6] <= muxgenerico2x1:MUX_ULA_PC.saida_MUX[30]
+LEDR[7] <= muxgenerico2x1:MUX_ULA_PC.saida_MUX[31]
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+HEX0[0] <= conversorhex7seg:DECODER_HEX0.saida7seg[0]
+HEX0[1] <= conversorhex7seg:DECODER_HEX0.saida7seg[1]
+HEX0[2] <= conversorhex7seg:DECODER_HEX0.saida7seg[2]
+HEX0[3] <= conversorhex7seg:DECODER_HEX0.saida7seg[3]
+HEX0[4] <= conversorhex7seg:DECODER_HEX0.saida7seg[4]
+HEX0[5] <= conversorhex7seg:DECODER_HEX0.saida7seg[5]
+HEX0[6] <= conversorhex7seg:DECODER_HEX0.saida7seg[6]
+HEX1[0] <= conversorhex7seg:DECODER_HEX1.saida7seg[0]
+HEX1[1] <= conversorhex7seg:DECODER_HEX1.saida7seg[1]
+HEX1[2] <= conversorhex7seg:DECODER_HEX1.saida7seg[2]
+HEX1[3] <= conversorhex7seg:DECODER_HEX1.saida7seg[3]
+HEX1[4] <= conversorhex7seg:DECODER_HEX1.saida7seg[4]
+HEX1[5] <= conversorhex7seg:DECODER_HEX1.saida7seg[5]
+HEX1[6] <= conversorhex7seg:DECODER_HEX1.saida7seg[6]
+HEX2[0] <= conversorhex7seg:DECODER_HEX2.saida7seg[0]
+HEX2[1] <= conversorhex7seg:DECODER_HEX2.saida7seg[1]
+HEX2[2] <= conversorhex7seg:DECODER_HEX2.saida7seg[2]
+HEX2[3] <= conversorhex7seg:DECODER_HEX2.saida7seg[3]
+HEX2[4] <= conversorhex7seg:DECODER_HEX2.saida7seg[4]
+HEX2[5] <= conversorhex7seg:DECODER_HEX2.saida7seg[5]
+HEX2[6] <= conversorhex7seg:DECODER_HEX2.saida7seg[6]
+HEX3[0] <= conversorhex7seg:DECODER_HEX3.saida7seg[0]
+HEX3[1] <= conversorhex7seg:DECODER_HEX3.saida7seg[1]
+HEX3[2] <= conversorhex7seg:DECODER_HEX3.saida7seg[2]
+HEX3[3] <= conversorhex7seg:DECODER_HEX3.saida7seg[3]
+HEX3[4] <= conversorhex7seg:DECODER_HEX3.saida7seg[4]
+HEX3[5] <= conversorhex7seg:DECODER_HEX3.saida7seg[5]
+HEX3[6] <= conversorhex7seg:DECODER_HEX3.saida7seg[6]
+HEX4[0] <= conversorhex7seg:DECODER_HEX4.saida7seg[0]
+HEX4[1] <= conversorhex7seg:DECODER_HEX4.saida7seg[1]
+HEX4[2] <= conversorhex7seg:DECODER_HEX4.saida7seg[2]
+HEX4[3] <= conversorhex7seg:DECODER_HEX4.saida7seg[3]
+HEX4[4] <= conversorhex7seg:DECODER_HEX4.saida7seg[4]
+HEX4[5] <= conversorhex7seg:DECODER_HEX4.saida7seg[5]
+HEX4[6] <= conversorhex7seg:DECODER_HEX4.saida7seg[6]
+HEX5[0] <= conversorhex7seg:DECODER_HEX5.saida7seg[0]
+HEX5[1] <= conversorhex7seg:DECODER_HEX5.saida7seg[1]
+HEX5[2] <= conversorhex7seg:DECODER_HEX5.saida7seg[2]
+HEX5[3] <= conversorhex7seg:DECODER_HEX5.saida7seg[3]
+HEX5[4] <= conversorhex7seg:DECODER_HEX5.saida7seg[4]
+HEX5[5] <= conversorhex7seg:DECODER_HEX5.saida7seg[5]
+HEX5[6] <= conversorhex7seg:DECODER_HEX5.saida7seg[6]
 SW[0] => muxgenerico2x1:MUX_ULA_PC.seletor_MUX
 SW[1] => ~NO_FANOUT~
 SW[2] => ~NO_FANOUT~
@@ -1663,6 +1663,38 @@ sel[1] => ula_31_1bit:ULA29.sel[1]
 sel[1] => ula_31_1bit:ULA30.sel[1]
 sel[1] => ula_31_1bit:ULA31.sel[1]
 sel[1] => ula_32bit:ULA32.sel[1]
+inverteA => ula_31_1bit:ULA1.inverteA
+inverteA => ula_31_1bit:ULA2.inverteA
+inverteA => ula_31_1bit:ULA3.inverteA
+inverteA => ula_31_1bit:ULA4.inverteA
+inverteA => ula_31_1bit:ULA5.inverteA
+inverteA => ula_31_1bit:ULA6.inverteA
+inverteA => ula_31_1bit:ULA7.inverteA
+inverteA => ula_31_1bit:ULA8.inverteA
+inverteA => ula_31_1bit:ULA9.inverteA
+inverteA => ula_31_1bit:ULA10.inverteA
+inverteA => ula_31_1bit:ULA11.inverteA
+inverteA => ula_31_1bit:ULA12.inverteA
+inverteA => ula_31_1bit:ULA13.inverteA
+inverteA => ula_31_1bit:ULA14.inverteA
+inverteA => ula_31_1bit:ULA15.inverteA
+inverteA => ula_31_1bit:ULA16.inverteA
+inverteA => ula_31_1bit:ULA17.inverteA
+inverteA => ula_31_1bit:ULA18.inverteA
+inverteA => ula_31_1bit:ULA19.inverteA
+inverteA => ula_31_1bit:ULA20.inverteA
+inverteA => ula_31_1bit:ULA21.inverteA
+inverteA => ula_31_1bit:ULA22.inverteA
+inverteA => ula_31_1bit:ULA23.inverteA
+inverteA => ula_31_1bit:ULA24.inverteA
+inverteA => ula_31_1bit:ULA25.inverteA
+inverteA => ula_31_1bit:ULA26.inverteA
+inverteA => ula_31_1bit:ULA27.inverteA
+inverteA => ula_31_1bit:ULA28.inverteA
+inverteA => ula_31_1bit:ULA29.inverteA
+inverteA => ula_31_1bit:ULA30.inverteA
+inverteA => ula_31_1bit:ULA31.inverteA
+inverteA => ula_32bit:ULA32.inverteA
 inverteB => ula_31_1bit:ULA1.inverteB
 inverteB => ula_31_1bit:ULA1.carryIn
 inverteB => ula_31_1bit:ULA2.inverteB
@@ -1734,17 +1766,24 @@ overflow <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA1
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA1|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA1|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -1781,17 +1820,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA2
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA2|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA2|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -1828,17 +1874,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA3
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA3|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA3|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -1875,17 +1928,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA4
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA4|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA4|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -1922,17 +1982,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA5
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA5|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA5|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -1969,17 +2036,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA6
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA6|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA6|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2016,17 +2090,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA7
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA7|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA7|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2063,17 +2144,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA8
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA8|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA8|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2110,17 +2198,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA9
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA9|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA9|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2157,17 +2252,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA10
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA10|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA10|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2204,17 +2306,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA11
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA11|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA11|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2251,17 +2360,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA12
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA12|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA12|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2298,17 +2414,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA13
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA13|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA13|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2345,17 +2468,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA14
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA14|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA14|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2392,17 +2522,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA15
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA15|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA15|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2439,17 +2576,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA16
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA16|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA16|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2486,17 +2630,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA17
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA17|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA17|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2533,17 +2684,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA18
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA18|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA18|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2580,17 +2738,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA19
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA19|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA19|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2627,17 +2792,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA20
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA20|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA20|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2674,17 +2846,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA21
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA21|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA21|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2721,17 +2900,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA22
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA22|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA22|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2768,17 +2954,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA23
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA23|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA23|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2815,17 +3008,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA24
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA24|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA24|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2862,17 +3062,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA25
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA25|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA25|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2909,17 +3116,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA26
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA26|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA26|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -2956,17 +3170,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA27
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA27|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA27|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -3003,17 +3224,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA28
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA28|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA28|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -3050,17 +3278,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA29
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA29|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA29|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -3097,17 +3332,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA30
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA30|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA30|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -3144,17 +3386,24 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA31
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
 carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
+
+
+|MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA31|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_31_1bit:ULA31|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -3191,11 +3440,11 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 |MIPS|ULAMIPS:ULA|ULA_32bit:ULA32
 slt => muxgenerico4x1_1bit:MUX_FINAL.entradaD_MUX
-entradaA => comb.IN1
-entradaA => comb.IN1
-entradaA => somadorgenerico_1bit:somador_1bit.entradaA
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaA_MUX
+entradaA => muxgenerico2x1_1bit:MUX_INVERTE_A.entradaB_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaA_MUX
 entradaB => muxgenerico2x1_1bit:MUX_INVERTE_B.entradaB_MUX
+inverteA => muxgenerico2x1_1bit:MUX_INVERTE_A.seletor_MUX
 inverteB => muxgenerico2x1_1bit:MUX_INVERTE_B.seletor_MUX
 sel[0] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[0]
 sel[1] => muxgenerico4x1_1bit:MUX_FINAL.seletor_MUX[1]
@@ -3204,6 +3453,13 @@ carryIn => somadorgenerico_1bit:somador_1bit.c_in
 carryOut <= somadorgenerico_1bit:somador_1bit.c_out
 saida <= muxgenerico4x1_1bit:MUX_FINAL.saida_MUX
 overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MIPS|ULAMIPS:ULA|ULA_32bit:ULA32|muxGenerico2x1_1bit:MUX_INVERTE_A
+entradaA_MUX => saida_MUX.DATAA
+entradaB_MUX => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
+saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|ULAMIPS:ULA|ULA_32bit:ULA32|muxGenerico2x1_1bit:MUX_INVERTE_B
@@ -3262,60 +3518,62 @@ tipo_R => muxgenerico2x1:MUX.seletor_MUX
 ULA_CTRL[0] <= muxgenerico2x1:MUX.saida_MUX[0]
 ULA_CTRL[1] <= muxgenerico2x1:MUX.saida_MUX[1]
 ULA_CTRL[2] <= muxgenerico2x1:MUX.saida_MUX[2]
+ULA_CTRL[3] <= muxgenerico2x1:MUX.saida_MUX[3]
 
 
 |MIPS|UnidadeControleULA:Decoder_Unidade_Controle_ULA|decoder_op_code:decoder_Op_code
-entrada[0] => Equal0.IN3
-entrada[0] => Equal1.IN5
-entrada[0] => Equal2.IN3
-entrada[0] => Equal3.IN4
-entrada[0] => Equal4.IN5
-entrada[0] => Equal5.IN5
-entrada[0] => Equal6.IN5
-entrada[0] => Equal7.IN4
-entrada[1] => Equal0.IN5
-entrada[1] => Equal1.IN2
-entrada[1] => Equal2.IN2
-entrada[1] => Equal3.IN3
-entrada[1] => Equal4.IN3
-entrada[1] => Equal5.IN4
-entrada[1] => Equal6.IN4
-entrada[1] => Equal7.IN3
-entrada[2] => Equal0.IN2
-entrada[2] => Equal1.IN4
-entrada[2] => Equal2.IN5
-entrada[2] => Equal3.IN5
-entrada[2] => Equal4.IN4
-entrada[2] => Equal5.IN2
-entrada[2] => Equal6.IN1
-entrada[2] => Equal7.IN2
-entrada[3] => Equal0.IN4
-entrada[3] => Equal1.IN3
-entrada[3] => Equal2.IN4
-entrada[3] => Equal3.IN2
-entrada[3] => Equal4.IN2
-entrada[3] => Equal5.IN1
-entrada[3] => Equal6.IN3
-entrada[3] => Equal7.IN5
-entrada[4] => Equal0.IN1
-entrada[4] => Equal1.IN1
-entrada[4] => Equal2.IN1
-entrada[4] => Equal3.IN1
-entrada[4] => Equal4.IN1
-entrada[4] => Equal5.IN0
-entrada[4] => Equal6.IN0
-entrada[4] => Equal7.IN1
-entrada[5] => Equal0.IN0
-entrada[5] => Equal1.IN0
-entrada[5] => Equal2.IN0
-entrada[5] => Equal3.IN0
-entrada[5] => Equal4.IN0
-entrada[5] => Equal5.IN3
-entrada[5] => Equal6.IN2
-entrada[5] => Equal7.IN0
+entrada[0] => Equal0.IN5
+entrada[0] => Equal1.IN2
+entrada[0] => Equal2.IN5
+entrada[0] => Equal3.IN5
+entrada[0] => Equal4.IN1
+entrada[0] => Equal5.IN2
+entrada[0] => Equal6.IN3
+entrada[0] => Equal7.IN5
+entrada[1] => Equal0.IN1
+entrada[1] => Equal1.IN5
+entrada[1] => Equal2.IN4
+entrada[1] => Equal3.IN4
+entrada[1] => Equal4.IN5
+entrada[1] => Equal5.IN1
+entrada[1] => Equal6.IN2
+entrada[1] => Equal7.IN4
+entrada[2] => Equal0.IN4
+entrada[2] => Equal1.IN1
+entrada[2] => Equal2.IN1
+entrada[2] => Equal3.IN0
+entrada[2] => Equal4.IN0
+entrada[2] => Equal5.IN5
+entrada[2] => Equal6.IN5
+entrada[2] => Equal7.IN3
+entrada[3] => Equal0.IN0
+entrada[3] => Equal1.IN0
+entrada[3] => Equal2.IN0
+entrada[3] => Equal3.IN3
+entrada[3] => Equal4.IN4
+entrada[3] => Equal5.IN4
+entrada[3] => Equal6.IN1
+entrada[3] => Equal7.IN0
+entrada[4] => Equal0.IN3
+entrada[4] => Equal1.IN4
+entrada[4] => Equal2.IN3
+entrada[4] => Equal3.IN2
+entrada[4] => Equal4.IN3
+entrada[4] => Equal5.IN3
+entrada[4] => Equal6.IN4
+entrada[4] => Equal7.IN2
+entrada[5] => Equal0.IN2
+entrada[5] => Equal1.IN3
+entrada[5] => Equal2.IN2
+entrada[5] => Equal3.IN1
+entrada[5] => Equal4.IN2
+entrada[5] => Equal5.IN0
+entrada[5] => Equal6.IN0
+entrada[5] => Equal7.IN1
 saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= <GND>
 
 
 |MIPS|UnidadeControleULA:Decoder_Unidade_Controle_ULA|decoder_funct:decoder_funct
@@ -3323,50 +3581,61 @@ entrada[0] => Equal0.IN2
 entrada[0] => Equal1.IN3
 entrada[0] => Equal2.IN4
 entrada[0] => Equal3.IN5
-entrada[0] => Equal4.IN3
+entrada[0] => Equal4.IN5
+entrada[0] => Equal5.IN3
 entrada[1] => Equal0.IN5
 entrada[1] => Equal1.IN5
 entrada[1] => Equal2.IN3
-entrada[1] => Equal3.IN2
+entrada[1] => Equal3.IN4
 entrada[1] => Equal4.IN2
+entrada[1] => Equal5.IN2
 entrada[2] => Equal0.IN1
 entrada[2] => Equal1.IN2
 entrada[2] => Equal2.IN2
-entrada[2] => Equal3.IN4
-entrada[2] => Equal4.IN5
+entrada[2] => Equal3.IN3
+entrada[2] => Equal4.IN4
+entrada[2] => Equal5.IN5
 entrada[3] => Equal0.IN4
 entrada[3] => Equal1.IN1
 entrada[3] => Equal2.IN1
 entrada[3] => Equal3.IN1
 entrada[3] => Equal4.IN1
+entrada[3] => Equal5.IN1
 entrada[4] => Equal0.IN0
 entrada[4] => Equal1.IN0
 entrada[4] => Equal2.IN0
 entrada[4] => Equal3.IN0
 entrada[4] => Equal4.IN0
+entrada[4] => Equal5.IN0
 entrada[5] => Equal0.IN3
 entrada[5] => Equal1.IN4
 entrada[5] => Equal2.IN5
-entrada[5] => Equal3.IN3
-entrada[5] => Equal4.IN4
+entrada[5] => Equal3.IN2
+entrada[5] => Equal4.IN3
+entrada[5] => Equal5.IN4
 saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|UnidadeControleULA:Decoder_Unidade_Controle_ULA|muxGenerico2x1:MUX
 entradaA_MUX[0] => saida_MUX.DATAA
 entradaA_MUX[1] => saida_MUX.DATAA
 entradaA_MUX[2] => saida_MUX.DATAA
+entradaA_MUX[3] => saida_MUX.DATAA
 entradaB_MUX[0] => saida_MUX.DATAB
 entradaB_MUX[1] => saida_MUX.DATAB
 entradaB_MUX[2] => saida_MUX.DATAB
+entradaB_MUX[3] => saida_MUX.DATAB
+seletor_MUX => saida_MUX.OUTPUTSELECT
 seletor_MUX => saida_MUX.OUTPUTSELECT
 seletor_MUX => saida_MUX.OUTPUTSELECT
 seletor_MUX => saida_MUX.OUTPUTSELECT
 saida_MUX[0] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 saida_MUX[1] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 saida_MUX[2] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
+saida_MUX[3] <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MIPS|RAMMIPS:RAM
@@ -3798,36 +4067,12 @@ entradaA[5] => Equal8.IN0
 entradaA[5] => Equal9.IN0
 entradaA[5] => Equal10.IN2
 entradaA[5] => Equal11.IN3
-entradaB[0] => Equal12.IN2
-entradaB[0] => Equal13.IN3
-entradaB[0] => Equal14.IN4
-entradaB[0] => Equal15.IN5
-entradaB[0] => Equal16.IN3
-entradaB[1] => Equal12.IN5
-entradaB[1] => Equal13.IN5
-entradaB[1] => Equal14.IN3
-entradaB[1] => Equal15.IN2
-entradaB[1] => Equal16.IN2
-entradaB[2] => Equal12.IN1
-entradaB[2] => Equal13.IN2
-entradaB[2] => Equal14.IN2
-entradaB[2] => Equal15.IN4
-entradaB[2] => Equal16.IN5
-entradaB[3] => Equal12.IN4
-entradaB[3] => Equal13.IN1
-entradaB[3] => Equal14.IN1
-entradaB[3] => Equal15.IN1
-entradaB[3] => Equal16.IN1
-entradaB[4] => Equal12.IN0
-entradaB[4] => Equal13.IN0
-entradaB[4] => Equal14.IN0
-entradaB[4] => Equal15.IN0
-entradaB[4] => Equal16.IN0
-entradaB[5] => Equal12.IN3
-entradaB[5] => Equal13.IN4
-entradaB[5] => Equal14.IN5
-entradaB[5] => Equal15.IN3
-entradaB[5] => Equal16.IN4
+entradaB[0] => ~NO_FANOUT~
+entradaB[1] => ~NO_FANOUT~
+entradaB[2] => ~NO_FANOUT~
+entradaB[3] => ~NO_FANOUT~
+entradaB[4] => ~NO_FANOUT~
+entradaB[5] => ~NO_FANOUT~
 saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE

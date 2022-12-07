@@ -34,23 +34,17 @@ architecture comportamento of decoderGeneric is
   constant JAL  : std_logic_vector(5 downto 0)   := "000011";
   constant JR  : std_logic_vector(5 downto 0)    := "000000";
   
-  
- -- FUNCT:
-  
-  constant ANDOP_FUNCT : std_logic_vector(5 downto 0) := "100100";
-  constant OROP_FUNCT : std_logic_vector(5 downto 0)  := "100101";
-  constant ADD_FUNCT : std_logic_vector(5 downto 0)   := "100000";
-  constant SUB_FUNCT : std_logic_vector(5 downto 0)   := "100010";
-  constant SLT_FUNCT : std_logic_vector(5 downto 0)   := "101010";
-  constant JR_FUNCT  : std_logic_vector(5 downto 0)   := "001000";
+ -- EXTRAS:
+ 
+  constant NOROP : std_logic_vector(5 downto 0)  := "000000";
 
 
   begin
-saida <= "00101010000000" when entradaA = ANDOP  AND entradaB = ANDOP_FUNCT  else
-         "00101010000000" when entradaA = OROP AND entradaB = OROP_FUNCT else
-         "00101010000000" when entradaA = ADD AND entradaB = ADD_FUNCT else
-         "00101010000000" when entradaA = SUB AND entradaB = SUB_FUNCT else
-         "00101010000000" when entradaA = SLT AND entradaB = SLT_FUNCT else
+saida <= "00101010000000" when entradaA = ANDOP else
+         "00101010000000" when entradaA = OROP else
+         "00101010000000" when entradaA = ADD else
+         "00101010000000" when entradaA = SUB else
+         "00101010000000" when entradaA = SLT else
 			"00001100100100" when entradaA = LW else 
          "00000100000010" when entradaA = SW else
 			"00000000010000" when entradaA = BEQ else
@@ -63,6 +57,7 @@ saida <= "00101010000000" when entradaA = ANDOP  AND entradaB = ANDOP_FUNCT  els
 			"00000000001000" when entradaA = BNE else
 			"11001001000000" when entradaA = JAL else
 			"10100010000001" when entradaA = JR else
+			"00101010000000" when entradaA = NOROP else
          "00000000000000";  -- NOP para os entradas Indefinidas
 			
 end architecture;

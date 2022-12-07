@@ -65,7 +65,7 @@ architecture arquitetura of MIPS is
   signal hab_escrita_MEM : 			std_logic;
   signal op_code : 			         std_logic_vector(5 downto 0);
   signal funct : 			            std_logic_vector(5 downto 0);
-  signal ULA_CTRL_OUT :             std_logic_vector(2 downto 0);
+  signal ULA_CTRL_OUT :             std_logic_vector(3 downto 0);
   signal Tipo_R :                   std_logic;
   signal ULA_Overflow_OUT :         std_logic;
   signal SW_0 :       		         std_logic;
@@ -225,6 +225,7 @@ ULA: entity work.ULAMIPS   generic map(larguraDados => larguraDados)
 						entradaB => MUX_ULA_OUT, 
 						sel      => ULA_CTRL_OUT(1 downto 0),
 						inverteB => ULA_CTRL_OUT(2),
+						inverteA => ULA_CTRL_OUT(3),
 						saida    => ULA_OUT, 
 						flagZero => ULA_Z_OUT,
 						overflow => ULA_Overflow_OUT

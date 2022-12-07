@@ -25,7 +25,7 @@ architecture bordaDescida of edgeDetector is
 begin
   process(clk)
   begin
-        if falling_edge(clk) then
+        if rising_edge(clk) then
             saidaQ <= entrada;
         end if;
   end process;

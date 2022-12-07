@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity decoder_op_code is
   port ( entrada : in std_logic_vector(5 downto 0);
-         saida : out std_logic_vector(2 downto 0)
+         saida : out std_logic_vector(3 downto 0)
   );
 end entity;
 
@@ -21,11 +21,11 @@ architecture comportamento of decoder_op_code is
   constant BNE  : std_logic_vector(5 downto 0)   := "000101";
   constant JAL  : std_logic_vector(5 downto 0)   := "000011";
   
-  constant ANDOP : std_logic_vector(2 downto 0)  := "000";
-  constant OROP  : std_logic_vector(2 downto 0)  := "001";
-  constant ADD    : std_logic_vector(2 downto 0) := "010";
-  constant SUB    : std_logic_vector(2 downto 0) := "110";
-  constant SLT    : std_logic_vector(2 downto 0) := "111";
+  constant ANDOP : std_logic_vector(3 downto 0)  := "0000";
+  constant OROP  : std_logic_vector(3 downto 0)  := "0001";
+  constant ADD    : std_logic_vector(3 downto 0) := "0010";
+  constant SUB    : std_logic_vector(3 downto 0) := "0110";
+  constant SLT    : std_logic_vector(3 downto 0) := "0111";
 
   begin
 saida <= ADD    when entrada = LW OR entrada = SW OR entrada = ADDI else
@@ -33,5 +33,5 @@ saida <= ADD    when entrada = LW OR entrada = SW OR entrada = ADDI else
 			ANDOP  when entrada = ANDI else
 			OROP   when entrada = ORI else
 			SLT    when entrada = SLTI else
-         "000";  -- NOP para os entradas Indefinidas
+         "0000";  -- NOP para os entradas Indefinidas
 end architecture;	
